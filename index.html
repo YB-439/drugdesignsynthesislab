@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drug Design & Synthesis Lab (DDSL) | Punjabi University, Patiala</title>
+  <meta name="description" content="Official website of Drug Design & Synthesis Lab (DDSL), Department of Pharmaceutical Sciences and Drug Research, Punjabi University, Patiala. PI: Dr. Yogita Bansal." />
+  <link rel="canonical" href="https://drugdesignsynthesislab.com" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Academic Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-slate-200 selection:text-slate-900">
+
+  <!-- TOP UNIVERSITY BRAND BAR -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="font-semibold text-white">Punjabi University, Patiala</span>
+        <span class="text-slate-600">|</span>
+        <span>Department of Pharmaceutical Sciences and Drug Research</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="https://scholar.google.com/citations?user=kxIxyF8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors flex items-center gap-1">
+          <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Google Scholar Profile
+        </a>
+        <span>&bull;</span>
+        <a href="https://drugdesignsynthesislab.com" class="hover:text-sky-400 transition-colors">drugdesignsynthesislab.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Lab Logo & Name -->
+        <a href="#home" class="flex items-center gap-3">
+          <img src="images/lab_logo.jpg" alt="DDSL Logo" class="w-12 h-12 object-contain rounded-lg border border-slate-200" />
+          <div>
+            <h1 class="text-lg sm:text-xl font-bold text-slate-900 tracking-tight font-serif">
+              Drug Design & Synthesis Lab
+            </h1>
+            <div class="text-xs text-slate-600 font-medium">
+              PI: <strong class="text-slate-900">Dr. Yogita Bansal</strong> &bull; Head & Professor
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Bar: Home | About | Research | QSAR Tools | Publications | Team | Contact -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-700">
+          <a href="#home" class="hover:text-sky-700 transition-colors">Home</a>
+          <a href="#about" class="hover:text-sky-700 transition-colors">About</a>
+          <a href="#research" class="hover:text-sky-700 transition-colors">Research</a>
+          <a href="#qsartools" class="hover:text-sky-700 transition-colors text-sky-800 font-bold">QSAR Tools</a>
+          <a href="#publications" class="hover:text-sky-700 transition-colors">Publications</a>
+          <a href="#team" class="hover:text-sky-700 transition-colors">Team</a>
+          <a href="#contact" class="hover:text-sky-700 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 pt-2 pb-4 space-y-2 text-sm font-semibold">
+      <a href="#home" class="block py-2 text-slate-800 hover:text-sky-700">Home</a>
+      <a href="#about" class="block py-2 text-slate-800 hover:text-sky-700">About</a>
+      <a href="#research" class="block py-2 text-slate-800 hover:text-sky-700">Research</a>
+      <a href="#qsartools" class="block py-2 text-sky-800 font-bold">QSAR Tools</a>
+      <a href="#publications" class="block py-2 text-slate-800 hover:text-sky-700">Publications</a>
+      <a href="#team" class="block py-2 text-slate-800 hover:text-sky-700">Team</a>
+      <a href="#contact" class="block py-2 text-slate-800 hover:text-sky-700">Contact</a>
+    </div>
+  </header>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="py-12 lg:py-16 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-8 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-300 text-slate-800 text-xs font-bold">
+            <span class="w-2 h-2 rounded-full bg-sky-600"></span>
+            Medicinal Chemistry & Computational Drug Discovery Research
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight font-serif">
+            Drug Design & Synthesis Lab (DDSL)
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-700 leading-relaxed font-serif italic border-l-4 border-slate-800 pl-4 py-1">
+            "Computer-assisted design, synthesis, and biological evaluation of active heterocyclic compounds targeting neurodegenerative, inflammatory, and oncological disorders."
+          </p>
+
+          <div class="text-sm text-slate-600 space-y-1 font-medium">
+            <div><strong class="text-slate-900">Principal Investigator:</strong> Dr. Yogita Bansal, Head and Professor</div>
+            <div><strong class="text-slate-900">Affiliation:</strong> Department of Pharmaceutical Sciences and Drug Research, Punjabi University, Patiala, Punjab, India</div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#qsartools" class="px-5 py-2.5 rounded-lg bg-slate-900 text-white font-semibold text-xs hover:bg-slate-800 transition-all shadow-sm flex items-center gap-2">
+              <i data-lucide="cpu" class="w-4 h-4"></i> Explore QSAR Tools
+            </a>
+            <a href="#publications" class="px-5 py-2.5 rounded-lg bg-white text-slate-800 border border-slate-300 hover:border-slate-400 font-semibold text-xs transition-all flex items-center gap-2">
+              <i data-lucide="file-text" class="w-4 h-4 text-sky-700"></i> View Publications
+            </a>
+            <a href="https://scholar.google.com/citations?user=kxIxyF8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" 
+               class="px-4 py-2.5 rounded-lg bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100 font-semibold text-xs flex items-center gap-1.5">
+              <i data-lucide="graduation-cap" class="w-4 h-4 text-amber-700"></i> Google Scholar Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Official Lab Crest / Banner Visual -->
+        <div class="lg:col-span-4 flex justify-center">
+          <div class="academic-card p-4 rounded-2xl border border-slate-200 bg-white max-w-sm text-center space-y-3">
+            <img src="images/lab_logo.jpg" alt="Drug Design & Synthesis Lab Logo" class="w-full h-auto max-h-72 object-contain rounded-xl" />
+            <div class="text-xs font-bold text-slate-800 font-serif">In-Silico to In-Vivo Research Workflow</div>
+            <div class="text-[11px] text-slate-500 font-mono">Discover &bull; Design &bull; Develop &bull; Deliver</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Simple Visual Drug Discovery Workflow -->
+      <div class="mt-14 pt-10 border-t border-slate-200">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-slate-600 mb-6 text-center font-mono">
+          Lab Drug Discovery Workflow (In-Silico to In-Vivo)
+        </h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="flow-step active">
+            <div class="text-xs font-bold text-sky-800 uppercase font-mono mb-1">Step 1</div>
+            <div class="text-sm font-bold text-slate-900">Target Identification & CADD</div>
+            <div class="text-xs text-slate-600 mt-1">Receptor modeling (BACE-1, VEGFR-2, AChE, IL-6)</div>
+          </div>
+          <div class="flow-step">
+            <div class="text-xs font-bold text-slate-500 uppercase font-mono mb-1">Step 2</div>
+            <div class="text-sm font-bold text-slate-900">QSAR & Machine Learning</div>
+            <div class="text-xs text-slate-600 mt-1">SMILES 2D/3D-QSAR modeling & descriptor screening</div>
+          </div>
+          <div class="flow-step">
+            <div class="text-xs font-bold text-slate-500 uppercase font-mono mb-1">Step 3</div>
+            <div class="text-sm font-bold text-slate-900">Chemical Synthesis</div>
+            <div class="text-xs text-slate-600 mt-1">Benzimidazole, Coumarin & hybrid scaffold synthesis</div>
+          </div>
+          <div class="flow-step">
+            <div class="text-xs font-bold text-slate-500 uppercase font-mono mb-1">Step 4</div>
+            <div class="text-sm font-bold text-slate-900">Biological Evaluation</div>
+            <div class="text-xs text-slate-600 mt-1">Enzyme inhibition assays & in-vivo evaluation</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Highlights Section -->
+      <div class="mt-12 bg-slate-900 text-white rounded-2xl p-6 sm:p-8">
+        <div class="flex items-center gap-2 mb-4 text-amber-400 font-bold text-xs uppercase tracking-wider font-mono">
+          <i data-lucide="award" class="w-4 h-4"></i> Key Academic Research Highlights
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
+          <div class="border-l-2 border-amber-400 pl-4">
+            <div class="text-lg font-bold text-white font-serif">Top 2% Scientist</div>
+            <div class="text-slate-300 mt-1">Listed among World's Top 2% Scientists by Stanford University (2021 onwards).</div>
+          </div>
+          <div class="border-l-2 border-sky-400 pl-4">
+            <div class="text-lg font-bold text-white font-serif">ANRF / SERB Project</div>
+            <div class="text-slate-300 mt-1">Structure-guided design of Benzimidazole-Coumarin hybrids as dual IL-6 & TNF-α inhibitors.</div>
+          </div>
+          <div class="border-l-2 border-emerald-400 pl-4">
+            <div class="text-lg font-bold text-white font-serif">Patent Granted</div>
+            <div class="text-slate-300 mt-1">Indian Patent No. 269611 for substituted benzimidazole therapeutic compounds.</div>
+          </div>
+          <div class="border-l-2 border-purple-400 pl-4">
+            <div class="text-lg font-bold text-white font-serif">3,800+ Citations</div>
+            <div class="text-slate-300 mt-1">h-index: 21 | i10-index: 28 on Google Scholar with 50+ published journal papers.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Latest 3 Publications Brief Preview -->
+      <div class="mt-12">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-lg font-bold text-slate-900 font-serif">Recent Publications</h3>
+          <a href="#publications" class="text-xs font-semibold text-sky-800 hover:underline">View All Publications &rarr;</a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="academic-card p-4 rounded-xl text-xs space-y-2">
+            <span class="academic-badge">2025 Journal Paper</span>
+            <h4 class="font-bold text-slate-900 leading-snug">Design of BBB permeable BACE-1 inhibitor as potential drug candidate for Alzheimer disease</h4>
+            <div class="text-slate-500 font-mono text-[11px]">Computational Biology and Chemistry (2025)</div>
+          </div>
+          <div class="academic-card p-4 rounded-xl text-xs space-y-2">
+            <span class="academic-badge">2025 Journal Paper</span>
+            <h4 class="font-bold text-slate-900 leading-snug">2D-QSAR driven design and MM/GBSA studies on quinazoline derivatives for VEGFR-2 inhibitors</h4>
+            <div class="text-slate-500 font-mono text-[11px]">Discover Chemistry (2025)</div>
+          </div>
+          <div class="academic-card p-4 rounded-xl text-xs space-y-2">
+            <span class="academic-badge">2024 Journal Paper</span>
+            <h4 class="font-bold text-slate-900 leading-snug">Critical analysis of binding pattern and SAR of benzo-fused heteronuclear compounds</h4>
+            <div class="text-slate-500 font-mono text-[11px]">Bioorganic & Medicinal Chemistry (2024)</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-serif">About the Laboratory</h2>
+        <div class="text-xs font-mono text-slate-500 mt-1">Drug Design & Synthesis Lab (DDSL) &bull; Punjabi University Patiala</div>
+      </div>
+
+      <div class="prose prose-slate max-w-none text-slate-700 text-sm leading-relaxed space-y-4">
+        <p>
+          The <strong>Drug Design & Synthesis Lab (DDSL)</strong> is an established academic research group in the <strong>Department of Pharmaceutical Sciences and Drug Research, Punjabi University, Patiala</strong>. Led by <strong>Dr. Yogita Bansal</strong> (Head and Professor), the laboratory focuses on rational computer-assisted drug design, chemical synthesis, and biological characterization of novel heterocyclic entities.
+        </p>
+
+        <h3 class="text-base font-bold text-slate-900 font-serif pt-2">Research Philosophy</h3>
+        <p>
+          Our research philosophy bridges modern <em>in-silico</em> computational molecular modeling (2D/3D-QSAR, docking, molecular dynamics, ADMET, and machine learning) with benchtop organic synthesis of privileged heterocyclic scaffolds (benzimidazoles, coumarins, pyrazoles, indoles, and quinazolines). This integrated approach accelerates the discovery of potent, target-selective therapeutic leads with optimized pharmacokinetic profiles.
+        </p>
+
+        <h3 class="text-base font-bold text-slate-900 font-serif pt-2">Institutional Affiliation & Leadership</h3>
+        <ul class="list-disc pl-5 space-y-1 text-slate-700">
+          <li><strong>Department:</strong> Department of Pharmaceutical Sciences and Drug Research (Est. 1962).</li>
+          <li><strong>University:</strong> Punjabi University, Patiala, Punjab, India (NAAC A+ Grade).</li>
+          <li><strong>Principal Investigator:</strong> Dr. Yogita Bansal — Head and Professor (23 years teaching & 20 years research experience; guided 40 M.Pharm dissertations and 3 Ph.D. scholars).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH SECTION -->
+  <section id="research" class="py-16 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-serif">Major Research Focus Areas</h2>
+        <p class="text-xs text-slate-600 font-mono">Core domains in computational drug design and medicinal chemistry</p>
+      </div>
+
+      <!-- 5 Simple Cards for Major Research Areas -->
+      <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+        
+        <div class="academic-card p-5 text-center space-y-3">
+          <div class="w-10 h-10 mx-auto rounded-lg bg-sky-100 text-sky-800 flex items-center justify-center">
+            <i data-lucide="laptop" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 font-serif">Computer-Aided Drug Design</h3>
+          <p class="text-xs text-slate-600">Structure-based and ligand-based virtual screening for lead discovery.</p>
+        </div>
+
+        <div class="academic-card p-5 text-center space-y-3">
+          <div class="w-10 h-10 mx-auto rounded-lg bg-indigo-100 text-indigo-800 flex items-center justify-center">
+            <i data-lucide="binary" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 font-serif">QSAR & Machine Learning</h3>
+          <p class="text-xs text-slate-600">2D/3D-QSAR modeling, SMILES descriptors, and ML regression algorithms.</p>
+        </div>
+
+        <div class="academic-card p-5 text-center space-y-3">
+          <div class="w-10 h-10 mx-auto rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center">
+            <i data-lucide="box" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 font-serif">Docking & Molecular Dynamics</h3>
+          <p class="text-xs text-slate-600">Receptor-ligand binding kinetics, MD simulations (100 ns+), and MM/GBSA.</p>
+        </div>
+
+        <div class="academic-card p-5 text-center space-y-3">
+          <div class="w-10 h-10 mx-auto rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center">
+            <i data-lucide="flask-conical" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 font-serif">Medicinal Chemistry & Synthesis</h3>
+          <p class="text-xs text-slate-600">Organic synthesis of benzimidazole, coumarin, and chromone hybrid scaffolds.</p>
+        </div>
+
+        <div class="academic-card p-5 text-center space-y-3">
+          <div class="w-10 h-10 mx-auto rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 font-serif">Biological Evaluation</h3>
+          <p class="text-xs text-slate-600">Target evaluation against BACE-1, VEGFR-2, AChE, IL-6, and TNF-α.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QSAR TOOLS DEDICATED SECTION -->
+  <section id="qsartools" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="border-b border-slate-200 pb-4">
+        <span class="academic-badge uppercase font-mono">Computational Suite</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-serif mt-2">Laboratory QSAR & Computational Tools</h2>
+        <p class="text-xs text-slate-600 mt-1">
+          Overview of key cheminformatics software, machine learning algorithms, docking suites, and molecular descriptor calculators utilized at DDSL.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Category 1: QSAR & Molecular Modeling -->
+        <div class="academic-card p-6 space-y-4">
+          <h3 class="text-base font-bold text-slate-900 font-serif flex items-center gap-2 border-b border-slate-100 pb-3">
+            <i data-lucide="sliders" class="w-4 h-4 text-sky-700"></i> QSAR & Molecular Modeling
+          </h3>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>CORAL / CORALSEA</span>
+                <a href="http://www.insilico.eu/coral/" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:underline font-normal font-mono">Official Link &rarr;</a>
+              </div>
+              <p class="text-slate-600 mt-1">SMILES-based QSAR modeling software for bioactivity and toxicity prediction using Monte Carlo optimization.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>Cresset Flare</span>
+                <a href="https://www.cresset-group.com/software/flare/" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:underline font-normal font-mono">Official Link &rarr;</a>
+              </div>
+              <p class="text-slate-600 mt-1">Comprehensive molecular modeling suite for ligand-based and structure-based drug design and electrostatic surface analysis.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>RDKit</span>
+                <a href="https://www.rdkit.org/" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:underline font-normal font-mono">Official Link &rarr;</a>
+              </div>
+              <p class="text-slate-600 mt-1">Open-source cheminformatics toolkit for chemical structure parsing, fingerprint generation, and 2D/3D depiction.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>Mordred</span>
+                <a href="https://github.com/mordred-descriptor/mordred" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:underline font-normal font-mono">Official Link &rarr;</a>
+              </div>
+              <p class="text-slate-600 mt-1">Molecular descriptor calculator capable of computing over 1,800 2D and 3D physical and topological descriptors.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Machine Learning -->
+        <div class="academic-card p-6 space-y-4">
+          <h3 class="text-base font-bold text-slate-900 font-serif flex items-center gap-2 border-b border-slate-100 pb-3">
+            <i data-lucide="cpu" class="w-4 h-4 text-indigo-700"></i> Machine Learning
+          </h3>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">Random Forest</div>
+              <p class="text-slate-600 mt-1">Ensemble decision-tree learning method applied for robust QSAR bioactivity classification and regression.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">Support Vector Machine (SVM)</div>
+              <p class="text-slate-600 mt-1">Supervised learning algorithm utilizing kernel functions for non-linear bioactivity and IC50 prediction.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">XGBoost</div>
+              <p class="text-slate-600 mt-1">Optimized gradient boosting framework for high-performance quantitative structure-activity relationship modeling.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">CatBoost</div>
+              <p class="text-slate-600 mt-1">Gradient boosting decision tree library optimized for handling categorical chemical features and molecular fingerprints.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Molecular Modeling & Docking -->
+        <div class="academic-card p-6 space-y-4">
+          <h3 class="text-base font-bold text-slate-900 font-serif flex items-center gap-2 border-b border-slate-100 pb-3">
+            <i data-lucide="box" class="w-4 h-4 text-teal-700"></i> Molecular Modeling & Docking
+          </h3>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>AutoDock Vina</span>
+                <a href="https://vina.scripps.edu/" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:underline font-normal font-mono">Official Link &rarr;</a>
+              </div>
+              <p class="text-slate-600 mt-1">Open-source receptor-ligand docking software for automated binding affinity and conformation scoring.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">Lead Finder</div>
+              <p class="text-slate-600 mt-1">Structure-based docking and scoring engine tailored for virtual screening of large compound libraries.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">Molecular Dynamics</div>
+              <p class="text-slate-600 mt-1">Atomic-level simulation of protein-ligand complex stability, conformational flexibility, and RMSD/RMSF tracking.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">MM/GBSA</div>
+              <p class="text-slate-600 mt-1">Molecular Mechanics/Generalized Born Surface Area method for precise binding free energy calculations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Chemical Informatics -->
+        <div class="academic-card p-6 space-y-4">
+          <h3 class="text-base font-bold text-slate-900 font-serif flex items-center gap-2 border-b border-slate-100 pb-3">
+            <i data-lucide="binary" class="w-4 h-4 text-emerald-700"></i> Chemical Informatics
+          </h3>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">Morgan / ECFP Fingerprints</div>
+              <p class="text-slate-600 mt-1">Circular topological fingerprints used for molecular structural representation and high-throughput virtual screening.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">MACCS Keys</div>
+              <p class="text-slate-600 mt-1">166-bit structural keys encoding specific functional groups and sub-structural patterns for rapid chemical filtering.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">Tanimoto Similarity</div>
+              <p class="text-slate-600 mt-1">Standard mathematical coefficient for calculating pairwise structural similarity between molecular entities.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">Molecular Descriptors</div>
+              <p class="text-slate-600 mt-1">Calculation of 0D, 1D, 2D, and 3D physical, chemical, and topological descriptors governing drug-likeness.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS SECTION -->
+  <section id="publications" class="py-16 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 pb-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-serif">Research Publications</h2>
+          <p class="text-xs text-slate-600 mt-1">Peer-reviewed research articles and reviews by Dr. Yogita Bansal and researchers at DDSL</p>
+        </div>
+
+        <!-- Google Scholar Button -->
+        <a href="https://scholar.google.com/citations?user=kxIxyF8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" 
+           class="px-5 py-2.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold shadow-sm flex items-center gap-2 shrink-0">
+          <i data-lucide="graduation-cap" class="w-4 h-4"></i> View Google Scholar Profile
+        </a>
+      </div>
+
+      <!-- Search & Scaffold Filter -->
+      <div class="flex flex-wrap items-center justify-between gap-3 bg-white p-4 rounded-xl border border-slate-200">
+        <div class="text-xs font-bold text-slate-700">Filter Lab Publications:</div>
+        <div class="flex flex-wrap gap-2">
+          <input type="text" id="pub-search-input" placeholder="Search title, target, journal..." 
+                 class="bg-slate-50 border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-800 focus:outline-none focus:border-sky-600 w-64" />
+          
+          <select id="pub-scaffold-filter" class="bg-slate-50 border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-800 focus:outline-none focus:border-sky-600">
+            <option value="all">All Scaffolds</option>
+            <option value="benzimidazole">Benzimidazole</option>
+            <option value="coumarin">Coumarin</option>
+            <option value="quinazoline">Quinazoline</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Clean Academic Table of Publications -->
+      <div class="academic-card overflow-x-auto">
+        <table class="w-full academic-table text-left">
+          <thead>
+            <tr>
+              <th class="w-12">#</th>
+              <th>Publication Title & Details</th>
+              <th class="w-48">Journal</th>
+              <th class="w-20">Year</th>
+              <th class="w-32 text-right">Link / DOI</th>
+            </tr>
+          </thead>
+          <tbody id="publications-list">
+            <!-- Rendered dynamically by app.js -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section id="team" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-serif">Research Group & Team</h2>
+        <p class="text-xs text-slate-600 mt-1">Principal Investigator, research scholars, project fellows, and lab alumni</p>
+      </div>
+
+      <!-- Principal Investigator Profile Card -->
+      <div class="academic-card p-6 sm:p-8 border border-slate-300 bg-slate-50 rounded-2xl flex flex-col md:flex-row gap-8 items-start">
+        
+        <div class="w-36 h-44 rounded-xl bg-slate-200 border border-slate-300 flex flex-col items-center justify-center text-slate-600 font-bold shrink-0 shadow-sm overflow-hidden">
+          <i data-lucide="user" class="w-16 h-16 text-slate-400"></i>
+          <span class="text-[10px] text-slate-500 font-mono mt-1">Dr. Yogita Bansal</span>
+        </div>
+
+        <div class="space-y-4 text-xs">
+          <div>
+            <span class="academic-badge uppercase font-mono">Principal Investigator</span>
+            <h3 class="text-2xl font-bold text-slate-900 font-serif mt-1">Dr. Yogita Bansal</h3>
+            <div class="text-slate-700 font-semibold mt-0.5">Head and Professor</div>
+            <div class="text-slate-600">Department of Pharmaceutical Sciences and Drug Research, Punjabi University, Patiala</div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-3 bg-white p-3.5 rounded-xl border border-slate-200 text-slate-700">
+            <div><strong>Academic Qualifications:</strong> B.Pharm (1998), M.Pharm (2001), Ph.D. (2015)</div>
+            <div><strong>Experience:</strong> 23 Years Teaching & 20 Years Research</div>
+            <div><strong>Students Guided:</strong> 40 M.Pharm & 03 Ph.D. Scholars</div>
+            <div><strong>Citations:</strong> 3,800+ Citations (h-index: 21, i10-index: 28)</div>
+          </div>
+
+          <p class="text-slate-700 leading-relaxed">
+            <strong>Research Focus:</strong> Computer-assisted design of biologically active compounds against inflammatory disorders, 2D/3D-QSAR modeling, and organic synthesis of Benzimidazole, Coumarin, and hybrid heterocyclic scaffolds.
+          </p>
+
+          <div class="flex items-center gap-4 text-slate-600 pt-1">
+            <span class="font-mono">Email: <a href="mailto:yogita_pharma@pbi.ac.in" class="text-sky-800 hover:underline">yogita_pharma@pbi.ac.in</a></span>
+            <span>&bull;</span>
+            <span class="font-mono">Phone: +91-175-03046255 (O)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scholars, Fellows & Alumni Grid -->
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <div class="academic-card p-5 space-y-2">
+          <span class="academic-badge font-mono">Ph.D. Research Scholars</span>
+          <h4 class="font-bold text-slate-900 font-serif text-sm">Ph.D. Scholars Group</h4>
+          <p class="text-xs text-slate-600">3 Ph.D. scholars guided and currently pursuing advanced research in QSAR modeling, heterocyclic synthesis, and neurodegenerative disease targets.</p>
+        </div>
+
+        <div class="academic-card p-5 space-y-2">
+          <span class="academic-badge font-mono">Master's Scholars</span>
+          <h4 class="font-bold text-slate-900 font-serif text-sm">M.Pharm Researchers</h4>
+          <p class="text-xs text-slate-600">Over 40 M.Pharm students have successfully completed their research dissertations in medicinal chemistry and computer-aided drug design.</p>
+        </div>
+
+        <div class="academic-card p-5 space-y-2">
+          <span class="academic-badge font-mono">Project Fellows & Alumni</span>
+          <h4 class="font-bold text-slate-900 font-serif text-sm">Research Alumni</h4>
+          <p class="text-xs text-slate-600">DDSL alumni hold prominent academic, research, and industrial positions across pharmaceutical corporations and universities worldwide.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 font-serif">Contact & Location</h2>
+        <p class="text-xs text-slate-600 mt-1">Official contact information for research collaborations and academic inquiries</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        
+        <!-- Contact Address & Details -->
+        <div class="academic-card p-6 bg-white space-y-5 text-xs text-slate-700">
+          <h3 class="text-base font-bold text-slate-900 font-serif">Drug Design & Synthesis Lab (DDSL)</h3>
+          
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-slate-900 block">Address</strong>
+                Department of Pharmaceutical Sciences and Drug Research,<br />
+                Punjabi University, Patiala, Punjab, India - 147002
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="mail" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-slate-900 block">Official Emails</strong>
+                <a href="mailto:yogita_pharma@pbi.ac.in" class="text-sky-800 hover:underline font-mono">yogita_pharma@pbi.ac.in</a><br />
+                <a href="mailto:yogitabansalp@rediffmail.com" class="text-sky-800 hover:underline font-mono">yogitabansalp@rediffmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="phone" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-slate-900 block">Contact Phone Numbers</strong>
+                Office: <span class="font-mono text-slate-800">+91-175-03046255</span><br />
+                Mobile: <span class="font-mono text-slate-800">+91-9855166101</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="globe" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-slate-900 block">Lab Domain</strong>
+                <a href="https://drugdesignsynthesislab.com" target="_blank" class="text-sky-800 hover:underline font-mono">drugdesignsynthesislab.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Profiles -->
+          <div class="pt-4 border-t border-slate-200 flex flex-wrap items-center gap-3 font-semibold">
+            <a href="https://scholar.google.com/citations?user=kxIxyF8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100 flex items-center gap-1">
+              <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-amber-700"></i> Google Scholar
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Google Map Location Card -->
+        <div class="academic-card p-6 bg-white space-y-4">
+          <h3 class="text-base font-bold text-slate-900 font-serif">Campus Map Location</h3>
+          <div class="w-full h-64 rounded-xl border border-slate-200 overflow-hidden bg-slate-100">
+            <iframe 
+              title="Punjabi University Patiala Map"
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              src="https://maps.google.com/maps?q=Punjabi+University+Patiala+Department+of+Pharmaceutical+Sciences&t=&z=15&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+          </div>
+          <div class="text-[11px] text-slate-500 font-mono text-center">
+            Punjabi University, Rajpura Road, Patiala, Punjab 147002
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-8 text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <strong class="text-white block font-serif">Drug Design & Synthesis Lab (DDSL)</strong>
+        Department of Pharmaceutical Sciences and Drug Research, Punjabi University, Patiala.
+      </div>
+      <div class="text-center md:text-right text-slate-500 font-mono">
+        &copy; 2026 Drug Design & Synthesis Lab. All Rights Reserved.<br />
+        <a href="https://drugdesignsynthesislab.com" class="hover:text-slate-300">drugdesignsynthesislab.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Load Application Scripts -->
+  <script src="js/publications-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
