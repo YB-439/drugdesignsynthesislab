@@ -18,7 +18,49 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Smooth navigation scrolling
+  // Desktop QSAR Tools Dropdown Toggle on Click
+  const qsarDropdownBtn = document.getElementById('qsar-dropdown-btn');
+  const qsarDropdownMenu = document.getElementById('qsar-dropdown-menu');
+  const qsarChevron = document.getElementById('qsar-dropdown-chevron');
+
+  if (qsarDropdownBtn && qsarDropdownMenu) {
+    qsarDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isHidden = qsarDropdownMenu.classList.contains('hidden');
+      if (isHidden) {
+        qsarDropdownMenu.classList.remove('hidden');
+        if (qsarChevron) qsarChevron.classList.add('rotate-180');
+      } else {
+        qsarDropdownMenu.classList.add('hidden');
+        if (qsarChevron) qsarChevron.classList.remove('rotate-180');
+      }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      const container = document.getElementById('qsar-dropdown-container');
+      if (container && !container.contains(e.target)) {
+        qsarDropdownMenu.classList.add('hidden');
+        if (qsarChevron) qsarChevron.classList.remove('rotate-180');
+      }
+    });
+  }
+
+  // Mobile QSAR Tools Accordion Toggle
+  const mobileQsarToggle = document.getElementById('mobile-qsar-toggle');
+  const mobileQsarSubmenu = document.getElementById('mobile-qsar-submenu');
+  const mobileQsarChevron = document.getElementById('mobile-qsar-chevron');
+
+  if (mobileQsarToggle && mobileQsarSubmenu) {
+    mobileQsarToggle.addEventListener('click', () => {
+      mobileQsarSubmenu.classList.toggle('hidden');
+      if (mobileQsarChevron) {
+        mobileQsarChevron.classList.toggle('rotate-180');
+      }
+    });
+  }
+
+  // Smooth navigation scrolling for in-page anchors
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
@@ -28,6 +70,14 @@ document.addEventListener('DOMContentLoaded', function () {
       if (targetElem) {
         e.preventDefault();
         targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Close desktop dropdown if open
+        if (qsarDropdownMenu) {
+          qsarDropdownMenu.classList.add('hidden');
+          if (qsarChevron) qsarChevron.classList.remove('rotate-180');
+        }
+
+        // Close mobile drawer if open
         if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
           mobileMenu.classList.add('hidden');
         }
