@@ -145,36 +145,43 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
       <!-- Principal Investigator Profile Card -->
-      <div class="academic-card p-6 sm:p-8 border-slate-300 bg-white rounded-2xl flex flex-col md:flex-row gap-8 items-start shadow-xs">
+      <div class="academic-card p-6 sm:p-8 border-slate-300 bg-white rounded-2xl shadow-xs space-y-6">
         
-        <div class="w-48 sm:w-56 rounded-2xl bg-slate-100 border border-slate-200 shrink-0 shadow-sm overflow-hidden aspect-[3/4]">
-          <img src="images/prof-yogita-bansal-portrait.jpg" alt="Prof. (Dr.) Yogita Bansal" class="w-full h-full object-cover" />
+        <!-- Top Row: Photo + Bio & Experience -->
+        <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+          <div class="w-48 sm:w-52 rounded-2xl bg-slate-100 border border-slate-200 shrink-0 shadow-sm overflow-hidden aspect-[3/4]">
+            <img src="images/prof-yogita-bansal-portrait.jpg" alt="Prof. (Dr.) Yogita Bansal" class="w-full h-full object-cover" />
+          </div>
+
+          <div class="space-y-3.5 text-xs flex-1 w-full">
+            <div>
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-900 border border-amber-300 inline-flex items-center gap-1.5">
+                  <i data-lucide="award" class="w-3.5 h-3.5 text-amber-700"></i> World's Top 2% Scientist (2021 to 2025, Stanford University)
+                </span>
+              </div>
+              <h2 class="text-2xl font-bold text-slate-900 font-serif">Prof. (Dr.) Yogita Bansal</h2>
+              <div class="text-slate-600 mt-0.5">Department of Pharmaceutical Sciences and Drug Research, Punjabi University, Patiala, Punjab, India</div>
+            </div>
+
+            <!-- Academic & Professional Highlights -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2 text-slate-700">
+              <div class="font-bold text-slate-900 text-xs font-serif flex items-center gap-1.5 border-b border-slate-200/80 pb-1">
+                <i data-lucide="briefcase" class="w-3.5 h-3.5 text-teal-700"></i> Academic & Professional Experience
+              </div>
+              <ul class="space-y-1.5 text-[11px] text-slate-600 list-disc list-inside">
+                <li><strong>24 Years of Teaching & 22 Years of Research Experience</strong></li>
+                <li><strong>Head of Department (HOD)</strong>, Department of Pharmaceutical Sciences & Drug Research, Punjabi University, Patiala (April 2025–Present)</li>
+                <li><strong>Professor</strong> (2019–Present) &bull; <strong>Associate Professor</strong> (2016–2019) &bull; <strong>Assistant Professor</strong> (2005–2016) at Punjabi University, Patiala</li>
+                <li><strong>Key Honors:</strong> Listed among World's Top 2% Scientists by Stanford University (2021 to 2025) &bull; Executive Member, Women Forum, APTI Central India</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-          <div>
-            <div class="flex items-center gap-2 mb-1.5">
-              <span class="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-900 border border-amber-300 inline-flex items-center gap-1.5">
-                <i data-lucide="award" class="w-3.5 h-3.5 text-amber-700"></i> World's Top 2% Scientist (2021 to 2025, Stanford University)
-              </span>
-            </div>
-            <h2 class="text-2xl font-bold text-slate-900 font-serif">Prof. (Dr.) Yogita Bansal</h2>
-            <div class="text-slate-600 mt-1">Department of Pharmaceutical Sciences and Drug Research, Punjabi University, Patiala, Punjab, India</div>
-          </div>
-
-          <!-- Academic & Professional Highlights -->
-          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2 text-slate-700">
-            <div class="font-bold text-slate-900 text-xs font-serif flex items-center gap-1.5 border-b border-slate-200/80 pb-1.5">
-              <i data-lucide="briefcase" class="w-3.5 h-3.5 text-teal-700"></i> Academic & Professional Experience
-            </div>
-            <ul class="space-y-1.5 text-[11px] text-slate-600 list-disc list-inside">
-              <li><strong>24 Years of Teaching & 22 Years of Research Experience</strong></li>
-              <li><strong>Head of Department (HOD)</strong>, Department of Pharmaceutical Sciences & Drug Research, Punjabi University, Patiala (April 2025–Present)</li>
-              <li><strong>Professor</strong> (2019–Present) &bull; <strong>Associate Professor</strong> (2016–2019) &bull; <strong>Assistant Professor</strong> (2005–2016) at Punjabi University, Patiala</li>
-              <li><strong>Key Honors:</strong> Listed among World's Top 2% Scientists by Stanford University (2021 to 2025) &bull; Executive Member, Women Forum, APTI Central India</li>
-            </ul>
-          </div>
-
-          <p class="text-slate-700 leading-relaxed text-xs">
+        <!-- Bottom Row: Specialization + Contact -->
+        <div class="pt-4 border-t border-slate-100 space-y-3 text-xs">
+          <p class="text-slate-700 leading-relaxed">
             <strong>Research Specialization:</strong> Computer-assisted drug design (CADD), 2D/3D-QSAR molecular modeling, rational organic synthesis of benzimidazole, coumarin, and chromone privileged heterocyclic scaffolds, and target evaluation against neurodegenerative and inflammatory disorders.
           </p>
 
