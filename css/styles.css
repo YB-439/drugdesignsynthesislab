@@ -1,101 +1,167 @@
-/* Clean Academic Styling for Drug Design & Synthesis Lab */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+/* Modern Scientific Styling for Drug Design & Synthesis Lab (DDSL) */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
-  --primary-navy: #0f2942;
-  --primary-navy-dark: #0a1c2e;
-  --accent-blue: #0284c7;
-  --accent-teal: #0f766e;
-  --bg-light: #f8fafc;
-  --text-dark: #1e293b;
-  --text-muted: #475569;
-  --border-light: #e2e8f0;
+  /* Scientific Navy & Deep Ocean Palette */
+  --color-navy-950: #071728;
+  --color-navy-900: #0c233d;
+  --color-navy-800: #123356;
+  --color-navy-700: #1a4674;
+  --color-navy-600: #255c94;
+
+  /* Scientific Teal & Emerald Accents */
+  --color-teal-700: #0f766e;
+  --color-teal-600: #0d9488;
+  --color-teal-500: #14b8a6;
+  --color-teal-100: #ccfbf1;
+  --color-teal-50:  #f0fdfa;
+
+  /* Sky / Cyans */
+  --color-sky-600: #0284c7;
+  --color-sky-500: #0ea5e9;
+  --color-sky-100: #e0f2fe;
+
+  /* Neutral Spectrum */
+  --color-slate-50:  #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: var(--color-slate-800);
   background-color: #ffffff;
-  color: var(--text-dark);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, .font-serif {
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.015em;
 }
 
 .font-mono {
   font-family: 'JetBrains Mono', monospace;
 }
 
+/* Subtle Geometric Molecular Pattern for Hero */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 118, 110, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 118, 110, 0.04) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(14, 165, 233, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
 /* Academic Card Styling */
 .academic-card {
   background-color: #ffffff;
-  border: 1px solid var(--border-light);
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease-in-out;
+  border: 1px solid var(--color-slate-200);
+  border-radius: 0.875rem;
+  box-shadow: 0 1px 3px rgba(12, 35, 61, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .academic-card:hover {
-  border-color: #cbd5e1;
-  box-shadow: 0 4px 12px rgba(15, 41, 66, 0.08);
+  border-color: #94a3b8;
+  box-shadow: 0 8px 24px rgba(12, 35, 61, 0.08);
+  transform: translateY(-2px);
 }
 
 .academic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
   background-color: #f1f5f9;
-  color: var(--primary-navy);
+  color: var(--color-navy-900);
   border: 1px solid #cbd5e1;
   border-radius: 9999px;
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   font-weight: 600;
   padding: 0.25rem 0.75rem;
+  letter-spacing: 0.03em;
 }
 
-/* Flowchart Visual */
+.academic-badge-teal {
+  background-color: var(--color-teal-50);
+  color: var(--color-teal-700);
+  border-color: #99f6e4;
+}
+
+.academic-badge-sky {
+  background-color: #f0f9ff;
+  color: #0369a1;
+  border-color: #bae6fd;
+}
+
+/* Research Workflow Step Cards */
 .flow-step {
   background: #ffffff;
-  border: 2px solid #e2e8f0;
-  border-radius: 0.75rem;
-  padding: 1rem 1.25rem;
+  border: 1.5px solid var(--color-slate-200);
+  border-radius: 0.875rem;
+  padding: 1.25rem 1rem;
   text-align: center;
   position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.flow-step:hover {
+  border-color: var(--color-teal-600);
+  background: var(--color-teal-50);
+  box-shadow: 0 4px 14px rgba(13, 148, 136, 0.08);
 }
 
 .flow-step.active {
-  border-color: var(--accent-blue);
-  background: #f0f9ff;
+  border-color: var(--color-teal-600);
+  background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.1);
 }
 
-/* Table styling */
+/* Academic Publication Table */
 .academic-table th {
   background-color: #f8fafc;
-  color: var(--primary-navy);
+  color: var(--color-navy-900);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
   padding: 0.875rem 1rem;
-  border-bottom: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--color-slate-200);
 }
 
 .academic-table td {
   padding: 1rem;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--color-slate-200);
   vertical-align: top;
 }
 
-/* Custom scrollbars */
+/* Custom Scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
   background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
+}
+
+/* Accessible focus styles */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--color-teal-600);
+  outline-offset: 2px;
 }
