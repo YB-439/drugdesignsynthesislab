@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QSAR Models & Computational Tools | Drug Design & Synthesis Lab (DDSL)</title>
+  <meta name="description" content="Official computational suite and QSAR models developed by DDSL, Punjabi University Patiala. Download NIK-Predict standalone executable, access online web servers, and p38 MAP kinase models." />
+  <link rel="canonical" href="https://drugdesignsynthesislab.com/tools.html" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-teal-100 selection:text-teal-900">
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Desktop Navigation Bar -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+          <a href="index.html" class="hover:text-teal-700 transition-colors">Home</a>
+          <a href="research.html" class="hover:text-teal-700 transition-colors">Research</a>
+
+          <!-- QSAR Models/Tools Dropdown Menu -->
+          <div class="relative group" id="qsar-dropdown-container">
+            <button id="qsar-dropdown-btn" type="button" class="flex items-center gap-1 hover:text-teal-700 transition-colors text-teal-800 font-bold py-2 focus:outline-none cursor-pointer">
+              <span>QSAR Models/Tools</span>
+              <i data-lucide="chevron-down" id="qsar-dropdown-chevron" class="w-4 h-4 transition-transform group-hover:rotate-180 duration-200"></i>
+            </button>
+
+            <!-- Dropdown List Container -->
+            <div id="qsar-dropdown-menu" class="absolute left-0 top-full pt-2 w-80 hidden group-hover:block transition-all z-50">
+              <div class="bg-white rounded-xl shadow-xl border border-slate-200 p-2 space-y-1">
+                <div class="px-3 py-1.5 text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono">
+                  DDSL QSAR & Kinase Predictors
+                </div>
+                
+                <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" 
+                   class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
+                  <div class="w-7 h-7 rounded-md bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-900 group-hover/item:text-teal-700">
+                      <span>NIK-Predict</span>
+                      <span class="px-1.5 py-0.5 text-[9px] font-bold rounded bg-teal-100 text-teal-800 border border-teal-200">v1.0.0 (.exe)</span>
+                    </div>
+                    <div class="text-[11px] text-slate-500 font-normal">Windows standalone executable for NIK bioactivity</div>
+                  </div>
+                </a>
+
+                <a href="https://nik-predict-2d-qsar.onrender.com" target="_blank" rel="noopener noreferrer"
+                   class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
+                  <div class="w-7 h-7 rounded-md bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-900 group-hover/item:text-sky-700">
+                      <span>NIK Web Server</span>
+                      <span class="px-1.5 py-0.5 text-[9px] font-bold rounded bg-sky-100 text-sky-800 border border-sky-200">Web App</span>
+                    </div>
+                    <div class="text-[11px] text-slate-500 font-normal">Cloud 2D-QSAR prediction platform</div>
+                  </div>
+                </a>
+
+                <a href="tools.html" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
+                  <div class="w-7 h-7 rounded-md bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="activity" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-900 group-hover/item:text-amber-700">
+                      <span>p38α/β-Predict</span>
+                      <span class="px-1.5 py-0.5 text-[9px] font-bold rounded bg-amber-100 text-amber-800 border border-amber-200">Kinase Tool</span>
+                    </div>
+                    <div class="text-[11px] text-slate-500 font-normal">p38α & p38β isoform selectivity model</div>
+                  </div>
+                </a>
+
+                <div class="border-t border-slate-100 my-1"></div>
+
+                <a href="tools.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-50 text-xs font-semibold text-teal-800 font-bold">
+                  <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                  <span>All QSAR Models/Tools Page &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="publications.html" class="hover:text-teal-700 transition-colors">Publications</a>
+          <a href="team.html" class="hover:text-teal-700 transition-colors">Team</a>
+          <a href="projects.html" class="hover:text-teal-700 transition-colors">Projects & Collaborations</a>
+          <a href="contact.html" class="hover:text-teal-700 transition-colors">Contact</a>
+        </nav>
+
+        <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-2 pb-4 space-y-2 text-sm font-semibold">
+      <a href="index.html" class="block py-2 text-slate-800 hover:text-teal-700">1. Home</a>
+      <a href="research.html" class="block py-2 text-slate-800 hover:text-teal-700">2. Research</a>
+
+      <div class="py-1">
+        <button id="mobile-qsar-toggle" type="button" class="w-full flex items-center justify-between py-2 text-teal-800 font-bold focus:outline-none">
+          <span>3. QSAR Models/Tools</span>
+          <i data-lucide="chevron-down" id="mobile-qsar-chevron" class="w-4 h-4 transition-transform"></i>
+        </button>
+        <div id="mobile-qsar-submenu" class="pl-3 space-y-2 border-l-2 border-teal-200 mt-1">
+          <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" class="flex items-center justify-between py-1 text-xs font-bold text-teal-700 hover:underline">
+            <span>&bull; NIK-Predict (.exe Download)</span>
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="https://nik-predict-2d-qsar.onrender.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between py-1 text-xs font-bold text-sky-700 hover:underline">
+            <span>&bull; NIK Web Server (Online)</span>
+            <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="tools.html" class="block py-1 text-xs text-teal-800 font-bold">
+            &bull; View All QSAR Models/Tools &rarr;
+          </a>
+        </div>
+      </div>
+
+      <a href="publications.html" class="block py-2 text-slate-800 hover:text-teal-700">4. Publications</a>
+      <a href="team.html" class="block py-2 text-slate-800 hover:text-teal-700">5. Team</a>
+      <a href="projects.html" class="block py-2 text-slate-800 hover:text-teal-700">6. Projects & Collaborations</a>
+      <a href="contact.html" class="block py-2 text-slate-800 hover:text-teal-700">7. Contact</a>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="bg-gradient-to-b from-teal-50/50 to-white py-12 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+      <span class="academic-badge academic-badge-teal uppercase font-mono">DDSL In-House & Computational Suites</span>
+      <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 font-serif">QSAR Models & Computational Tools</h1>
+      <p class="text-xs sm:text-sm text-slate-600 max-w-3xl leading-relaxed">
+        Validated machine learning bioactivity prediction models, downloadable desktop executables, cloud web servers, and cheminformatics suites developed and utilized at DDSL.
+      </p>
+    </div>
+  </div>
+
+  <!-- MAIN TOOLS CONTENT -->
+  <main class="py-14 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Featured In-House Tools Grid (NIK-Predict & p38-Predict) -->
+      <div class="grid lg:grid-cols-2 gap-8">
+        
+        <!-- Tool 1: NIK-Predict -->
+        <div class="academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-5">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="academic-badge academic-badge-teal uppercase font-mono">Kinase QSAR Tool</span>
+                <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-teal-100 text-teal-800 border border-teal-200">v1.0.0</span>
+              </div>
+              <h2 class="text-2xl font-bold text-slate-900 font-serif mt-2">NIK-Predict</h2>
+              <p class="text-xs text-slate-600">
+                NF-κB Inducing Kinase (NIK / MAP3K14) Bioactivity Prediction Platform
+              </p>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center shrink-0">
+              <i data-lucide="cpu" class="w-6 h-6"></i>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-700 leading-relaxed">
+            Consensus 3-run Monte Carlo 2D-QSAR model developed within the <strong>CORALSEA-2024</strong> platform for rapid, reliable virtual screening of small-molecule NIK inhibitors. Available both as a standalone offline desktop application and as a cloud web server.
+          </p>
+
+          <!-- Specifications Table -->
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2">
+            <div class="grid grid-cols-3 gap-2">
+              <span class="font-bold text-slate-900">Input Format:</span>
+              <span class="col-span-2 font-mono text-slate-700">SMILES strings (Single molecule or Multi-line batch)</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="font-bold text-slate-900">Output Endpoints:</span>
+              <span class="col-span-2 text-slate-700">Predicted pIC50, IC50 (nM/µM), AD evaluation, CSV export</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="font-bold text-slate-900">Validation Metrics:</span>
+              <span class="col-span-2 text-slate-700">R² = 0.765, Q²(F1) = 0.660, CCC = 0.861, MAE = 0.291</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="font-bold text-slate-900">Applicability Domain:</span>
+              <span class="col-span-2 font-mono text-slate-700">Defect(SMILES) &lt; 7.98 &bull; MW &ge; 150 g/mol</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="font-bold text-slate-900">Dataset Curation:</span>
+              <span class="col-span-2 text-slate-700">118 small-molecule NIK inhibitors from published literature</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" 
+               class="px-5 py-3 rounded-xl bg-teal-800 hover:bg-teal-900 text-white font-bold text-xs shadow-sm flex items-center gap-2 transition-all">
+              <i data-lucide="download" class="w-4 h-4"></i> Download NIK-Predict (.exe)
+            </a>
+            <a href="https://nik-predict-2d-qsar.onrender.com" target="_blank" rel="noopener noreferrer" 
+               class="px-5 py-3 rounded-xl bg-white border border-slate-300 hover:border-slate-400 text-slate-800 font-semibold text-xs flex items-center gap-2 transition-all">
+              <i data-lucide="globe" class="w-4 h-4 text-sky-600"></i> Launch Online Web Server &rarr;
+            </a>
+          </div>
+
+          <div class="text-[11px] text-slate-500 font-mono">
+            Supported OS: Windows 10 / 11 (64-bit standalone executable, portable, no Python or external libraries required).
+          </div>
+        </div>
+
+        <!-- Tool 2: p38α/β-Predict -->
+        <div class="academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-5">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="academic-badge academic-badge-sky uppercase font-mono">Isoform Selectivity</span>
+                <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-sky-100 text-sky-800 border border-sky-200">JMGM 2026</span>
+              </div>
+              <h2 class="text-2xl font-bold text-slate-900 font-serif mt-2">p38α/β-Predict</h2>
+              <p class="text-xs text-slate-600">
+                p38 MAP Kinase α & β Isoform Selectivity & Potency Platform
+              </p>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center shrink-0">
+              <i data-lucide="activity" class="w-6 h-6"></i>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-700 leading-relaxed">
+            Consensus 3-run Monte Carlo 2D-QSAR ensemble model predicting continuous inhibitory potency (pIC50) against p38α (MAPK14) alongside qualitative classification on p38β (MAPK11) to establish isoform selectivity for inflammatory therapeutic design.
+          </p>
+
+          <!-- Specifications Table -->
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2">
+            <div class="grid grid-cols-3 gap-2">
+              <span class="font-bold text-slate-900">Input Format:</span>
+              <span class="col-span-2 font-mono text-slate-700">SMILES strings / Chemical structures</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="font-bold text-slate-900">Output Endpoints:</span>
+              <span class="col-span-2 text-slate-700">p38α pIC50 continuous + p38β binary score (Active/Inactive)</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="font-bold text-slate-900">p38α Validation:</span>
+              <span class="col-span-2 text-slate-700">R² = 0.871, Q² = 0.859, CCC = 0.932, RMSE = 0.295</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="font-bold text-slate-900">p38β Validation:</span>
+              <span class="col-span-2 text-slate-700">Accuracy = 1.000, Sensitivity = 1.000, Specificity = 1.000</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <span class="font-bold text-slate-900">Published Citation:</span>
+              <span class="col-span-2 text-slate-700 font-mono text-[11px]">J. Mol. Graph. Model. 143, 109246 (2026)</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="https://doi.org/10.1016/j.jmgm.2025.109246" target="_blank" rel="noopener noreferrer" 
+               class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs flex items-center gap-2 transition-all">
+              <i data-lucide="book-open" class="w-4 h-4 text-amber-400"></i> Read Article in JMGM &rarr;
+            </a>
+            <span class="px-4 py-3 rounded-xl bg-slate-100 text-slate-600 text-xs font-mono font-medium">
+              Standalone Desktop App (Local / On Request)
+            </span>
+          </div>
+
+          <div class="text-[11px] text-slate-500 font-mono">
+            Model Lead: Mr. Saurabh Gupta & Prof. Yogita Bansal.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Laboratory Computational Suites Overview -->
+      <div class="pt-6 space-y-6">
+        <h3 class="text-xl font-bold text-slate-900 font-serif flex items-center gap-2">
+          <i data-lucide="layers" class="w-5 h-5 text-teal-700"></i> Standard Computational Suites & Algorithms Utilized at DDSL
+        </h3>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="academic-card p-5 space-y-3 bg-white">
+            <h4 class="text-xs font-bold text-teal-900 uppercase font-mono flex items-center gap-1.5 border-b border-slate-100 pb-2">
+              <i data-lucide="sliders" class="w-3.5 h-3.5 text-teal-700"></i> QSAR Software
+            </h4>
+            <div class="space-y-3 text-xs">
+              <div>
+                <div class="font-bold text-slate-900 flex justify-between">
+                  <span>CORAL / CORALSEA</span>
+                  <a href="http://www.insilico.eu/coral/" target="_blank" rel="noopener noreferrer" class="text-teal-700 hover:underline font-mono">Official Link &rarr;</a>
+                </div>
+                <p class="text-slate-600 text-[11px] mt-0.5">Monte Carlo correlation balance optimization for SMILES-based QSAR modeling.</p>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900 flex justify-between">
+                  <span>Cresset Flare</span>
+                  <a href="https://www.cresset-group.com/software/flare/" target="_blank" rel="noopener noreferrer" class="text-teal-700 hover:underline font-mono">Official Link &rarr;</a>
+                </div>
+                <p class="text-slate-600 text-[11px] mt-0.5">3D molecular electrostatic field points, ligand and structure-based CADD suite.</p>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900 flex justify-between">
+                  <span>Mordred</span>
+                  <a href="https://github.com/mordred-descriptor/mordred" target="_blank" rel="noopener noreferrer" class="text-teal-700 hover:underline font-mono">Official Link &rarr;</a>
+                </div>
+                <p class="text-slate-600 text-[11px] mt-0.5">Computes over 1,800 2D and 3D physical and topological molecular descriptors.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="academic-card p-5 space-y-3 bg-white">
+            <h4 class="text-xs font-bold text-teal-900 uppercase font-mono flex items-center gap-1.5 border-b border-slate-100 pb-2">
+              <i data-lucide="cpu" class="w-3.5 h-3.5 text-sky-700"></i> Machine Learning
+            </h4>
+            <div class="space-y-3 text-xs">
+              <div>
+                <div class="font-bold text-slate-900">Random Forest</div>
+                <p class="text-slate-600 text-[11px] mt-0.5">Ensemble decision-tree regressors for non-linear bioactivity prediction.</p>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">Support Vector Machines (SVM)</div>
+                <p class="text-slate-600 text-[11px] mt-0.5">Kernel-based learning for high-dimensional chemical feature spaces.</p>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">XGBoost & CatBoost</div>
+                <p class="text-slate-600 text-[11px] mt-0.5">Gradient-boosted decision trees for molecular property regression.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="academic-card p-5 space-y-3 bg-white">
+            <h4 class="text-xs font-bold text-teal-900 uppercase font-mono flex items-center gap-1.5 border-b border-slate-100 pb-2">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-indigo-700"></i> Docking & Dynamics
+            </h4>
+            <div class="space-y-3 text-xs">
+              <div>
+                <div class="font-bold text-slate-900 flex justify-between">
+                  <span>AutoDock Vina</span>
+                  <a href="https://vina.scripps.edu/" target="_blank" rel="noopener noreferrer" class="text-teal-700 hover:underline font-mono">Official Link &rarr;</a>
+                </div>
+                <p class="text-slate-600 text-[11px] mt-0.5">Automated receptor-ligand docking and conformational scoring suite.</p>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">Molecular Dynamics</div>
+                <p class="text-slate-600 text-[11px] mt-0.5">100 ns+ trajectory simulation for protein-ligand stability & RMSD/RMSF.</p>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">MM/GBSA Free Energy</div>
+                <p class="text-slate-600 text-[11px] mt-0.5">Generalized Born surface area endpoint binding free energy calculation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="academic-card p-5 space-y-3 bg-white">
+            <h4 class="text-xs font-bold text-teal-900 uppercase font-mono flex items-center gap-1.5 border-b border-slate-100 pb-2">
+              <i data-lucide="binary" class="w-3.5 h-3.5 text-purple-700"></i> Cheminformatics
+            </h4>
+            <div class="space-y-3 text-xs">
+              <div>
+                <div class="font-bold text-slate-900 flex justify-between">
+                  <span>RDKit Toolkit</span>
+                  <a href="https://www.rdkit.org/" target="_blank" rel="noopener noreferrer" class="text-teal-700 hover:underline font-mono">Official Link &rarr;</a>
+                </div>
+                <p class="text-slate-600 text-[11px] mt-0.5">Open-source chemical structure parsing, canonicalization, and depiction.</p>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">Morgan / ECFP4</div>
+                <p class="text-slate-600 text-[11px] mt-0.5">Circular topological fingerprints for molecular similarity and clustering.</p>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">Tanimoto Metric & MACCS</div>
+                <p class="text-slate-600 text-[11px] mt-0.5">Pairwise structural similarity and substructure key searching.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 py-12 text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <strong class="text-white block font-serif text-sm">Drug Design & Synthesis Lab (DDSL)</strong>
+          <span class="text-slate-400">Department of Pharmaceutical Sciences and Drug Research &bull; Punjabi University, Patiala</span>
+        </div>
+        <div class="flex flex-wrap gap-4 text-xs font-semibold text-slate-300">
+          <a href="index.html" class="hover:text-teal-400">Home</a>
+          <a href="research.html" class="hover:text-teal-400">Research</a>
+          <a href="tools.html" class="hover:text-teal-400 text-teal-400">QSAR Models/Tools</a>
+          <a href="publications.html" class="hover:text-teal-400">Publications</a>
+          <a href="team.html" class="hover:text-teal-400">Team</a>
+          <a href="projects.html" class="hover:text-teal-400">Projects</a>
+          <a href="contact.html" class="hover:text-teal-400">Contact</a>
+        </div>
+      </div>
+      <div class="text-center text-slate-500 font-mono text-[11px] pt-4 border-t border-slate-800">
+        &copy; 2026 Drug Design & Synthesis Lab. All Rights Reserved. &bull; <a href="https://drugdesignsynthesislab.com/" class="text-teal-400">drugdesignsynthesislab.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

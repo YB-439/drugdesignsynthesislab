@@ -62,15 +62,15 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         
-        <!-- Desktop Navigation Bar: Exactly 7 Items as specified -->
+        <!-- Desktop Navigation Bar: Dedicated Multi-Page Navigation -->
         <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
-          <a href="#home" class="hover:text-teal-700 transition-colors">Home</a>
-          <a href="#research" class="hover:text-teal-700 transition-colors">Research</a>
+          <a href="index.html" class="hover:text-teal-700 transition-colors font-bold text-teal-800">Home</a>
+          <a href="research.html" class="hover:text-teal-700 transition-colors">Research</a>
 
-          <!-- 3. Tools Dropdown Menu -->
+          <!-- 3. QSAR Models/Tools Dropdown Menu -->
           <div class="relative group" id="qsar-dropdown-container">
-            <button id="qsar-dropdown-btn" type="button" class="flex items-center gap-1 hover:text-teal-700 transition-colors text-teal-800 font-bold py-2 focus:outline-none cursor-pointer">
-              <span>Tools</span>
+            <button id="qsar-dropdown-btn" type="button" class="flex items-center gap-1 hover:text-teal-700 transition-colors text-slate-700 hover:text-teal-800 font-semibold py-2 focus:outline-none cursor-pointer">
+              <span>QSAR Models/Tools</span>
               <i data-lucide="chevron-down" id="qsar-dropdown-chevron" class="w-4 h-4 transition-transform group-hover:rotate-180 duration-200"></i>
             </button>
 
@@ -112,7 +112,7 @@
                 </a>
 
                 <!-- p38 MAP Kinase Predictor -->
-                <a href="#qsartools" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
+                <a href="tools.html" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
                   <div class="w-7 h-7 rounded-md bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 mt-0.5">
                     <i data-lucide="activity" class="w-3.5 h-3.5"></i>
                   </div>
@@ -127,19 +127,19 @@
 
                 <div class="border-t border-slate-100 my-1"></div>
 
-                <!-- Link to section for all tools overview -->
-                <a href="#qsartools" class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-50 text-xs font-semibold text-teal-800">
+                <!-- Link to dedicated Tools page -->
+                <a href="tools.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-50 text-xs font-semibold text-teal-800">
                   <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-                  <span>All Tools & Documentation</span>
+                  <span>All QSAR Models/Tools Page &rarr;</span>
                 </a>
               </div>
             </div>
           </div>
 
-          <a href="#publications" class="hover:text-teal-700 transition-colors">Publications</a>
-          <a href="#team" class="hover:text-teal-700 transition-colors">Team</a>
-          <a href="#projects" class="hover:text-teal-700 transition-colors">Projects & Collaborations</a>
-          <a href="#contact" class="hover:text-teal-700 transition-colors">Contact</a>
+          <a href="publications.html" class="hover:text-teal-700 transition-colors">Publications</a>
+          <a href="team.html" class="hover:text-teal-700 transition-colors">Team</a>
+          <a href="projects.html" class="hover:text-teal-700 transition-colors">Projects & Collaborations</a>
+          <a href="contact.html" class="hover:text-teal-700 transition-colors">Contact</a>
         </nav>
 
         <!-- Mobile Menu Toggle Button -->
@@ -149,15 +149,15 @@
       </div>
     </div>
 
-    <!-- Mobile Drawer (1 to 7 items as specified) -->
+    <!-- Mobile Drawer (Dedicated Pages) -->
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-2 pb-4 space-y-2 text-sm font-semibold">
-      <a href="#home" class="block py-2 text-slate-800 hover:text-teal-700">1. Home</a>
-      <a href="#research" class="block py-2 text-slate-800 hover:text-teal-700">2. Research</a>
+      <a href="index.html" class="block py-2 text-teal-800 font-bold">1. Home</a>
+      <a href="research.html" class="block py-2 text-slate-800 hover:text-teal-700">2. Research</a>
 
       <!-- Mobile Tools Accordion -->
       <div class="py-1">
-        <button id="mobile-qsar-toggle" type="button" class="w-full flex items-center justify-between py-2 text-teal-800 font-bold focus:outline-none">
-          <span>3. Tools</span>
+        <button id="mobile-qsar-toggle" type="button" class="w-full flex items-center justify-between py-2 text-slate-800 font-semibold focus:outline-none">
+          <span>3. QSAR Models/Tools</span>
           <i data-lucide="chevron-down" id="mobile-qsar-chevron" class="w-4 h-4 transition-transform"></i>
         </button>
         <div id="mobile-qsar-submenu" class="pl-3 space-y-2 border-l-2 border-teal-200 mt-1">
@@ -169,16 +169,16 @@
             <span>&bull; NIK Web Server (Online)</span>
             <i data-lucide="globe" class="w-3.5 h-3.5"></i>
           </a>
-          <a href="#qsartools" class="block py-1 text-xs text-slate-600 hover:text-teal-700">
-            &bull; All Tools, Downloads & Documentation
+          <a href="tools.html" class="block py-1 text-xs text-teal-800 font-bold">
+            &bull; View All QSAR Models/Tools &rarr;
           </a>
         </div>
       </div>
 
-      <a href="#publications" class="block py-2 text-slate-800 hover:text-teal-700">4. Publications</a>
-      <a href="#team" class="block py-2 text-slate-800 hover:text-teal-700">5. Team</a>
-      <a href="#projects" class="block py-2 text-slate-800 hover:text-teal-700">6. Projects & Collaborations</a>
-      <a href="#contact" class="block py-2 text-slate-800 hover:text-teal-700">7. Contact</a>
+      <a href="publications.html" class="block py-2 text-slate-800 hover:text-teal-700">4. Publications</a>
+      <a href="team.html" class="block py-2 text-slate-800 hover:text-teal-700">5. Team</a>
+      <a href="projects.html" class="block py-2 text-slate-800 hover:text-teal-700">6. Projects & Collaborations</a>
+      <a href="contact.html" class="block py-2 text-slate-800 hover:text-teal-700">7. Contact</a>
     </div>
   </header>
 
