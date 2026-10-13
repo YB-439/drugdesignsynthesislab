@@ -162,19 +162,25 @@ function initPublicationsSection() {
             <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-semibold rounded bg-slate-100 text-slate-700 border border-slate-200">
               Scaffold: ${pub.scaffold}
             </span>
+            ${pub.target ? `
             <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-semibold rounded bg-teal-50 text-teal-800 border border-teal-200">
               Target: ${pub.target}
-            </span>
+            </span>` : ''}
+            ${pub.citations ? `
+            <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-amber-50 text-amber-900 border border-amber-200">
+              ${pub.citations} citations
+            </span>` : ''}
+            ${pub.doi ? `
             <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-mono text-slate-500">
               DOI: ${pub.doi}
-            </span>
+            </span>` : ''}
           </div>
         </td>
         <td class="text-xs text-slate-700 font-medium py-4">
           <div class="font-semibold text-slate-800">${pub.journal}</div>
           <div class="text-[10px] text-slate-500 mt-0.5">${pub.type || 'Research Article'}</div>
         </td>
-        <td class="font-mono text-xs font-bold text-slate-900 py-4">${pub.year}</td>
+        <td class="font-mono text-xs font-bold text-slate-900 py-4">${pub.year || 'N/A'}</td>
         <td class="text-right py-4">
           <a href="${pub.link}" target="_blank" rel="noopener noreferrer" 
              class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-teal-100 hover:text-teal-900 text-xs font-semibold text-slate-700 transition-colors">
@@ -186,6 +192,26 @@ function initPublicationsSection() {
     `).join('');
 
     if (window.lucide) window.lucide.createIcons();
+  }
+
+  // Dynamically populate Year Filter options from data
+  if (yearFilter && Array.isArray(window.LAB_PUBLICATIONS)) {
+    const years = Array.from(new Set(window.LAB_PUBLICATIONS.map(p => p.year).filter(y => y > 0))).sort((a, b) => b - a);
+    const prevVal = yearFilter.value;
+    yearFilter.innerHTML = '<option value="all">All Years</option>' + years.map(y => `<option value="${y}">${y}</option>`).join('');
+    if (prevVal && years.includes(parseInt(prevVal))) {
+      yearFilter.value = prevVal;
+    }
+  }
+
+  // Dynamically populate Scaffold Filter options from data
+  if (scaffoldFilter && Array.isArray(window.LAB_PUBLICATIONS)) {
+    const scaffolds = Array.from(new Set(window.LAB_PUBLICATIONS.map(p => p.scaffold).filter(Boolean))).sort();
+    const prevScaff = scaffoldFilter.value;
+    scaffoldFilter.innerHTML = '<option value="all">All Scaffolds</option>' + scaffolds.map(s => `<option value="${s}">${s}</option>`).join('');
+    if (prevScaff && scaffolds.includes(prevScaff)) {
+      scaffoldFilter.value = prevScaff;
+    }
   }
 
   renderPubs(window.LAB_PUBLICATIONS);
