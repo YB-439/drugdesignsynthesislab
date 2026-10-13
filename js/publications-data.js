@@ -1,7 +1,7 @@
 /**
  * Auto-Generated Publications Dataset for Prof. Yogita Bansal & DDSL
  * Google Scholar ID: kxIxyF8AAAAJ
- * Auto-updated on: 2026-10-13 14:52:29
+ * Auto-updated on: 2026-10-13 14:59:34
  */
 
 window.LAB_PUBLICATIONS = [
@@ -11,8 +11,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Molecular Diversity, 1-39",
     "year": 2026,
     "citations": 3,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:BqipwSGYUEgC",
-    "doi": "",
+    "link": "https://doi.org/10.1007/s11030-026-11546-x",
+    "doi": "10.1007/s11030-026-11546-x",
     "id": 1
   },
   {
@@ -21,8 +21,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "In Silico Research in Biomedicine, 100345",
     "year": 2026,
     "citations": 1,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:GnPB-g6toBAC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.insi.2026.100345",
+    "doi": "10.1016/j.insi.2026.100345",
     "id": 2
   },
   {
@@ -31,8 +31,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Computational biology and chemistry 116, 108371",
     "year": 2025,
     "citations": 26,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:blknAaTinKkC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.compbiolchem.2025.108371",
+    "doi": "10.1016/j.compbiolchem.2025.108371",
     "id": 3
   },
   {
@@ -41,8 +41,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Discover Chemistry 2 (1), 111",
     "year": 2025,
     "citations": 9,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:hMod-77fHWUC",
-    "doi": "",
+    "link": "https://doi.org/10.1007/s44371-025-00173-4",
+    "doi": "10.1007/s44371-025-00173-4",
     "id": 4
   },
   {
@@ -51,8 +51,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Journal of Molecular Graphics and Modelling, 109246",
     "year": 2025,
     "citations": 5,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:YFjsv_pBGBYC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.jmgm.2025.109246",
+    "doi": "10.1016/j.jmgm.2025.109246",
     "id": 5
   },
   {
@@ -61,8 +61,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Cytologia 90 (2), 109-117",
     "year": 2025,
     "citations": 1,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:NMxIlDl6LWMC",
-    "doi": "",
+    "link": "https://doi.org/10.1508/cytologia.90.109",
+    "doi": "10.1508/cytologia.90.109",
     "id": 6
   },
   {
@@ -71,8 +71,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Bioorganic & medicinal chemistry 115, 117966",
     "year": 2024,
     "citations": 10,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:isC4tDSrTZIC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.bmc.2024.117966",
+    "doi": "10.1016/j.bmc.2024.117966",
     "id": 7
   },
   {
@@ -81,8 +81,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "SAR and QSAR in Environmental Research 35 (4), 265-284",
     "year": 2024,
     "citations": 10,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:r0BpntZqJG4C",
-    "doi": "",
+    "link": "https://doi.org/10.1080/1062936x.2024.2332203",
+    "doi": "10.1080/1062936x.2024.2332203",
     "id": 8
   },
   {
@@ -91,8 +91,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "European Journal of Medicinal Chemistry Reports 12, 100180",
     "year": 2024,
     "citations": 4,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:bEWYMUwI8FkC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.ejmcr.2024.100180",
+    "doi": "10.1016/j.ejmcr.2024.100180",
     "id": 9
   },
   {
@@ -101,8 +101,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Chemical Biology & Drug Design 104 (5), e70008",
     "year": 2024,
     "citations": 4,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:k_IJM867U9cC",
-    "doi": "",
+    "link": "https://doi.org/10.1111/cbdd.70008",
+    "doi": "10.1111/cbdd.70008",
     "id": 10
   },
   {
@@ -111,8 +111,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Alzheimer's & Dementia 20, e089026",
     "year": 2024,
     "citations": 2,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:TFP_iSt0sucC",
-    "doi": "",
+    "link": "https://doi.org/10.1002/alz.089026",
+    "doi": "10.1002/alz.089026",
     "id": 11
   },
   {
@@ -121,8 +121,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Fused Pyrimidine-Based Drug Discovery, 193-220",
     "year": 2023,
     "citations": 4,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:TQgYirikUcIC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/b978-0-443-18616-5.00007-7",
+    "doi": "10.1016/b978-0-443-18616-5.00007-7",
     "id": 12
   },
   {
@@ -131,8 +131,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Alzheimer's & Dementia 19, e066745",
     "year": 2023,
     "citations": 1,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:e5wmG9Sq2KIC",
-    "doi": "",
+    "link": "https://doi.org/10.1002/alz.066745",
+    "doi": "10.1002/alz.066745",
     "id": 13
   },
   {
@@ -141,8 +141,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Alzheimer's & Dementia 19, e076685",
     "year": 2023,
     "citations": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:_Qo2XoVZTnwC",
-    "doi": "",
+    "link": "https://doi.org/10.1002/alz.076685",
+    "doi": "10.1002/alz.076685",
     "id": 14
   },
   {
@@ -151,8 +151,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Bioorganic Chemistry 121, 105670",
     "year": 2022,
     "citations": 27,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:hFOr9nPyWt4C",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.bioorg.2022.105670",
+    "doi": "10.1016/j.bioorg.2022.105670",
     "id": 15
   },
   {
@@ -161,8 +161,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Medicinal Chemistry 18 (5), 602-615",
     "year": 2022,
     "citations": 8,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:-f6ydRqryjwC",
-    "doi": "",
+    "link": "https://doi.org/10.2174/1573406417666210927123137",
+    "doi": "10.2174/1573406417666210927123137",
     "id": 16
   },
   {
@@ -171,8 +171,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "European Journal of Chemistry 13 (3), 307-318",
     "year": 2022,
     "citations": 4,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:HDshCWvjkbEC",
-    "doi": "",
+    "link": "https://doi.org/10.5155/eurjchem.13.3.307-318.2282",
+    "doi": "10.5155/eurjchem.13.3.307-318.2282",
     "id": 17
   },
   {
@@ -181,8 +181,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Central Nervous System Agents in Medicinal ChemistryChemistry-Central …",
     "year": 2022,
     "citations": 3,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:mB3voiENLucC",
-    "doi": "",
+    "link": "https://doi.org/10.2174/1871524922666220428134001",
+    "doi": "10.2174/1871524922666220428134001",
     "id": 18
   },
   {
@@ -191,8 +191,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Current Organic Chemistry 25 (6), 669-694",
     "year": 2021,
     "citations": 37,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:ZeXyd9-uunAC",
-    "doi": "",
+    "link": "https://doi.org/10.2174/1385272825666210208141107",
+    "doi": "10.2174/1385272825666210208141107",
     "id": 19
   },
   {
@@ -201,8 +201,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "JPC–Journal of Planar Chromatography–Modern TLC 34 (2), 173-181",
     "year": 2021,
     "citations": 2,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:IWHjjKOFINEC",
-    "doi": "",
+    "link": "https://doi.org/10.1007/s00764-021-00101-z",
+    "doi": "10.1007/s00764-021-00101-z",
     "id": 20
   },
   {
@@ -211,8 +211,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Journal of the Indian Chemical Society 98 (10), 100165",
     "year": 2021,
     "citations": 1,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:qUcmZB5y_30C",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.jics.2021.100165",
+    "doi": "10.1016/j.jics.2021.100165",
     "id": 21
   },
   {
@@ -221,8 +221,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Bioorganic & medicinal chemistry 28 (5), 115327",
     "year": 2020,
     "citations": 591,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:QIV2ME_5wuYC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.bmc.2020.115327",
+    "doi": "10.1016/j.bmc.2020.115327",
     "id": 22
   },
   {
@@ -231,8 +231,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Medicinal Research Reviews 40 (3), 823-855",
     "year": 2020,
     "citations": 191,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:4DMP91E08xMC",
-    "doi": "",
+    "link": "https://doi.org/10.1002/med.21636",
+    "doi": "10.1002/med.21636",
     "id": 23
   },
   {
@@ -241,8 +241,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Medicinal Chemistry 16 (4), 544-554",
     "year": 2020,
     "citations": 10,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:qxL8FJ1GzNcC",
-    "doi": "",
+    "link": "https://doi.org/10.2174/1573406415666190409111459",
+    "doi": "10.2174/1573406415666190409111459",
     "id": 24
   },
   {
@@ -251,8 +251,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Current Traditional Medicine 6 (4), 360-379",
     "year": 2020,
     "citations": 1,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:7PzlFSSx8tAC",
-    "doi": "",
+    "link": "https://doi.org/10.2174/2215083805666190830125626",
+    "doi": "10.2174/2215083805666190830125626",
     "id": 25
   },
   {
@@ -291,8 +291,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Mini Reviews in Medicinal Chemistry 19 (8), 624-646",
     "year": 2019,
     "citations": 88,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:4TOpqqG69KYC",
-    "doi": "",
+    "link": "https://doi.org/10.2174/1389557517666171101104024",
+    "doi": "10.2174/1389557517666171101104024",
     "id": 29
   },
   {
@@ -301,8 +301,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "JPC–Journal of Planar Chromatography–Modern TLC 32 (6), 461-465",
     "year": 2019,
     "citations": 9,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:mVmsd5A6BfQC",
-    "doi": "",
+    "link": "https://doi.org/10.1556/1006.2019.32.6.3",
+    "doi": "10.1556/1006.2019.32.6.3",
     "id": 30
   },
   {
@@ -311,8 +311,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Synthesis 51 (21), 4006-4013",
     "year": 2019,
     "citations": 5,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:4JMBOYKVnBMC",
-    "doi": "",
+    "link": "https://doi.org/10.1055/s-0039-1690153",
+    "doi": "10.1055/s-0039-1690153",
     "id": 31
   },
   {
@@ -321,8 +321,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Alzheimer's & Dementia 15, P269-P270",
     "year": 2019,
     "citations": 0,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:Wp0gIr-vW9MC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.jalz.2019.06.646",
+    "doi": "10.1016/j.jalz.2019.06.646",
     "id": 32
   },
   {
@@ -331,8 +331,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Medicinal chemistry research 27 (1), 61-71",
     "year": 2018,
     "citations": 59,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:YOwf2qJgpHMC",
-    "doi": "",
+    "link": "https://doi.org/10.1007/s00044-017-2036-1",
+    "doi": "10.1007/s00044-017-2036-1",
     "id": 33
   },
   {
@@ -351,8 +351,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "J. Adv. Pharm. Technol. Res 5, 1-19",
     "year": 2017,
     "citations": 6,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:ULOm3_A8WrAC",
-    "doi": "",
+    "link": "https://doi.org/10.15415/jptrm.2017.51001",
+    "doi": "10.15415/jptrm.2017.51001",
     "id": 35
   },
   {
@@ -361,8 +361,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Alzheimer's & Dementia 13 (7S_Part_5), P268-P269",
     "year": 2017,
     "citations": 1,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:_kc_bZDykSQC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.jalz.2017.06.147",
+    "doi": "10.1016/j.jalz.2017.06.147",
     "id": 36
   },
   {
@@ -371,8 +371,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Journal of evidence-based complementary & alternative medicine 21 (4), NP127 …",
     "year": 2016,
     "citations": 33,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:5nxA0vEk-isC",
-    "doi": "",
+    "link": "https://doi.org/10.1177/2156587216661468",
+    "doi": "10.1177/2156587216661468",
     "id": 37
   },
   {
@@ -381,8 +381,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Journal of pharmaceutical and biomedical analysis 120, 202-211",
     "year": 2016,
     "citations": 23,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:MXK_kJrjxJIC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.jpba.2015.12.027",
+    "doi": "10.1016/j.jpba.2015.12.027",
     "id": 38
   },
   {
@@ -391,8 +391,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Indian J. Pharm. Educ. Res 50 (3), S161-S190",
     "year": 2016,
     "citations": 13,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:3fE2CSJIrl8C",
-    "doi": "",
+    "link": "https://doi.org/10.5530/ijper.50.3.28",
+    "doi": "10.5530/ijper.50.3.28",
     "id": 39
   },
   {
@@ -401,8 +401,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Anti-Cancer Agents in Medicinal Chemistry (Formerly Current Medicinal …",
     "year": 2015,
     "citations": 168,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:YsMSGLbcyi4C",
-    "doi": "",
+    "link": "https://doi.org/10.2174/1871520615666150101125503",
+    "doi": "10.2174/1871520615666150101125503",
     "id": 40
   },
   {
@@ -411,8 +411,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "European Journal of Medicinal Chemistry 89, 671-682",
     "year": 2015,
     "citations": 35,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:ufrVoPGSRksC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.ejmech.2014.10.081",
+    "doi": "10.1016/j.ejmech.2014.10.081",
     "id": 41
   },
   {
@@ -421,8 +421,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Medicinal Chemistry Research 24 (3), 1170-1179",
     "year": 2015,
     "citations": 17,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:hqOjcs7Dif8C",
-    "doi": "",
+    "link": "https://doi.org/10.1007/s00044-014-1198-3",
+    "doi": "10.1007/s00044-014-1198-3",
     "id": 42
   },
   {
@@ -431,8 +431,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Bioorganic & medicinal chemistry 22 (15), 3806-3814",
     "year": 2014,
     "citations": 382,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:9yKSN-GCB0IC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.bmc.2014.05.032",
+    "doi": "10.1016/j.bmc.2014.05.032",
     "id": 43
   },
   {
@@ -441,8 +441,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "European Journal of Medicinal Chemistry 76, 31-42",
     "year": 2014,
     "citations": 299,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:qjMakFHDy7sC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.ejmech.2014.01.060",
+    "doi": "10.1016/j.ejmech.2014.01.060",
     "id": 44
   },
   {
@@ -451,8 +451,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Acta Pharmaceutica Sinica B 4 (5), 368-375",
     "year": 2014,
     "citations": 192,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:zYLM7Y9cAGgC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.apsb.2014.07.001",
+    "doi": "10.1016/j.apsb.2014.07.001",
     "id": 45
   },
   {
@@ -461,8 +461,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Drug Dev Ther 5 (2), 145",
     "year": 2014,
     "citations": 33,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:LkGwnXOMwfcC",
-    "doi": "",
+    "link": "https://doi.org/10.4103/2394-2002.139630",
+    "doi": "10.4103/2394-2002.139630",
     "id": 46
   },
   {
@@ -471,8 +471,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Medicinal Chemistry Research 23 (5), 2690-2697",
     "year": 2014,
     "citations": 27,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:WF5omc3nYNoC",
-    "doi": "",
+    "link": "https://doi.org/10.1007/s00044-013-0856-1",
+    "doi": "10.1007/s00044-013-0856-1",
     "id": 47
   },
   {
@@ -481,8 +481,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Archives of pharmacal research 37 (11), 1426-1436",
     "year": 2014,
     "citations": 21,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:eQOLeE2rZwMC",
-    "doi": "",
+    "link": "https://doi.org/10.1007/s12272-013-0282-4",
+    "doi": "10.1007/s12272-013-0282-4",
     "id": 48
   },
   {
@@ -491,8 +491,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Medicinal Chemistry 10 (4), 418-425",
     "year": 2014,
     "citations": 8,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:roLk4NBRz8UC",
-    "doi": "",
+    "link": "https://doi.org/10.2174/157340641004140421115518",
+    "doi": "10.2174/157340641004140421115518",
     "id": 49
   },
   {
@@ -501,8 +501,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Medicinal Chemistry Research 22 (7), 3049-3060",
     "year": 2013,
     "citations": 398,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:UeHWp8X0CEIC",
-    "doi": "",
+    "link": "https://doi.org/10.1007/s00044-012-0321-6",
+    "doi": "10.1007/s00044-012-0321-6",
     "id": 50
   },
   {
@@ -511,8 +511,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Journal of pharmaceutical and biomedical analysis 72, 186-197",
     "year": 2013,
     "citations": 18,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:Tyk-4Ss8FVUC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.jpba.2012.08.014",
+    "doi": "10.1016/j.jpba.2012.08.014",
     "id": 51
   },
   {
@@ -521,8 +521,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Biomedical Chromatography 27 (11), 1387-1397",
     "year": 2013,
     "citations": 11,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:8k81kl-MbHgC",
-    "doi": "",
+    "link": "https://doi.org/10.1002/bmc.2933",
+    "doi": "10.1002/bmc.2933",
     "id": 52
   },
   {
@@ -531,8 +531,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Bioorganic & medicinal chemistry 20 (21), 6208-6236",
     "year": 2012,
     "citations": 1107,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:u5HHmVD_uO8C",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.bmc.2012.09.013",
+    "doi": "10.1016/j.bmc.2012.09.013",
     "id": 53
   },
   {
@@ -541,8 +541,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Bioorg. Med. Chem 20 (21), 6199-6207",
     "year": 2012,
     "citations": 4,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:0EnyYjriUFMC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.bmc.2012.09.013",
+    "doi": "10.1016/j.bmc.2012.09.013",
     "id": 54
   },
   {
@@ -561,8 +561,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "analyst 136 (24), 5218-5228",
     "year": 2011,
     "citations": 4,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:_FxGoFyzp5QC",
-    "doi": "",
+    "link": "https://doi.org/10.1039/c1an15587c",
+    "doi": "10.1039/c1an15587c",
     "id": 56
   },
   {
@@ -571,8 +571,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Inflammopharmacology 17 (4), 239-244",
     "year": 2009,
     "citations": 80,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:2osOgNQ5qMEC",
-    "doi": "",
+    "link": "https://doi.org/10.1007/s10787-009-0010-3",
+    "doi": "10.1007/s10787-009-0010-3",
     "id": 57
   },
   {
@@ -581,8 +581,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Journal of the Iranian Chemical Society 6 (3), 504-509",
     "year": 2009,
     "citations": 18,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:Y0pCki6q_DkC",
-    "doi": "",
+    "link": "https://doi.org/10.1007/bf03246527",
+    "doi": "10.1007/bf03246527",
     "id": 58
   },
   {
@@ -591,8 +591,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "European Journal of Medicinal Chemistry 43 (9), 1808-1812",
     "year": 2008,
     "citations": 101,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:d1gkVwhDpl0C",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.ejmech.2007.11.008",
+    "doi": "10.1016/j.ejmech.2007.11.008",
     "id": 59
   },
   {
@@ -601,8 +601,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Bioorganic & medicinal chemistry 16 (24), 10210-10215",
     "year": 2008,
     "citations": 56,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:IjCSPb-OGe4C",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.bmc.2008.10.056",
+    "doi": "10.1016/j.bmc.2008.10.056",
     "id": 60
   },
   {
@@ -611,8 +611,8 @@ window.LAB_PUBLICATIONS = [
     "journal": "Bioorganic & medicinal chemistry letters 15 (17), 3962-3965",
     "year": 2005,
     "citations": 89,
-    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:u-x6o8ySG0sC",
-    "doi": "",
+    "link": "https://doi.org/10.1016/j.bmcl.2005.05.054",
+    "doi": "10.1016/j.bmcl.2005.05.054",
     "id": 61
   }
 ];

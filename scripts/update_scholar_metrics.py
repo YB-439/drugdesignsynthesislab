@@ -1,10 +1,16 @@
 import urllib.request
+import urllib.parse
 import re
 import json
 import os
 import html
 import time
+import difflib
+import sys
 from datetime import datetime
+
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
 
 SCHOLAR_ID = "kxIxyF8AAAAJ"
 URL = f"https://scholar.google.com/citations?user={SCHOLAR_ID}&hl=en&pagesize=100"
@@ -13,6 +19,25 @@ def clean_text(text):
     if not text:
         return ""
     return html.unescape(text.strip())
+
+def resolve_doi_from_crossref(title):
+    try:
+        clean_q = re.sub(r'[^a-zA-Z0-9\s]', ' ', title).strip()
+        url = "https://api.crossref.org/works?query.title=" + urllib.parse.quote(clean_q) + "&rows=3"
+        req = urllib.request.Request(url, headers={'User-Agent': 'DDSL-Scholar-Bot/1.0 (mailto:drugdesignsynthesislab@gmail.com)'})
+        with urllib.request.urlopen(req, timeout=8) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            items = data.get('message', {}).get('items', [])
+            for item in items:
+                cr_titles = item.get('title', [])
+                if not cr_titles:
+                    continue
+                ratio = difflib.SequenceMatcher(None, title.lower(), cr_titles[0].lower()).ratio()
+                if ratio >= 0.75:
+                    return item.get("DOI", ""), item.get("URL", "")
+    except Exception:
+        pass
+    return "", ""
 
 def auto_detect_scaffold(title):
     t = title.lower()
@@ -177,14 +202,27 @@ def fetch_scholar_data():
         
         final_journal = journal if journal else (matched_journal if matched_journal else "Journal Publication")
         
+        # Determine publisher link / DOI
+        final_link = link or (matched.get("link", "") if matched else "")
+        final_doi = matched.get("doi", "") if matched else ""
+        if matched and matched.get("link", "").startswith("https://doi.org/"):
+            final_link = matched["link"]
+            final_doi = matched.get("doi", "")
+        elif not final_doi:
+            # Query Crossref for official DOI
+            resolved_doi, resolved_url = resolve_doi_from_crossref(title)
+            if resolved_url:
+                final_link = resolved_url
+                final_doi = resolved_doi
+
         paper = {
             "title": title,
             "authors": (matched.get("authors") if matched and matched.get("authors") else authors) or "Prof. Yogita Bansal et al.",
             "journal": final_journal,
             "year": (matched.get("year") if matched and matched.get("year") else year) or year,
             "citations": citations if citations > 0 else (matched.get("citations", 0) if matched else 0),
-            "link": link or (matched.get("link", "") if matched else ""),
-            "doi": matched.get("doi", "") if matched else ""
+            "link": final_link,
+            "doi": final_doi
         }
 
         parsed_papers.append(paper)
