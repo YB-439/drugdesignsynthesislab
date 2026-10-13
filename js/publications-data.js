@@ -1,7 +1,7 @@
 /**
  * Auto-Generated Publications Dataset for Prof. Yogita Bansal & DDSL
  * Google Scholar ID: kxIxyF8AAAAJ
- * Auto-updated on: 2026-10-13 14:46:37
+ * Auto-updated on: 2026-10-13 14:52:29
  */
 
 window.LAB_PUBLICATIONS = [
