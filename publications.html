@@ -240,20 +240,10 @@
 
           <!-- Right Column (8 cols): Smooth Scientific Curved Spline Area Graph -->
           <div class="lg:col-span-8 space-y-3">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div class="flex items-center justify-between gap-2">
               <h3 class="text-xs font-bold font-mono uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
                 <i data-lucide="trending-up" class="w-3.5 h-3.5 text-teal-700"></i> Citation Velocity & Trajectory (2022 &ndash; 2026)
               </h3>
-              
-              <!-- Legend indicating difference between completed years and 2026 YTD -->
-              <div class="flex items-center gap-3 text-[11px] font-mono text-slate-600">
-                <span class="inline-flex items-center gap-1.5">
-                  <span class="w-4 h-0.5 bg-teal-800 inline-block"></span> 2022&ndash;2025 (Annual Trend)
-                </span>
-                <span class="inline-flex items-center gap-1.5 font-semibold text-teal-800">
-                  <span class="w-4 h-0.5 border-t-2 border-dashed border-teal-600 inline-block"></span> 2026 (Ongoing YTD)
-                </span>
-              </div>
             </div>
 
             <!-- Curved Area Chart Card -->
@@ -297,15 +287,11 @@
                   <path d="M 55 47.4 C 92 47.4, 128 42.9, 165 42.9 C 202 42.9, 238 45.4, 275 45.4 C 312 45.4, 348 42.1, 385 42.1 C 418 42.1, 452 68.7, 485 68.7 L 485 168 L 55 168 Z" 
                         fill="url(#scholarAreaGradient)" />
 
-                  <!-- 2. Solid Smooth Spline Curve for Completed Years (2022 to 2025) -->
-                  <path d="M 55 47.4 C 92 47.4, 128 42.9, 165 42.9 C 202 42.9, 238 45.4, 275 45.4 C 312 45.4, 348 42.1, 385 42.1" 
+                  <!-- 2. Solid Smooth Spline Curve (2022 to 2026) -->
+                  <path d="M 55 47.4 C 92 47.4, 128 42.9, 165 42.9 C 202 42.9, 238 45.4, 275 45.4 C 312 45.4, 348 42.1, 385 42.1 C 418 42.1, 452 68.7, 485 68.7" 
                         fill="none" stroke="#0f766e" stroke-width="3.5" stroke-linecap="round" />
 
-                  <!-- 3. Dashed Projected Spline Curve for Ongoing Current Year (2025 to 2026) -->
-                  <path d="M 385 42.1 C 418 42.1, 452 68.7, 485 68.7" 
-                        fill="none" stroke="#0d9488" stroke-width="3" stroke-dasharray="6,4" stroke-linecap="round" />
-
-                  <!-- 4. Data Point Nodes & Floating Pills for Past Years -->
+                  <!-- 3. Data Point Nodes & Floating Pills -->
                   <!-- 2022 Point (x = 55, y = 47.4): 420 citations -->
                   <g class="transition-transform hover:scale-105 origin-center">
                     <rect x="33" y="15" width="44" height="20" rx="5" fill="#0f172a" filter="url(#badgeShadow)" />
@@ -334,36 +320,20 @@
                     <circle cx="385" cy="42.1" r="5" fill="#ffffff" stroke="#0f766e" stroke-width="3" />
                   </g>
 
-                  <!-- 5. 2026 Beacon & Highlight Point (x = 485, y = 68.7): 344 YTD citations -->
-                  <!-- Pulsing Beacon Halo -->
-                  <circle cx="485" cy="68.7" r="10" fill="#0d9488" fill-opacity="0.25">
-                    <animate attributeName="r" values="6;14;6" dur="2s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite" />
-                  </circle>
-                  <!-- Inner Beacon Point -->
-                  <circle cx="485" cy="68.7" r="6" fill="#0f766e" stroke="#2dd4bf" stroke-width="2.5" />
-
-                  <!-- Distinctive Emerald Floating Pill for 2026 -->
+                  <!-- 2026 Point (x = 485, y = 68.7): 344 citations -->
                   <g class="transition-transform hover:scale-105 origin-center">
-                    <rect x="447" y="32" width="76" height="22" rx="6" fill="#0f766e" stroke="#2dd4bf" stroke-width="1.5" filter="url(#badgeShadow)" />
-                    <text x="485" y="47" font-family="monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">344 YTD</text>
+                    <rect x="463" y="36" width="44" height="20" rx="5" fill="#0f172a" filter="url(#badgeShadow)" />
+                    <text x="485" y="50" font-family="monospace" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">344</text>
+                    <circle cx="485" cy="68.7" r="5" fill="#ffffff" stroke="#0f766e" stroke-width="3" />
                   </g>
 
-                  <!-- 6. X-Axis Labels (Years) -->
+                  <!-- 4. X-Axis Labels (Years) -->
                   <text x="55" y="190" font-family="monospace" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">2022</text>
                   <text x="165" y="190" font-family="monospace" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">2023</text>
                   <text x="275" y="190" font-family="monospace" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">2024</text>
                   <text x="385" y="190" font-family="monospace" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">2025</text>
-                  
-                  <!-- 2026 Distinctive Label -->
-                  <text x="485" y="190" font-family="monospace" font-size="11" font-weight="700" fill="#0f766e" text-anchor="middle">2026 (Ongoing)</text>
+                  <text x="485" y="190" font-family="monospace" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">2026</text>
                 </svg>
-              </div>
-
-              <!-- Bottom info row -->
-              <div class="mt-4 pt-3 border-t border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between text-[11px] text-slate-500 gap-1 font-mono">
-                <span>*2026 represents ongoing Year-to-Date citations in current calendar year</span>
-                <span id="scholar-sync-note">Synced via Google Scholar Profile</span>
               </div>
             </div>
 
