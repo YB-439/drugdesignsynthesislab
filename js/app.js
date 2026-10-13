@@ -204,46 +204,31 @@ function initPublicationsSection() {
     }
   }
 
-  // Dynamically populate Scaffold Filter options from data
-  if (scaffoldFilter && Array.isArray(window.LAB_PUBLICATIONS)) {
-    const scaffolds = Array.from(new Set(window.LAB_PUBLICATIONS.map(p => p.scaffold).filter(Boolean))).sort();
-    const prevScaff = scaffoldFilter.value;
-    scaffoldFilter.innerHTML = '<option value="all">All Scaffolds</option>' + scaffolds.map(s => `<option value="${s}">${s}</option>`).join('');
-    if (prevScaff && scaffolds.includes(prevScaff)) {
-      scaffoldFilter.value = prevScaff;
-    }
-  }
-
   renderPubs(window.LAB_PUBLICATIONS);
 
   function filterPubs() {
     const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
-    const scaffold = (scaffoldFilter ? scaffoldFilter.value : 'all');
     const year = (yearFilter ? yearFilter.value : 'all');
-    const type = (typeFilter ? typeFilter.value : 'all');
 
     const filtered = window.LAB_PUBLICATIONS.filter(p => {
       const matchQuery = !query || 
         p.title.toLowerCase().includes(query) || 
         p.journal.toLowerCase().includes(query) || 
         p.authors.toLowerCase().includes(query) ||
-        p.target.toLowerCase().includes(query) ||
-        p.doi.toLowerCase().includes(query);
+        (p.target && p.target.toLowerCase().includes(query)) ||
+        (p.scaffold && p.scaffold.toLowerCase().includes(query)) ||
+        (p.doi && p.doi.toLowerCase().includes(query));
 
-      const matchScaffold = scaffold === 'all' || p.scaffold.toLowerCase().includes(scaffold.toLowerCase());
       const matchYear = year === 'all' || p.year.toString() === year;
-      const matchType = type === 'all' || (p.type && p.type.toLowerCase().includes(type.toLowerCase()));
 
-      return matchQuery && matchScaffold && matchYear && matchType;
+      return matchQuery && matchYear;
     });
 
     renderPubs(filtered);
   }
 
   if (searchInput) searchInput.addEventListener('input', filterPubs);
-  if (scaffoldFilter) scaffoldFilter.addEventListener('change', filterPubs);
   if (yearFilter) yearFilter.addEventListener('change', filterPubs);
-  if (typeFilter) typeFilter.addEventListener('change', filterPubs);
 }
 
 /**
