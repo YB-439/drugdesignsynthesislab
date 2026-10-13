@@ -1,7 +1,7 @@
 /**
  * Auto-Generated Publications Dataset for Prof. Yogita Bansal & DDSL
  * Google Scholar ID: kxIxyF8AAAAJ
- * Auto-updated on: 2026-10-13 14:18:08
+ * Auto-updated on: 2026-10-13 14:23:27
  */
 
 window.LAB_PUBLICATIONS = [
@@ -383,6 +383,19 @@ window.LAB_PUBLICATIONS = [
     "id": 29
   },
   {
+    "title": "Secondary Metabolites in Arctium lappa L.: Variation Among Plant Parts and Phenological Stages",
+    "authors": "NF Bhatt, RC Gupta, Y Bansal",
+    "journal": "Peer-Reviewed Scientific Journal",
+    "year": 2019,
+    "citations": 9,
+    "scaffold": "Natural Products",
+    "target": "Biological Target / Pharmacology",
+    "type": "Research Article",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:mVmsd5A6BfQC",
+    "doi": "",
+    "id": 30
+  },
+  {
     "title": "Direct Access to Highly Functionalised Benzimidazoles and Benzoxazoles from a Common Precursor",
     "authors": "A Garrido, PO Delaye, F Quintin, M Abarbri, P Lameiras, A Gueiffier, ...",
     "journal": "Peer-Reviewed Scientific Journal",
@@ -393,7 +406,20 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:4JMBOYKVnBMC",
     "doi": "",
-    "id": 30
+    "id": 31
+  },
+  {
+    "title": "P1‐091: DESIGN AND IN SILICO SCREENING OF BIFUNCTIONAL DERIVATIVES FOR INHIBITION OF ACETYLCHOLINESTRASE IN ALZHEIMER'S DISEASE",
+    "authors": "S Kaur, Y Bansal",
+    "journal": "Peer-Reviewed Scientific Journal",
+    "year": 2019,
+    "citations": 0,
+    "scaffold": "CADD / In-Silico",
+    "target": "Biological Target / Pharmacology",
+    "type": "Research Article",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:Wp0gIr-vW9MC",
+    "doi": "",
+    "id": 32
   },
   {
     "title": "Synthesis and PASS-assisted evaluation of coumarin–benzimidazole derivatives as potential anti-inflammatory and anthelmintic agents",
@@ -406,7 +432,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:YOwf2qJgpHMC",
     "doi": "",
-    "id": 31
+    "id": 33
   },
   {
     "title": "Benzoxazole-coumarin derivatives: potential candidates for development of safer anti-inflammatory drugs",
@@ -419,7 +445,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:aqlVkmm33-oC",
     "doi": "",
-    "id": 32
+    "id": 34
   },
   {
     "title": "WHO guided real time stability testing on Shankhpushpi Syrup",
@@ -432,7 +458,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:ULOm3_A8WrAC",
     "doi": "",
-    "id": 33
+    "id": 35
   },
   {
     "title": "[P1–080]: IN SILICO ASSISTED DESIGN, SYNTHESIS AND EVALUATIONS OF PLURIPOTENT COMPOUNDS FOR COMBATING ALZHEIMER's DISEASE",
@@ -445,7 +471,20 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:_kc_bZDykSQC",
     "doi": "",
-    "id": 34
+    "id": 36
+  },
+  {
+    "title": "Accelerated Stability Studies on Dried Extracts of Centella asiatica Through Chemical, HPLC, HPTLC, and Biological Activity Analyses",
+    "authors": "I Kaur, N Suthar, J Kaur, Y Bansal, G Bansal",
+    "journal": "Peer-Reviewed Scientific Journal",
+    "year": 2016,
+    "citations": 33,
+    "scaffold": "Medicinal Chemistry",
+    "target": "Biological Target / Pharmacology",
+    "type": "Research Article",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:5nxA0vEk-isC",
+    "doi": "",
+    "id": 37
   },
   {
     "title": "Forced degradation, LC–UV, MSn and LC–MS–TOF studies on azilsartan: Identification of a known and three new degradation impurities",
@@ -458,7 +497,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:MXK_kJrjxJIC",
     "doi": "",
-    "id": 35
+    "id": 38
   },
   {
     "title": "Understanding unconventional routes to impurities from drugs in hydrolytic conditions",
@@ -471,7 +510,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:3fE2CSJIrl8C",
     "doi": "",
-    "id": 36
+    "id": 39
   },
   {
     "title": "Coumarin: a promising scaffold for anticancer agents",
@@ -484,7 +523,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:YsMSGLbcyi4C",
     "doi": "",
-    "id": 37
+    "id": 40
   },
   {
     "title": "Benzimidazole–ibuprofen/mesalamine conjugates: Potential candidates for multifactorial diseases",
@@ -497,7 +536,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:ufrVoPGSRksC",
     "doi": "",
-    "id": 38
+    "id": 41
   },
   {
     "title": "2-Aminobenzimidazole conjugates of NSAIDS: novel compounds with immunomodulatory, anti-inflammatory and antioxidant actions",
@@ -510,7 +549,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:hqOjcs7Dif8C",
     "doi": "",
-    "id": 39
+    "id": 42
   },
   {
     "title": "Coumarin hybrids as novel therapeutic agents",
@@ -523,7 +562,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:9yKSN-GCB0IC",
     "doi": "",
-    "id": 40
+    "id": 43
   },
   {
     "title": "Multifunctional compounds: Smart molecules for multifactorial diseases",
@@ -536,7 +575,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:qjMakFHDy7sC",
     "doi": "",
-    "id": 41
+    "id": 44
   },
   {
     "title": "Novel coumarin–benzimidazole derivatives as antioxidants and safer anti-inflammatory agents",
@@ -549,7 +588,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:zYLM7Y9cAGgC",
     "doi": "",
-    "id": 42
+    "id": 45
   },
   {
     "title": "Anti-inflammatory and antinociceptive activity of vanillin",
@@ -562,7 +601,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:LkGwnXOMwfcC",
     "doi": "",
-    "id": 43
+    "id": 46
   },
   {
     "title": "Design, synthesis, and PASS-assisted evaluation of novel 2-substituted benzimidazole derivatives as potent anthelmintics",
@@ -575,7 +614,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:WF5omc3nYNoC",
     "doi": "",
-    "id": 44
+    "id": 47
   },
   {
     "title": "Synthesis and pharmacological evaluation of polyfunctional benzimidazole-NSAID chimeric molecules combining anti-inflammatory, immunomodulatory and antioxidant activities",
@@ -588,7 +627,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:eQOLeE2rZwMC",
     "doi": "",
-    "id": 45
+    "id": 48
   },
   {
     "title": "Design, synthesis and PASS assisted evaluation of novel 2-substituted benzimidazole derivatives as potent anthelimintics",
@@ -601,7 +640,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:roLk4NBRz8UC",
     "doi": "",
-    "id": 46
+    "id": 49
   },
   {
     "title": "Coumarin: a potential nucleus for anti-inflammatory molecules",
@@ -614,7 +653,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:UeHWp8X0CEIC",
     "doi": "",
-    "id": 47
+    "id": 50
   },
   {
     "title": "ESI-MSn and LC–ESI-MS studies to characterize forced degradation products of bosentan and a validated stability-indicating LC–UV method",
@@ -627,7 +666,20 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:Tyk-4Ss8FVUC",
     "doi": "",
-    "id": 48
+    "id": 51
+  },
+  {
+    "title": "MSn, LC‐MS‐TOF and LC‐PDA studies for identification of new degradation impurities of bupropion",
+    "authors": "R Bansal, B Saini, Y Bansal, G Bansal",
+    "journal": "Peer-Reviewed Scientific Journal",
+    "year": 2013,
+    "citations": 11,
+    "scaffold": "Medicinal Chemistry",
+    "target": "Biological Target / Pharmacology",
+    "type": "Research Article",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:8k81kl-MbHgC",
+    "doi": "",
+    "id": 52
   },
   {
     "title": "The therapeutic journey of benzimidazoles: A review",
@@ -640,7 +692,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Review",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:u5HHmVD_uO8C",
     "doi": "",
-    "id": 49
+    "id": 53
   },
   {
     "title": "The therapeutic journey of benzimidazoles: A review pp 6208-6236",
@@ -653,7 +705,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Review",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:0EnyYjriUFMC",
     "doi": "",
-    "id": 50
+    "id": 54
   },
   {
     "title": "Analytical methods for standardization of Aegle marmelos: A review",
@@ -666,7 +718,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Review",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:W7OEmFMy1HYC",
     "doi": "",
-    "id": 51
+    "id": 55
   },
   {
     "title": "MS2/TOF and LC-MS/TOF studies on toremifene to characterize its forced degradation products",
@@ -679,7 +731,20 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:_FxGoFyzp5QC",
     "doi": "",
-    "id": 52
+    "id": 56
+  },
+  {
+    "title": "Anti-inflammatory, analgesic and antipyretic activity of aqueous extract of fresh leaves of Coccinia indica",
+    "authors": "J Niazi, P Singh, Y Bansal, RK Goel",
+    "journal": "Peer-Reviewed Scientific Journal",
+    "year": 2009,
+    "citations": 80,
+    "scaffold": "Medicinal Chemistry",
+    "target": "Biological Target / Pharmacology",
+    "type": "Research Article",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:2osOgNQ5qMEC",
+    "doi": "",
+    "id": 57
   },
   {
     "title": "Design and synthesis of coumarin substituted oxathiadiazolone derivatives having anti-inflammatory activity possibly through p38 MAP kinase inhibition",
@@ -692,7 +757,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:Y0pCki6q_DkC",
     "doi": "",
-    "id": 53
+    "id": 58
   },
   {
     "title": "Angiotensin II–AT1 receptor antagonists: Design, synthesis and evaluation of substituted carboxamido benzimidazole derivatives",
@@ -705,7 +770,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:d1gkVwhDpl0C",
     "doi": "",
-    "id": 54
+    "id": 59
   },
   {
     "title": "Design, synthesis, and evaluation of 5-sulfamoyl benzimidazole derivatives as novel angiotensin II receptor antagonists",
@@ -718,7 +783,7 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:IjCSPb-OGe4C",
     "doi": "",
-    "id": 55
+    "id": 60
   },
   {
     "title": "Design, synthesis, and evaluation of novelly substituted benzimidazole compounds as angiotensin II receptor antagonists",
@@ -731,6 +796,6 @@ window.LAB_PUBLICATIONS = [
     "type": "Research Article",
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:u-x6o8ySG0sC",
     "doi": "",
-    "id": 56
+    "id": 61
   }
 ];

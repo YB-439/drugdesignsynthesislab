@@ -138,12 +138,13 @@ def fetch_scholar_data():
 
     parsed_papers = []
     for r in rows:
-        t_match = re.search(r'<a[^>]*class="gsc_a_at"[^>]*>([^<]+)</a>', r)
+        t_match = re.search(r'<a[^>]*class="gsc_a_at"[^>]*>(.*?)</a>', r)
         l_match = re.search(r'href="([^"]+)"', r)
         if not t_match:
             continue
 
-        title = clean_text(t_match.group(1))
+        raw_title = re.sub(r'<[^>]+>', '', t_match.group(1))
+        title = clean_text(raw_title)
         link = ("https://scholar.google.com" + clean_text(l_match.group(1))) if l_match else ""
         
         grays = re.findall(r'<div class="gs_gray">([^<]*)</div>', r)
