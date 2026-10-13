@@ -146,106 +146,51 @@
 
   <!-- HERO SECTION -->
   <section class="bg-gradient-to-b from-teal-50/60 via-white to-slate-50 py-14 sm:py-16 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-10 items-center">
-        
-        <!-- Left Column: Title, Subtitle, Overview, CTA Buttons -->
-        <div class="lg:col-span-8 space-y-6">
-          <div class="space-y-3">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-teal-100 text-teal-900 border border-teal-200">
-              <span class="w-2 h-2 rounded-full bg-teal-600 animate-pulse"></span>
-              CORALSEA-2024 Monte Carlo 2D-QSAR Platform
-            </div>
-            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 font-serif tracking-tight">
-              NIK-Predict
-            </h1>
-            <p class="text-lg sm:text-xl font-medium text-teal-800 font-serif">
-              A Bioactivity Prediction Platform for NIK Inhibitor Research
-            </p>
+      <div class="max-w-4xl space-y-6">
+        <div class="space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-teal-100 text-teal-900 border border-teal-200">
+            <span class="w-2 h-2 rounded-full bg-teal-600 animate-pulse"></span>
+            CORALSEA-2024 Monte Carlo 2D-QSAR Platform
           </div>
-
-          <div class="space-y-3 text-slate-700 text-sm sm:text-base leading-relaxed">
-            <p>
-              <strong>NIK-Predict</strong> is a computational tool developed at the <strong>Drug Design & Synthesis Lab (DDSL)</strong>, Department of Pharmaceutical Sciences and Drug Research, Punjabi University, Patiala, to help researchers estimate the inhibitory activity of small molecules against <strong>NF-κB-inducing kinase (NIK/MAP3K14)</strong>.
-            </p>
-            <p class="text-slate-600">
-              The platform brings our Monte Carlo-based 2D-QSAR model into a simple, easy-to-use application. Researchers can enter a molecular SMILES string, visualize the structure, and obtain a predicted pIC₅₀ value without running the underlying modeling workflow themselves.
-            </p>
-          </div>
-
-          <!-- Primary Download Action Buttons -->
-          <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-2">
-            <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" 
-               class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all group">
-              <i data-lucide="download" class="w-5 h-5 group-hover:translate-y-0.5 transition-transform"></i>
-              <span>Download NIK-Predict for Windows</span>
-              <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-teal-900/60 text-teal-100">v1.0.0</span>
-            </a>
-          </div>
-
-          <!-- Quick System Badges -->
-          <div class="flex flex-wrap items-center gap-4 pt-1 text-xs text-slate-500 font-mono">
-            <span class="inline-flex items-center gap-1.5">
-              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> 100% Offline & Private
-            </span>
-            <span class="inline-flex items-center gap-1.5">
-              <i data-lucide="box" class="w-4 h-4 text-teal-600"></i> Portable (No Install Required)
-            </span>
-            <span class="inline-flex items-center gap-1.5">
-              <i data-lucide="laptop" class="w-4 h-4 text-slate-600"></i> Windows 10 / 11 (64-bit)
-            </span>
-          </div>
+          <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 font-serif tracking-tight">
+            NIK-Predict
+          </h1>
+          <p class="text-lg sm:text-xl font-medium text-teal-800 font-serif">
+            A Bioactivity Prediction Platform for NIK Inhibitor Research
+          </p>
         </div>
 
-        <!-- Right Column: Quick Feature Card -->
-        <div class="lg:col-span-4">
-          <div class="academic-card p-6 bg-white border-teal-200/80 shadow-md space-y-4">
-            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
-              <div class="flex items-center gap-2">
-                <div class="w-9 h-9 rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center">
-                  <i data-lucide="cpu" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <h2 class="text-sm font-bold text-slate-900">NIK-Predict Engine</h2>
-                  <span class="text-[11px] font-mono text-teal-700">CORALSEA Monte Carlo</span>
-                </div>
-              </div>
-              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Ready</span>
-            </div>
-
-            <!-- Quick Specs List -->
-            <div class="space-y-2.5 text-xs">
-              <div class="flex justify-between py-1 border-b border-slate-100">
-                <span class="text-slate-500">Biological Target:</span>
-                <span class="font-bold text-slate-900 font-mono">NIK / MAP3K14</span>
-              </div>
-              <div class="flex justify-between py-1 border-b border-slate-100">
-                <span class="text-slate-500">Input Modality:</span>
-                <span class="font-bold text-slate-900 font-mono">SMILES strings</span>
-              </div>
-              <div class="flex justify-between py-1 border-b border-slate-100">
-                <span class="text-slate-500">Prediction Endpoint:</span>
-                <span class="font-bold text-teal-800 font-mono font-semibold">pIC₅₀ (Bioactivity)</span>
-              </div>
-              <div class="flex justify-between py-1 border-b border-slate-100">
-                <span class="text-slate-500">Batch Processing:</span>
-                <span class="font-bold text-slate-900">Supported (Multi-line)</span>
-              </div>
-              <div class="flex justify-between py-1">
-                <span class="text-slate-500">Applicability Domain:</span>
-                <span class="font-bold text-slate-900 font-mono">Defect(SMILES) &lt; 7.98</span>
-              </div>
-            </div>
-
-            <div class="pt-2 border-t border-slate-100">
-              <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe"
-                 class="w-full py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold flex items-center justify-center gap-2 transition-colors">
-                <i data-lucide="download" class="w-3.5 h-3.5"></i> Download NIK-Predict.exe
-              </a>
-            </div>
-          </div>
+        <div class="space-y-3 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            <strong>NIK-Predict</strong> is a computational tool developed at the <strong>Drug Design & Synthesis Lab (DDSL)</strong>, Department of Pharmaceutical Sciences and Drug Research, Punjabi University, Patiala, to help researchers estimate the inhibitory activity of small molecules against <strong>NF-κB-inducing kinase (NIK/MAP3K14)</strong>.
+          </p>
+          <p class="text-slate-600">
+            The platform brings our Monte Carlo-based 2D-QSAR model into a simple, easy-to-use application. Researchers can enter a molecular SMILES string, visualize the structure, and obtain a predicted pIC₅₀ value without running the underlying modeling workflow themselves.
+          </p>
         </div>
 
+        <!-- Primary Download Action Buttons -->
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-2">
+          <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" 
+             class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all group">
+            <i data-lucide="download" class="w-5 h-5 group-hover:translate-y-0.5 transition-transform"></i>
+            <span>Download NIK-Predict for Windows</span>
+            <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-teal-900/60 text-teal-100">v1.0.0</span>
+          </a>
+        </div>
+
+        <!-- Quick System Badges -->
+        <div class="flex flex-wrap items-center gap-4 pt-1 text-xs text-slate-500 font-mono">
+          <span class="inline-flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> 100% Offline & Private
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <i data-lucide="box" class="w-4 h-4 text-teal-600"></i> Portable (No Install Required)
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <i data-lucide="laptop" class="w-4 h-4 text-slate-600"></i> Windows 10 / 11 (64-bit)
+          </span>
+        </div>
       </div>
     </div>
   </section>
@@ -254,53 +199,6 @@
   <main class="py-14 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
-      <!-- SECTION 1: NIK BIOLOGICAL TARGET BACKGROUND -->
-      <section class="academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-6">
-        <div class="border-b border-slate-200 pb-4">
-          <div class="flex items-center gap-2">
-            <span class="academic-badge academic-badge-teal uppercase font-mono">Target Biology</span>
-            <span class="text-xs font-mono text-slate-500">MAP3K14 Signaling Axis</span>
-          </div>
-          <h2 class="text-2xl font-bold text-slate-900 font-serif mt-2">
-            NIK: A Key Target in NF-κB Signalling
-          </h2>
-        </div>
-
-        <div class="grid lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 space-y-4 text-slate-700 text-sm leading-relaxed">
-            <p>
-              <strong>NF-κB-inducing kinase (NIK)</strong>, also known as <strong>MAP3K14</strong>, is a serine/threonine protein kinase that plays a key role in regulating the non-canonical NF-κB signalling pathway. This pathway is involved in several important biological processes, including immune system development, B-cell survival, and the regulation of inflammatory responses.
-            </p>
-            <p>
-              Under normal conditions, NIK levels are tightly controlled by cellular regulatory mechanisms. When NIK accumulates, it promotes the processing of <strong>NF-κB2 p100 into p52</strong>, contributing to the activation of downstream gene expression.
-            </p>
-            <p>
-              Because of its central role in this signalling pathway, NIK has attracted significant interest as a potential target for the development of small-molecule inhibitors in conditions driven by aberrant non-canonical NF-κB activation, such as autoimmune diseases, inflammatory disorders, and lymphoid malignancies.
-            </p>
-          </div>
-
-          <!-- Highlight Box -->
-          <div class="lg:col-span-4 bg-teal-50/60 p-5 rounded-2xl border border-teal-200 space-y-3">
-            <h3 class="text-xs font-bold font-mono uppercase text-teal-900 flex items-center gap-1.5">
-              <i data-lucide="activity" class="w-4 h-4 text-teal-700"></i> Signaling Pathway Summary
-            </h3>
-            <div class="space-y-2 text-xs text-slate-700">
-              <div class="p-2.5 rounded-lg bg-white border border-teal-100">
-                <span class="font-bold text-slate-900 block">Non-Canonical Pathway</span>
-                <span class="text-[11px] text-slate-600">Regulates lymphoid organogenesis, B-cell maturation, and survival.</span>
-              </div>
-              <div class="p-2.5 rounded-lg bg-white border border-teal-100">
-                <span class="font-bold text-slate-900 block">p100 &rarr; p52 Proteolytic Processing</span>
-                <span class="text-[11px] text-slate-600">NIK phosphorylation triggers IKKα activation and p100 processing.</span>
-              </div>
-              <div class="p-2.5 rounded-lg bg-white border border-teal-100">
-                <span class="font-bold text-slate-900 block">Therapeutic Opportunity</span>
-                <span class="text-[11px] text-slate-600">Small-molecule inhibition blocks dysregulated p52-dependent transcription.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- SECTION 2: WHY NIK-PREDICT? & WHAT CAN YOU DO -->
       <section class="space-y-6">
@@ -368,57 +266,17 @@
         </div>
       </section>
 
-      <!-- SECTION 3: HOW IT WORKS (3-STEP PIPELINE) -->
-      <section class="academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-6">
-        <div class="border-b border-slate-200 pb-4">
+      <!-- SECTION 2: HOW IT WORKS -->
+      <section class="academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-4">
+        <div class="border-b border-slate-200 pb-3">
           <span class="academic-badge academic-badge-teal uppercase font-mono">Computational Workflow</span>
-          <h2 class="text-2xl font-bold text-slate-900 font-serif mt-2">
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900 font-serif mt-1">
             How It Works
           </h2>
-          <p class="text-xs text-slate-600 mt-1">
-            Seamless 3-step prediction workflow from chemical string to validated bioactivity estimation.
-          </p>
         </div>
-
-        <div class="grid md:grid-cols-3 gap-6 relative">
-          
-          <!-- Step 1 -->
-          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2.5">
-            <div class="flex items-center justify-between">
-              <span class="w-7 h-7 rounded-full bg-teal-800 text-white font-mono text-xs font-bold flex items-center justify-center">1</span>
-              <i data-lucide="file-code" class="w-4 h-4 text-teal-700"></i>
-            </div>
-            <h3 class="text-sm font-bold text-slate-900">Enter a Molecule</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Simply provide the molecular structure as a SMILES string (e.g., <code class="bg-white px-1.5 py-0.5 rounded border text-[11px] font-mono">CC1=CC=C...</code>) or upload a supported SMILES file.
-            </p>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2.5">
-            <div class="flex items-center justify-between">
-              <span class="w-7 h-7 rounded-full bg-teal-800 text-white font-mono text-xs font-bold flex items-center justify-center">2</span>
-              <i data-lucide="cpu" class="w-4 h-4 text-teal-700"></i>
-            </div>
-            <h3 class="text-sm font-bold text-slate-900">Run the QSAR Model</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              NIK-Predict parses the molecular graph, calculates optimal Monte Carlo correlation balance descriptors, and processes the compound through the calibrated model.
-            </p>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2.5">
-            <div class="flex items-center justify-between">
-              <span class="w-7 h-7 rounded-full bg-teal-800 text-white font-mono text-xs font-bold flex items-center justify-center">3</span>
-              <i data-lucide="check-circle" class="w-4 h-4 text-teal-700"></i>
-            </div>
-            <h3 class="text-sm font-bold text-slate-900">Obtain Predicted pIC₅₀</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Returns the model-predicted bioactivity value alongside applicability domain metrics, providing immediate insight into predicted inhibitory potency.
-            </p>
-          </div>
-
-        </div>
+        <p class="text-sm sm:text-base text-slate-700 leading-relaxed">
+          Simply provide the molecular structure as a SMILES string or upload a supported SMILES file. NIK-Predict processes the input and returns the model-predicted bioactivity value.
+        </p>
       </section>
 
       <!-- SECTION 4: ABOUT THE PREDICTION MODEL & SPECIFICATIONS -->
@@ -498,99 +356,44 @@
 
       </section>
 
-      <!-- SECTION 5: GETTING STARTED & YOUR DATA, YOUR PRIVACY -->
-      <section class="grid md:grid-cols-2 gap-8 items-stretch">
-        
-        <!-- Getting Started -->
-        <div class="academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex items-center gap-2">
-              <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center">
-                <i data-lucide="play" class="w-4 h-4"></i>
-              </div>
-              <h2 class="text-xl font-bold text-slate-900 font-serif">Getting Started</h2>
+      <!-- SECTION: PRIVACY & RESEARCH DISCLAIMER -->
+      <section class="grid md:grid-cols-12 gap-8 items-stretch">
+        <!-- Your Data, Your Privacy (8 cols) -->
+        <div class="md:col-span-7 academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center">
+              <i data-lucide="lock" class="w-4 h-4"></i>
             </div>
-            
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Download the Windows application, extract the package if required, and launch <code class="font-mono font-bold text-teal-900 bg-teal-50 px-1.5 py-0.5 rounded border border-teal-200">NIK-Predict.exe</code> to begin. Follow the instructions in the application to enter compounds and obtain predictions.
-            </p>
-
-            <div class="space-y-2 text-xs text-slate-700 pt-2 font-mono">
-              <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-teal-700"></i>
-                <span>Windows 10 / 11 64-bit compatible</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-teal-700"></i>
-                <span>Standalone executable (no Python setup required)</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-teal-700"></i>
-                <span>Portable & ready to run immediately</span>
-              </div>
-            </div>
+            <h2 class="text-xl font-bold text-slate-900 font-serif">Your Data, Your Privacy</h2>
           </div>
+          
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <strong>Your privacy matters to us.</strong> NIK-Predict is designed to run locally on your computer, and the molecular structures and SMILES strings you submit are <strong>not stored or collected by us</strong>.
+          </p>
 
-          <div class="pt-4">
-            <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe"
-               class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-teal-800 hover:bg-teal-900 text-white font-bold text-xs shadow-xs transition-colors">
-              <i data-lucide="download" class="w-4 h-4"></i> Download NIK-Predict.exe Now
-            </a>
-          </div>
-        </div>
-
-        <!-- Your Data, Your Privacy -->
-        <div class="academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex items-center gap-2">
-              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center">
-                <i data-lucide="lock" class="w-4 h-4"></i>
-              </div>
-              <h2 class="text-xl font-bold text-slate-900 font-serif">Your Data, Your Privacy</h2>
-            </div>
-            
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              <strong>Your privacy matters to us.</strong> NIK-Predict is designed to run locally on your computer, and the molecular structures and SMILES strings you submit are <strong>not stored or collected by us</strong>.
-            </p>
-
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Your input data is <strong>not uploaded to an external cloud server</strong> when using the desktop application, ensuring complete confidentiality for proprietary or unpublished chemical structures.
-            </p>
-          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Your input data is <strong>not uploaded to an external cloud server</strong> when using the desktop application, ensuring complete confidentiality for proprietary or unpublished chemical structures.
+          </p>
 
           <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-[11px] font-mono text-slate-500">
             Local execution &bull; 100% Client-side processing &bull; Zero tracking
           </div>
         </div>
 
-      </section>
-
-      <!-- SECTION 6: INSTITUTIONAL ATTRIBUTION & DISCLAIMER BANNER -->
-      <section class="academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-6">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-slate-200 pb-6">
-          <div class="space-y-1.5">
+        <!-- Research Scope & Disclaimer (5 cols) -->
+        <div class="md:col-span-5 academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
             <span class="text-[10px] font-mono uppercase tracking-wider text-slate-500 font-semibold">Laboratory Attribution</span>
-            <h2 class="text-xl font-bold text-slate-900 font-serif">Developed at</h2>
+            <h2 class="text-base font-bold text-slate-900 font-serif">Developed at</h2>
             <div class="text-xs text-slate-700 leading-relaxed">
               <strong>Drug Design & Synthesis Lab (DDSL)</strong><br />
               Department of Pharmaceutical Sciences and Drug Research<br />
               Punjabi University, Patiala, Punjab, India
             </div>
           </div>
-
-          <div class="flex flex-wrap items-center gap-3">
-            <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe"
-               class="px-5 py-3 rounded-xl bg-teal-800 hover:bg-teal-900 text-white font-bold text-xs shadow-xs flex items-center gap-2 transition-colors">
-              <i data-lucide="download" class="w-4 h-4"></i> Download NIK-Predict for Windows
-            </a>
-            <a href="tools.html" class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs transition-colors">
-              Explore All QSAR Tools &rarr;
-            </a>
+          <div class="text-[11px] text-slate-500 font-mono pt-3 border-t border-slate-200 leading-relaxed">
+            *Disclaimer: For research and educational use. Predicted bioactivity values require experimental validation.
           </div>
-        </div>
-
-        <div class="text-[11px] text-slate-500 font-mono text-center sm:text-left leading-relaxed">
-          *Disclaimer: For research and educational use. Predicted bioactivity values require appropriate interpretation and experimental validation.
         </div>
       </section>
 
