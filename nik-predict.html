@@ -165,7 +165,7 @@
               NIK-Predict is a computational application developed by the Drug Design & Synthesis Lab (DDSL), Department of Pharmaceutical Sciences and Drug Research, Punjabi University, Patiala, to help researchers identify and prioritize potential inhibitors of NF-κB-inducing kinase (NIK/MAP3K14).
             </p>
             <p class="text-slate-600" style="text-align: justify; text-justify: inter-word;">
-              The application uses a 2D-QSAR model developed in CORALSEA software using the Monte Carlo algorithm to predict the inhibitory activity of small molecules against NIK. Researchers can enter a molecule's SMILES string to obtain its predicted pIC₅₀ value and assess its potential for further investigation.
+              The application uses a 2D-QSAR model developed in <a href="https://www.insilico.eu/coral/CORALSEA.html" target="_blank" rel="noopener noreferrer" class="text-teal-700 hover:text-teal-900 underline font-medium">CORALSEA software</a> using the Monte Carlo algorithm to predict the inhibitory activity of small molecules against NIK. Researchers can enter a molecule's SMILES string to obtain its predicted pIC₅₀ value and assess its potential for further investigation.
             </p>
           </div>
 
@@ -288,6 +288,35 @@
           </div>
         </div>
 
+      </section>
+
+      <!-- ACKNOWLEDGMENT & SOFTWARE ATTRIBUTION -->
+      <section class="academic-card p-6 sm:p-7 bg-white border-slate-300 rounded-2xl shadow-xs">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="space-y-2 max-w-3xl">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center shrink-0">
+                <i data-lucide="award" class="w-4 h-4"></i>
+              </div>
+              <h2 class="text-base sm:text-lg font-bold text-slate-900 font-serif">
+                Acknowledgment & Software Attribution
+              </h2>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" style="text-align: justify; text-justify: inter-word;">
+              The 2D-QSAR predictive model integrated into NIK-Predict was constructed using the freeware <a href="https://www.insilico.eu/coral/CORALSEA.html" target="_blank" rel="noopener noreferrer" class="text-teal-700 hover:text-teal-900 underline font-semibold">CORAL software platform (CORALSEA)</a>, developed at the Department of Environmental Health Sciences, Laboratory of Environmental Chemistry and Toxicology, Istituto di Ricerche Farmacologiche Mario Negri IRCCS, Milan, Italy (by Dr. Andrey A. Toropov, Dr. Alla P. Toropova, and collaborators). We gratefully acknowledge the authors and institute for providing the computational tools that made this work possible.
+            </p>
+          </div>
+
+          <div class="shrink-0 flex items-center">
+            <a href="https://www.insilico.eu/coral/CORALSEA.html" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-teal-50 text-slate-800 hover:text-teal-800 border border-slate-300 hover:border-teal-300 font-semibold text-xs transition-all shadow-xs group">
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-teal-700 transition-colors"></i>
+              <span>Visit CORALSEA Website</span>
+            </a>
+          </div>
+        </div>
       </section>
 
     </div>
