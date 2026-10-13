@@ -111,6 +111,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initialize Publications Academic List
   initPublicationsSection();
+
+  // Initialize Google Scholar live bibliometrics
+  initScholarMetrics();
 });
 
 /**
@@ -215,4 +218,78 @@ function initPublicationsSection() {
   if (scaffoldFilter) scaffoldFilter.addEventListener('change', filterPubs);
   if (yearFilter) yearFilter.addEventListener('change', filterPubs);
   if (typeFilter) typeFilter.addEventListener('change', filterPubs);
+}
+
+/**
+ * Dynamic Google Scholar Bibliometric Metrics & Yearly Citation Chart Loader
+ */
+function initScholarMetrics() {
+  const barsContainer = document.getElementById('scholar-bars-container');
+  if (!barsContainer) return;
+
+  fetch('data/scholar-metrics.json')
+    .then(res => {
+      if (!res.ok) throw new Error('Data file unavailable');
+      return res.json();
+    })
+    .then(data => {
+      if (!data) return;
+
+      // Update stat highlight cards
+      if (data.table) {
+        const cAll = document.getElementById('stat-cites-all');
+        const cRec = document.getElementById('stat-cites-recent');
+        const hAll = document.getElementById('stat-h-all');
+        const hRec = document.getElementById('stat-h-recent');
+        const iAll = document.getElementById('stat-i10-all');
+        const iRec = document.getElementById('stat-i10-recent');
+
+        const tcAll = document.getElementById('table-cites-all');
+        const tcRec = document.getElementById('table-cites-recent');
+        const thAll = document.getElementById('table-h-all');
+        const thRec = document.getElementById('table-h-recent');
+        const tiAll = document.getElementById('table-i10-all');
+        const tiRec = document.getElementById('table-i10-recent');
+
+        if (cAll && data.table.citations?.all) cAll.textContent = data.table.citations.all.toLocaleString();
+        if (cRec && data.table.citations?.since_recent) cRec.textContent = `${data.table.citations.since_recent.toLocaleString()} since '21`;
+        if (hAll && data.table.h_index?.all) hAll.textContent = data.table.h_index.all;
+        if (hRec && data.table.h_index?.since_recent) hRec.textContent = `${data.table.h_index.since_recent} since '21`;
+        if (iAll && data.table.i10_index?.all) iAll.textContent = data.table.i10_index.all;
+        if (iRec && data.table.i10_index?.since_recent) iRec.textContent = `${data.table.i10_index.since_recent} since '21`;
+
+        if (tcAll && data.table.citations?.all) tcAll.textContent = data.table.citations.all;
+        if (tcRec && data.table.citations?.since_recent) tcRec.textContent = data.table.citations.since_recent;
+        if (thAll && data.table.h_index?.all) thAll.textContent = data.table.h_index.all;
+        if (thRec && data.table.h_index?.since_recent) thRec.textContent = data.table.h_index.since_recent;
+        if (tiAll && data.table.i10_index?.all) tiAll.textContent = data.table.i10_index.all;
+        if (tiRec && data.table.i10_index?.since_recent) tiRec.textContent = data.table.i10_index.since_recent;
+      }
+
+      // Update bars if history present
+      if (Array.isArray(data.history) && data.history.length > 0) {
+        const maxVal = Math.max(...data.history.map(h => h.citations), 440);
+        
+        barsContainer.innerHTML = data.history.map(item => {
+          const pct = Math.min(100, Math.max(8, (item.citations / maxVal) * 100));
+          return `
+            <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative">
+              <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2 py-0.5 rounded bg-slate-900 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
+                ${item.year}: ${item.citations}
+              </div>
+              <div class="w-full max-w-[28px] rounded-t-sm bg-slate-500 hover:bg-teal-600 transition-colors cursor-pointer" style="height: ${pct.toFixed(1)}%;"></div>
+              <span class="text-[10px] font-mono text-slate-600 mt-2">${item.year}</span>
+            </div>
+          `;
+        }).join('');
+      }
+
+      const syncNote = document.getElementById('scholar-sync-note');
+      if (syncNote && data.last_updated) {
+        syncNote.textContent = `Live synced: ${data.last_updated.split(' ')[0]}`;
+      }
+    })
+    .catch(() => {
+      // Quiet fallback: pre-rendered static content remains intact
+    });
 }

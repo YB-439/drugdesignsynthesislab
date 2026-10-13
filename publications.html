@@ -151,6 +151,223 @@
   <main class="py-14 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       
+      <!-- Google Scholar Bibliometric Analytics Card -->
+      <div class="academic-card p-6 sm:p-8 bg-white border-slate-300 shadow-xs space-y-6">
+        
+        <!-- Top Title Bar -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-5">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-teal-50 text-teal-800 border border-teal-200">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                LIVE BIBLIOMETRIC DATA
+              </span>
+              <span class="text-xs text-slate-500 font-mono">Google Scholar ID: kxIxyF8AAAAJ</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 font-serif">
+              Citation Metrics & Scientific Impact
+            </h2>
+            <p class="text-xs text-slate-600">
+              Verified citation analytics for <strong>Prof. (Dr.) Yogita Bansal</strong> &bull; Department of Pharmaceutical Sciences and Drug Research, Punjabi University Patiala.
+            </p>
+          </div>
+
+          <a href="https://scholar.google.com/citations?user=kxIxyF8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 hover:bg-amber-50 text-slate-700 hover:text-amber-900 border border-slate-200 hover:border-amber-300 text-xs font-bold transition-all shadow-2xs shrink-0" title="Open Official Google Scholar Profile">
+            <i data-lucide="graduation-cap" class="w-4 h-4 text-amber-600"></i>
+            <span>Google Scholar Profile &rarr;</span>
+          </a>
+        </div>
+
+        <!-- Metrics Grid: Left (Table + Highlight Cards) / Right (Yearly Citation Bar Chart) -->
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Column (5 cols): Summary Cards & Comparison Table -->
+          <div class="lg:col-span-5 space-y-5">
+            
+            <!-- 3 Stat Highlight Blocks -->
+            <div class="grid grid-cols-3 gap-3">
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-0.5">
+                <div class="text-[10px] font-mono text-slate-500 font-semibold uppercase">Citations</div>
+                <div class="text-xl sm:text-2xl font-extrabold text-teal-800 font-serif" id="stat-cites-all">4,343</div>
+                <div class="text-[10px] text-slate-500 font-mono" id="stat-cites-recent">2,470 since '21</div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-0.5">
+                <div class="text-[10px] font-mono text-slate-500 font-semibold uppercase">h-index</div>
+                <div class="text-xl sm:text-2xl font-extrabold text-teal-800 font-serif" id="stat-h-all">23</div>
+                <div class="text-[10px] text-slate-500 font-mono" id="stat-h-recent">18 since '21</div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-0.5">
+                <div class="text-[10px] font-mono text-slate-500 font-semibold uppercase">i10-index</div>
+                <div class="text-xl sm:text-2xl font-extrabold text-teal-800 font-serif" id="stat-i10-all">33</div>
+                <div class="text-[10px] text-slate-500 font-mono" id="stat-i10-recent">28 since '21</div>
+              </div>
+            </div>
+
+            <!-- Exact Google Scholar Metrics Table (matching user screenshot) -->
+            <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-2xs">
+              <div class="px-4 py-2 bg-slate-50 border-b border-slate-200 flex items-center justify-between text-xs font-bold text-slate-800">
+                <span>Citation Indices</span>
+                <span class="text-[10px] font-mono font-normal text-slate-500">Google Scholar</span>
+              </div>
+              <table class="w-full text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200/80 text-slate-500 text-[11px] font-semibold">
+                    <th class="py-2.5 px-4 text-left">Metric</th>
+                    <th class="py-2.5 px-4 text-right">All</th>
+                    <th class="py-2.5 px-4 text-right">Since 2021</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 font-mono text-xs">
+                  <tr class="hover:bg-slate-50/50">
+                    <td class="py-2.5 px-4 font-sans font-semibold text-slate-900">Citations</td>
+                    <td class="py-2.5 px-4 text-right font-bold text-teal-900" id="table-cites-all">4343</td>
+                    <td class="py-2.5 px-4 text-right text-slate-600" id="table-cites-recent">2470</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50/50">
+                    <td class="py-2.5 px-4 font-sans font-semibold text-slate-900">h-index</td>
+                    <td class="py-2.5 px-4 text-right font-bold text-teal-900" id="table-h-all">23</td>
+                    <td class="py-2.5 px-4 text-right text-slate-600" id="table-h-recent">18</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50/50">
+                    <td class="py-2.5 px-4 font-sans font-semibold text-slate-900">i10-index</td>
+                    <td class="py-2.5 px-4 text-right font-bold text-teal-900" id="table-i10-all">33</td>
+                    <td class="py-2.5 px-4 text-right text-slate-600" id="table-i10-recent">28</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="text-[11px] text-slate-500 leading-normal">
+              <span class="font-semibold text-slate-700">h-index:</span> 23 papers with at least 23 citations &bull; 
+              <span class="font-semibold text-slate-700">i10-index:</span> 33 papers with 10+ citations.
+            </div>
+
+          </div>
+
+          <!-- Right Column (7 cols): Yearly Citations Bar Chart (matching user screenshot) -->
+          <div class="lg:col-span-7 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xs font-bold font-mono uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
+                <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 text-teal-700"></i> Citations by Year (2019 – 2026)
+              </h3>
+              <span class="text-[11px] font-mono text-slate-500">Max: ~440 / year</span>
+            </div>
+
+            <!-- Chart Box -->
+            <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/60 relative">
+              
+              <!-- Y-Axis Grid Lines & Chart Area -->
+              <div class="relative h-48 flex items-end justify-between pt-6 pb-6 pr-12">
+                <!-- Grid Lines (0, 110, 220, 330, 440) -->
+                <div class="absolute inset-0 pr-10 pb-6 pt-6 flex flex-col justify-between pointer-events-none">
+                  <div class="w-full border-b border-slate-200/80"></div>
+                  <div class="w-full border-b border-slate-200/80"></div>
+                  <div class="w-full border-b border-slate-200/80"></div>
+                  <div class="w-full border-b border-slate-200/80"></div>
+                  <div class="w-full border-b border-slate-300"></div>
+                </div>
+
+                <!-- Y-Axis Labels -->
+                <div class="absolute right-0 inset-y-0 pb-6 pt-6 flex flex-col justify-between text-right text-[10px] font-mono text-slate-500 select-none pointer-events-none">
+                  <span>440</span>
+                  <span>330</span>
+                  <span>220</span>
+                  <span>110</span>
+                  <span>0</span>
+                </div>
+
+                <!-- Bars Container -->
+                <div id="scholar-bars-container" class="w-full pr-10 h-full flex items-end justify-between gap-1 sm:gap-2.5 z-10">
+                  <!-- 2019: 269 -->
+                  <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative">
+                    <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2 py-0.5 rounded bg-slate-900 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
+                      2019: 269
+                    </div>
+                    <div class="w-full max-w-[28px] rounded-t-sm bg-slate-500 hover:bg-teal-600 transition-colors cursor-pointer" style="height: 61.1%;"></div>
+                    <span class="text-[10px] font-mono text-slate-600 mt-2">2019</span>
+                  </div>
+
+                  <!-- 2020: 363 -->
+                  <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative">
+                    <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2 py-0.5 rounded bg-slate-900 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
+                      2020: 363
+                    </div>
+                    <div class="w-full max-w-[28px] rounded-t-sm bg-slate-500 hover:bg-teal-600 transition-colors cursor-pointer" style="height: 82.5%;"></div>
+                    <span class="text-[10px] font-mono text-slate-600 mt-2">2020</span>
+                  </div>
+
+                  <!-- 2021: 402 -->
+                  <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative">
+                    <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2 py-0.5 rounded bg-slate-900 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
+                      2021: 402
+                    </div>
+                    <div class="w-full max-w-[28px] rounded-t-sm bg-slate-500 hover:bg-teal-600 transition-colors cursor-pointer" style="height: 91.4%;"></div>
+                    <span class="text-[10px] font-mono text-slate-600 mt-2">2021</span>
+                  </div>
+
+                  <!-- 2022: 420 -->
+                  <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative">
+                    <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2 py-0.5 rounded bg-slate-900 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
+                      2022: 420
+                    </div>
+                    <div class="w-full max-w-[28px] rounded-t-sm bg-slate-500 hover:bg-teal-600 transition-colors cursor-pointer" style="height: 95.5%;"></div>
+                    <span class="text-[10px] font-mono text-slate-600 mt-2">2022</span>
+                  </div>
+
+                  <!-- 2023: 436 -->
+                  <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative">
+                    <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2 py-0.5 rounded bg-slate-900 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
+                      2023: 436
+                    </div>
+                    <div class="w-full max-w-[28px] rounded-t-sm bg-slate-500 hover:bg-teal-600 transition-colors cursor-pointer" style="height: 99.1%;"></div>
+                    <span class="text-[10px] font-mono text-slate-600 mt-2">2023</span>
+                  </div>
+
+                  <!-- 2024: 427 -->
+                  <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative">
+                    <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2 py-0.5 rounded bg-slate-900 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
+                      2024: 427
+                    </div>
+                    <div class="w-full max-w-[28px] rounded-t-sm bg-slate-500 hover:bg-teal-600 transition-colors cursor-pointer" style="height: 97.0%;"></div>
+                    <span class="text-[10px] font-mono text-slate-600 mt-2">2024</span>
+                  </div>
+
+                  <!-- 2025: 439 -->
+                  <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative">
+                    <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2 py-0.5 rounded bg-slate-900 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
+                      2025: 439
+                    </div>
+                    <div class="w-full max-w-[28px] rounded-t-sm bg-slate-500 hover:bg-teal-600 transition-colors cursor-pointer" style="height: 99.8%;"></div>
+                    <span class="text-[10px] font-mono text-slate-600 mt-2">2025</span>
+                  </div>
+
+                  <!-- 2026: 344 -->
+                  <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative">
+                    <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2 py-0.5 rounded bg-slate-900 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
+                      2026: 344
+                    </div>
+                    <div class="w-full max-w-[28px] rounded-t-sm bg-slate-500 hover:bg-teal-600 transition-colors cursor-pointer" style="height: 78.2%;"></div>
+                    <span class="text-[10px] font-mono text-slate-600 mt-2">2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom info row -->
+              <div class="mt-4 pt-3 border-t border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between text-[11px] text-slate-500 gap-1 font-mono">
+                <span>*2026 citations reflect year-to-date tracking</span>
+                <span id="scholar-sync-note">Synced via Google Scholar Profile</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
       <!-- Search & Multi-Filter Bar -->
       <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-4">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">

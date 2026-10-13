@@ -1,0 +1,53 @@
+{
+  "scholar_id": "kxIxyF8AAAAJ",
+  "profile_url": "https://scholar.google.com/citations?user=kxIxyF8AAAAJ&hl=en",
+  "last_updated": "2026-10-13 13:33:23",
+  "table": {
+    "citations": {
+      "all": 4343,
+      "since_recent": 2470
+    },
+    "h_index": {
+      "all": 23,
+      "since_recent": 18
+    },
+    "i10_index": {
+      "all": 33,
+      "since_recent": 28
+    }
+  },
+  "history": [
+    {
+      "year": 2019,
+      "citations": 269
+    },
+    {
+      "year": 2020,
+      "citations": 363
+    },
+    {
+      "year": 2021,
+      "citations": 402
+    },
+    {
+      "year": 2022,
+      "citations": 420
+    },
+    {
+      "year": 2023,
+      "citations": 436
+    },
+    {
+      "year": 2024,
+      "citations": 427
+    },
+    {
+      "year": 2025,
+      "citations": 439
+    },
+    {
+      "year": 2026,
+      "citations": 344
+    }
+  ]
+}
