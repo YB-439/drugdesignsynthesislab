@@ -122,16 +122,14 @@ document.addEventListener('DOMContentLoaded', function () {
 function initPublicationsSection() {
   const container = document.getElementById('publications-list');
   const searchInput = document.getElementById('pub-search-input');
-  const scaffoldFilter = document.getElementById('pub-scaffold-filter');
   const yearFilter = document.getElementById('pub-year-filter');
-  const typeFilter = document.getElementById('pub-type-filter');
   const countBadge = document.getElementById('pub-count-badge');
 
   if (!container || !window.LAB_PUBLICATIONS) return;
 
   function renderPubs(pubs) {
     if (countBadge) {
-      countBadge.textContent = `${pubs.length} of ${window.LAB_PUBLICATIONS.length} papers`;
+      countBadge.textContent = `${pubs.length} papers`;
     }
 
     if (pubs.length === 0) {
@@ -157,28 +155,10 @@ function initPublicationsSection() {
           <div class="font-bold text-slate-900 text-sm font-serif mb-1 leading-snug">
             <a href="${pub.link}" target="_blank" rel="noopener noreferrer" class="hover:text-teal-700 transition-colors">${pub.title}</a>
           </div>
-          <div class="text-xs text-slate-600 mb-1.5">${pub.authors}</div>
-          <div class="flex flex-wrap items-center gap-1.5">
-            <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-semibold rounded bg-slate-100 text-slate-700 border border-slate-200">
-              Scaffold: ${pub.scaffold}
-            </span>
-            ${pub.target ? `
-            <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-semibold rounded bg-teal-50 text-teal-800 border border-teal-200">
-              Target: ${pub.target}
-            </span>` : ''}
-            ${pub.citations ? `
-            <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-amber-50 text-amber-900 border border-amber-200">
-              ${pub.citations} citations
-            </span>` : ''}
-            ${pub.doi ? `
-            <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-mono text-slate-500">
-              DOI: ${pub.doi}
-            </span>` : ''}
-          </div>
+          <div class="text-xs text-slate-600">${pub.authors}</div>
         </td>
         <td class="text-xs text-slate-700 font-medium py-4">
-          <div class="font-semibold text-slate-800">${pub.journal}</div>
-          <div class="text-[10px] text-slate-500 mt-0.5">${pub.type || 'Research Article'}</div>
+          <div class="font-semibold text-slate-800">${pub.journal || 'Journal Publication'}</div>
         </td>
         <td class="font-mono text-xs font-bold text-slate-900 py-4">${pub.year || 'N/A'}</td>
         <td class="text-right py-4">
@@ -213,10 +193,8 @@ function initPublicationsSection() {
     const filtered = window.LAB_PUBLICATIONS.filter(p => {
       const matchQuery = !query || 
         p.title.toLowerCase().includes(query) || 
-        p.journal.toLowerCase().includes(query) || 
-        p.authors.toLowerCase().includes(query) ||
-        (p.target && p.target.toLowerCase().includes(query)) ||
-        (p.scaffold && p.scaffold.toLowerCase().includes(query)) ||
+        (p.journal && p.journal.toLowerCase().includes(query)) || 
+        (p.authors && p.authors.toLowerCase().includes(query)) ||
         (p.doi && p.doi.toLowerCase().includes(query));
 
       const matchYear = year === 'all' || p.year.toString() === year;

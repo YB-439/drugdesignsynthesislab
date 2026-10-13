@@ -147,9 +147,13 @@ def fetch_scholar_data():
         title = clean_text(raw_title)
         link = ("https://scholar.google.com" + clean_text(l_match.group(1))) if l_match else ""
         
-        grays = re.findall(r'<div class="gs_gray">([^<]*)</div>', r)
-        authors = clean_text(grays[0]) if len(grays) > 0 else "Prof. Yogita Bansal & Co-workers"
-        journal = clean_text(grays[1]) if len(grays) > 1 else ""
+        grays = re.findall(r'<div class="gs_gray">(.*?)</div>', r, re.DOTALL)
+        authors = clean_text(re.sub(r'<[^>]+>', '', grays[0])) if len(grays) > 0 else "Prof. Yogita Bansal & Co-workers"
+        if len(grays) > 1:
+            raw_j = re.sub(r'<span class="gs_oph">.*?</span>', '', grays[1])
+            journal = clean_text(re.sub(r'<[^>]+>', '', raw_j))
+        else:
+            journal = ""
 
         c_match = re.search(r'class="gsc_a_ac[^"]*"[^>]*>(\d+)<', r)
         citations = int(c_match.group(1)) if c_match else 0
@@ -166,32 +170,22 @@ def fetch_scholar_data():
                     matched = v
                     break
 
-        if matched:
-            paper = {
-                "title": title,
-                "authors": matched.get("authors") or authors,
-                "journal": matched.get("journal") or journal or "Peer-Reviewed Scientific Journal",
-                "year": matched.get("year") or year,
-                "citations": citations if citations > 0 else matched.get("citations", 0),
-                "scaffold": matched.get("scaffold") or auto_detect_scaffold(title),
-                "target": matched.get("target") or "Medicinal Chemistry",
-                "type": matched.get("type") or auto_detect_type(title, journal),
-                "link": matched.get("link") or link,
-                "doi": matched.get("doi") or ""
-            }
-        else:
-            paper = {
-                "title": title,
-                "authors": authors if authors else "Prof. Yogita Bansal et al.",
-                "journal": journal if journal else "Peer-Reviewed Scientific Journal",
-                "year": year,
-                "citations": citations,
-                "scaffold": auto_detect_scaffold(title),
-                "target": "Biological Target / Pharmacology",
-                "type": auto_detect_type(title, journal),
-                "link": link,
-                "doi": ""
-            }
+        # Determine clean journal name
+        matched_journal = matched.get("journal", "") if matched else ""
+        if matched_journal.strip().lower() in ["peer-reviewed scientific journal", "journal publication", ""]:
+            matched_journal = ""
+        
+        final_journal = journal if journal else (matched_journal if matched_journal else "Journal Publication")
+        
+        paper = {
+            "title": title,
+            "authors": (matched.get("authors") if matched and matched.get("authors") else authors) or "Prof. Yogita Bansal et al.",
+            "journal": final_journal,
+            "year": (matched.get("year") if matched and matched.get("year") else year) or year,
+            "citations": citations if citations > 0 else (matched.get("citations", 0) if matched else 0),
+            "link": link or (matched.get("link", "") if matched else ""),
+            "doi": matched.get("doi", "") if matched else ""
+        }
 
         parsed_papers.append(paper)
 

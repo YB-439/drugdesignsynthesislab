@@ -716,14 +716,11 @@
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
           <div class="flex items-center gap-2">
             <span class="text-xs font-bold text-slate-700">Filter Publications:</span>
-            <span id="pub-count-badge" class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 text-[11px] font-mono">
-              61 papers
-            </span>
           </div>
 
           <div class="flex flex-wrap items-center gap-2">
             <!-- Search Text -->
-            <input type="text" id="pub-search-input" placeholder="Search title, author, target, DOI..." 
+            <input type="text" id="pub-search-input" placeholder="Search title, author, journal, DOI..." 
                    class="bg-slate-50 border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-800 focus:outline-none focus:border-teal-600 w-full sm:w-72" />
 
             <!-- Year Filter -->
@@ -740,8 +737,8 @@
           <thead>
             <tr>
               <th class="w-12">#</th>
-              <th>Publication Title, Authors & Targets</th>
-              <th class="w-52">Journal & Type</th>
+              <th>Publication Title & Authors</th>
+              <th class="w-60">Journal</th>
               <th class="w-20">Year</th>
               <th class="w-36 text-right">Official DOI</th>
             </tr>
