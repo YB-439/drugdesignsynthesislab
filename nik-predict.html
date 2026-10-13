@@ -148,8 +148,8 @@
   <section class="bg-gradient-to-b from-teal-50/60 via-white to-slate-50 py-14 sm:py-16 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-12 gap-10 items-center">
-        <!-- Left Column: Title, Overview, CTA Buttons (7 cols) -->
-        <div class="lg:col-span-7 space-y-6">
+        <!-- Left Column: Title, Overview, CTA Buttons (8 cols) -->
+        <div class="lg:col-span-8 space-y-6">
           <div class="space-y-3">
 
             <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 font-serif tracking-tight">
@@ -169,31 +169,32 @@
             </p>
           </div>
 
-          <!-- Primary Download & Article Action Buttons -->
-          <div class="flex flex-wrap items-center gap-4 pt-2">
+          <!-- Primary Download & Article Action Buttons (Single Row on Desktop) -->
+          <div class="flex flex-wrap lg:flex-nowrap items-center gap-3 pt-2">
+            <!-- 1. Download Button -->
             <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" 
-               class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all group">
-              <i data-lucide="download" class="w-5 h-5 group-hover:translate-y-0.5 transition-transform"></i>
+               class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all whitespace-nowrap flex-shrink-0 group">
+              <i data-lucide="download" class="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-0.5 transition-transform"></i>
               <span>Download NIK-Predict for Windows</span>
               <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-teal-900/60 text-teal-100">v1.0.0</span>
             </a>
 
-            <!-- Explore other QSAR Models/Tools Button -->
-            <a href="tools.html" 
-               class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 hover:border-slate-300 font-semibold text-sm transition-all group">
-              <i data-lucide="layers" class="w-4 h-4 text-slate-600 group-hover:text-teal-700 transition-colors"></i>
-              <span>Explore other QSAR Models/Tools &rarr;</span>
-            </a>
-
-            <!-- Read Article Button -->
+            <!-- 2. Read Article Button -->
             <button type="button" 
                     id="read-article-btn"
                     onclick="openPaperStatusModal()"
-                    class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 hover:border-teal-600 font-semibold text-sm shadow-xs transition-all cursor-pointer group">
+                    class="inline-flex items-center justify-center gap-2 px-3.5 sm:px-4 py-3 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 hover:border-teal-600 font-semibold text-xs sm:text-sm shadow-xs transition-all cursor-pointer whitespace-nowrap flex-shrink-0 group">
               <i data-lucide="book-open" class="w-4 h-4 text-teal-700 group-hover:scale-110 transition-transform"></i>
               <span>Read Article</span>
               <span class="px-1.5 py-0.5 text-[10px] font-mono rounded bg-amber-100 text-amber-800 border border-amber-200">In Press</span>
             </button>
+
+            <!-- 3. Explore other QSAR Models/Tools Button (Right of Read Article) -->
+            <a href="tools.html" 
+               class="inline-flex items-center justify-center gap-2 px-3.5 sm:px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 hover:border-slate-300 font-semibold text-xs sm:text-sm transition-all whitespace-nowrap flex-shrink-0 group">
+              <i data-lucide="layers" class="w-4 h-4 text-slate-600 group-hover:text-teal-700 transition-colors"></i>
+              <span>Explore other QSAR Models/Tools &rarr;</span>
+            </a>
           </div>
 
           <!-- Quick System Badges -->
@@ -210,8 +211,8 @@
           </div>
         </div>
 
-        <!-- Right Column: Workflow Diagram Graphic (5 cols) -->
-        <div class="lg:col-span-5 flex justify-center">
+        <!-- Right Column: Workflow Diagram Graphic (4 cols) -->
+        <div class="lg:col-span-4 flex justify-center">
           <div class="academic-card p-3 sm:p-4 bg-white border-teal-200/80 shadow-lg rounded-2xl w-full max-w-lg overflow-hidden group">
             <img src="images/nik-predict-workflow.jpg" 
                  alt="NIK-Predict Bioactivity Prediction App Workflow: input SMILES to Monte Carlo QSAR model to predicted value" 
