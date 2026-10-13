@@ -1,7 +1,7 @@
 {
   "scholar_id": "kxIxyF8AAAAJ",
   "profile_url": "https://scholar.google.com/citations?user=kxIxyF8AAAAJ&hl=en",
-  "last_updated": "2026-10-13 13:33:23",
+  "last_updated": "2026-10-13 13:56:29",
   "table": {
     "citations": {
       "all": 4343,
@@ -18,36 +18,29 @@
   },
   "history": [
     {
-      "year": 2019,
-      "citations": 269
-    },
-    {
-      "year": 2020,
-      "citations": 363
-    },
-    {
-      "year": 2021,
-      "citations": 402
-    },
-    {
       "year": 2022,
-      "citations": 420
+      "citations": 420,
+      "is_current": false
     },
     {
       "year": 2023,
-      "citations": 436
+      "citations": 436,
+      "is_current": false
     },
     {
       "year": 2024,
-      "citations": 427
+      "citations": 427,
+      "is_current": false
     },
     {
       "year": 2025,
-      "citations": 439
+      "citations": 439,
+      "is_current": false
     },
     {
       "year": 2026,
-      "citations": 344
+      "citations": 344,
+      "is_current": true
     }
   ]
 }

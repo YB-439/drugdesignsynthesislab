@@ -252,35 +252,51 @@ function initScholarMetrics() {
         const tiRec = document.getElementById('table-i10-recent');
 
         if (cAll && data.table.citations?.all) cAll.textContent = data.table.citations.all.toLocaleString();
-        if (cRec && data.table.citations?.since_recent) cRec.textContent = `${data.table.citations.since_recent.toLocaleString()} since '21`;
+        if (cRec && data.table.citations?.since_recent) cRec.textContent = data.table.citations.since_recent.toLocaleString();
         if (hAll && data.table.h_index?.all) hAll.textContent = data.table.h_index.all;
-        if (hRec && data.table.h_index?.since_recent) hRec.textContent = `${data.table.h_index.since_recent} since '21`;
+        if (hRec && data.table.h_index?.since_recent) hRec.textContent = data.table.h_index.since_recent;
         if (iAll && data.table.i10_index?.all) iAll.textContent = data.table.i10_index.all;
-        if (iRec && data.table.i10_index?.since_recent) iRec.textContent = `${data.table.i10_index.since_recent} since '21`;
-
-        if (tcAll && data.table.citations?.all) tcAll.textContent = data.table.citations.all;
-        if (tcRec && data.table.citations?.since_recent) tcRec.textContent = data.table.citations.since_recent;
-        if (thAll && data.table.h_index?.all) thAll.textContent = data.table.h_index.all;
-        if (thRec && data.table.h_index?.since_recent) thRec.textContent = data.table.h_index.since_recent;
-        if (tiAll && data.table.i10_index?.all) tiAll.textContent = data.table.i10_index.all;
-        if (tiRec && data.table.i10_index?.since_recent) tiRec.textContent = data.table.i10_index.since_recent;
+        if (iRec && data.table.i10_index?.since_recent) iRec.textContent = data.table.i10_index.since_recent;
       }
 
-      // Update bars if history present
+      // Update bars if history present (5-year data with distinct last-year styling)
       if (Array.isArray(data.history) && data.history.length > 0) {
-        const maxVal = Math.max(...data.history.map(h => h.citations), 440);
+        // Take latest 5 years
+        const history5 = data.history.slice(-5);
+        const maxVal = Math.max(...history5.map(h => h.citations), 440);
         
-        barsContainer.innerHTML = data.history.map(item => {
-          const pct = Math.min(100, Math.max(8, (item.citations / maxVal) * 100));
-          return `
-            <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative">
-              <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2 py-0.5 rounded bg-slate-900 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
-                ${item.year}: ${item.citations}
+        barsContainer.innerHTML = history5.map((item, idx) => {
+          const isLast = (idx === history5.length - 1) || item.is_current || item.year === 2026;
+          const pct = Math.min(100, Math.max(10, (item.citations / maxVal) * 100));
+
+          if (isLast) {
+            return `
+              <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative max-w-[56px]">
+                <div class="mb-1">
+                  <span class="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-teal-100 text-teal-800 border border-teal-300 shadow-2xs">
+                    YTD
+                  </span>
+                </div>
+                <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2.5 py-0.5 rounded bg-teal-950 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
+                  ${item.year}: ${item.citations} (Ongoing YTD)
+                </div>
+                <div class="w-full rounded-t-sm bg-gradient-to-t from-teal-700 via-teal-600 to-emerald-400 hover:brightness-110 border-2 border-teal-400 shadow-sm transition-all cursor-pointer" style="height: ${pct.toFixed(1)}%;"></div>
+                <span class="text-xs font-mono font-bold text-teal-800 mt-2 flex items-center gap-0.5">
+                  ${item.year}<span class="text-teal-600 text-[10px]">*</span>
+                </span>
               </div>
-              <div class="w-full max-w-[28px] rounded-t-sm bg-slate-500 hover:bg-teal-600 transition-colors cursor-pointer" style="height: ${pct.toFixed(1)}%;"></div>
-              <span class="text-[10px] font-mono text-slate-600 mt-2">${item.year}</span>
-            </div>
-          `;
+            `;
+          } else {
+            return `
+              <div class="flex-1 flex flex-col items-center h-full justify-end group/bar relative max-w-[56px]">
+                <div class="opacity-0 group-hover/bar:opacity-100 transition-opacity absolute -top-8 px-2 py-0.5 rounded bg-slate-900 text-white text-[10px] font-mono pointer-events-none whitespace-nowrap shadow-md z-20">
+                  ${item.year}: ${item.citations} citations
+                </div>
+                <div class="w-full rounded-t-sm bg-slate-500 hover:bg-slate-600 transition-colors cursor-pointer" style="height: ${pct.toFixed(1)}%;"></div>
+                <span class="text-xs font-mono text-slate-600 mt-2 font-medium">${item.year}</span>
+              </div>
+            `;
+          }
         }).join('');
       }
 
