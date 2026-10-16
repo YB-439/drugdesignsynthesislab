@@ -283,3 +283,97 @@ function initScholarMetrics() {
       // Quiet fallback: pre-rendered static content remains intact
     });
 }
+
+/**
+ * ==============================================================================
+ * p38α/β-Predict Pre-Publication Academic Access Verification Logic
+ * ==============================================================================
+ */
+window.openP38AccessModal = function () {
+  const modal = document.getElementById('p38-access-modal');
+  if (modal) {
+    modal.classList.remove('hidden');
+    const input = document.getElementById('p38-pin-input');
+    if (input) {
+      input.value = '';
+      input.focus();
+    }
+    const status = document.getElementById('p38-pin-status');
+    if (status) {
+      status.classList.add('hidden');
+      status.textContent = '';
+    }
+    if (window.lucide) lucide.createIcons();
+  }
+};
+
+window.closeP38AccessModal = function () {
+  const modal = document.getElementById('p38-access-modal');
+  if (modal) modal.classList.add('hidden');
+};
+
+// Global escape key and backdrop click listener
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeP38AccessModal();
+  }
+});
+
+window.handleP38PinSubmit = async function (e) {
+  e.preventDefault();
+  const pinInput = document.getElementById('p38-pin-input')?.value || '';
+  const statusEl = document.getElementById('p38-pin-status');
+  const submitBtn = document.getElementById('p38-pin-submit-btn');
+
+  if (!statusEl) return;
+
+  statusEl.className = 'text-xs font-medium py-2 px-3 rounded-lg';
+
+  try {
+    const enc = new TextEncoder();
+    const hashBuffer = await crypto.subtle.digest('SHA-256', enc.encode(pinInput.trim()));
+    const key = new Uint8Array(hashBuffer);
+
+    // Encrypted download URL payload (Symmetric stream cipher keyed with SHA-256 of authorized PIN)
+    const cipherHex = '01fbc5c9fd3f713dcc6523643e69a5acc54a07954f643d63f19d27cfaefb32431ae6d6d7fd7c3066c36924653867eaad85554da068287a35bb9d27d2acf23a4908eb9ecfbf2b6e3c9b23273f7326dbbdcf4341af79676c28ad';
+    const cipherBytes = new Uint8Array(cipherHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+    const decrypted = new Uint8Array(cipherBytes.length);
+
+    for (let i = 0; i < cipherBytes.length; i++) {
+      decrypted[i] = cipherBytes[i] ^ key[i % key.length];
+    }
+
+    const decryptedUrl = new TextDecoder().decode(decrypted);
+
+    if (decryptedUrl.startsWith('https://github.com/YB-439/drugdesignsynthesislab/releases/download/')) {
+      statusEl.textContent = '✓ Access PIN Verified! Initiating secure download...';
+      statusEl.classList.add('bg-teal-50', 'text-teal-800', 'border', 'border-teal-300');
+      statusEl.classList.remove('hidden');
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Downloading...';
+      }
+
+      setTimeout(() => {
+        window.location.href = decryptedUrl;
+        setTimeout(() => {
+          closeP38AccessModal();
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i data-lucide="key" class="w-3.5 h-3.5"></i> <span>Unlock &amp; Download</span>';
+            if (window.lucide) lucide.createIcons();
+          }
+        }, 2000);
+      }, 600);
+    } else {
+      statusEl.textContent = '✕ Invalid Access PIN. Please request the authorized code from Prof. Yogita Bansal or Mr. Saurabh Gupta.';
+      statusEl.classList.add('bg-rose-50', 'text-rose-800', 'border', 'border-rose-300');
+      statusEl.classList.remove('hidden');
+    }
+  } catch (err) {
+    statusEl.textContent = 'Verification error. Please ensure JavaScript is enabled and try again.';
+    statusEl.classList.add('bg-rose-50', 'text-rose-800', 'border', 'border-rose-300');
+    statusEl.classList.remove('hidden');
+  }
+};
