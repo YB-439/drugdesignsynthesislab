@@ -45,8 +45,8 @@
                   <span class="text-xs font-bold text-teal-900">NIK-Predict</span>
                 </a>
 
-                <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" 
-                   class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
+                <button type="button" onclick="if(window.openNikAccessModal){openNikAccessModal();}" 
+                   class="w-full text-left flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
                   <div class="w-7 h-7 rounded-md bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
                     <i data-lucide="download" class="w-3.5 h-3.5"></i>
                   </div>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="text-[11px] text-slate-500 font-normal">Direct Windows portable executable</div>
                   </div>
-                </a>
+                </button>
 
 
                 <a href="tools.html" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
@@ -108,10 +108,10 @@
           <a href="nik-predict.html" class="block py-1 text-xs font-bold text-teal-900">
             &bull; NIK-Predict
           </a>
-          <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" class="flex items-center justify-between py-1 text-xs font-bold text-teal-700 hover:underline">
+          <button type="button" onclick="if(window.openNikAccessModal){openNikAccessModal();}" class="w-full flex items-center justify-between py-1 text-xs font-bold text-teal-700 hover:underline text-left cursor-pointer">
             <span>&bull; NIK-Predict (.exe Download)</span>
             <i data-lucide="download" class="w-3.5 h-3.5"></i>
-          </a>
+          </button>
           <a href="tools.html#p38-predict" class="block py-1 text-xs font-bold text-teal-900">
             &bull; p38-Predict
           </a>
@@ -162,12 +162,13 @@
           <!-- Primary Download & Article Action Buttons (Single Row on Desktop) -->
           <div class="flex flex-wrap lg:flex-nowrap items-center gap-3 pt-2">
             <!-- 1. Download Button -->
-            <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" 
-               class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all whitespace-nowrap flex-shrink-0 group">
+            <button type="button" 
+               onclick="openNikAccessModal()"
+               class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all whitespace-nowrap flex-shrink-0 group cursor-pointer">
               <i data-lucide="download" class="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-0.5 transition-transform"></i>
               <span>Download NIK-Predict for Windows</span>
               <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-teal-900/60 text-teal-100">v1.0.0</span>
-            </a>
+            </button>
 
             <!-- 2. Read Article Button -->
             <button type="button" 
@@ -366,34 +367,70 @@
     </div>
   </div>
 
-  <script src="js/app.js"></script>
-  <script>
-    function openPaperStatusModal() {
-      const modal = document.getElementById('paper-status-modal');
-      if (modal) {
-        modal.classList.remove('hidden');
-        if (window.lucide) { lucide.createIcons(); }
-      }
-    }
-    function closePaperStatusModal() {
-      const modal = document.getElementById('paper-status-modal');
-      if (modal) {
-        modal.classList.add('hidden');
-      }
-    }
-    // Close modal when clicking outside dialog
-    document.addEventListener('click', function(e) {
-      const modal = document.getElementById('paper-status-modal');
-      if (modal && e.target === modal) {
-        closePaperStatusModal();
-      }
-    });
-    // Close modal on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closePaperStatusModal();
-      }
-    });
-  </script>
+  <!-- ============================================================================== -->
+  <!-- NIK-Predict Pre-Publication Academic Access Verification Modal                 -->
+  <!-- ============================================================================== -->
+  <div id="nik-access-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="academic-card bg-white max-w-lg w-full p-6 sm:p-7 shadow-2xl space-y-5 border-teal-300 animate-in fade-in duration-200">
+      
+      <!-- Modal Header -->
+      <div class="flex items-start justify-between gap-3 border-b border-slate-100 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center shrink-0">
+            <i data-lucide="lock" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="inline-block text-[10px] font-bold font-mono tracking-wider uppercase px-2 py-0.5 rounded bg-teal-100 text-teal-900 mb-1">
+              Pre-Publication Restricted Access
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 font-serif leading-tight">NIK-Predict Standalone (.exe)</h3>
+          </div>
+        </div>
+        <button type="button" onclick="closeNikAccessModal()" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg hover:bg-slate-100">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Notice Description -->
+      <div class="text-xs text-slate-600 space-y-2 leading-relaxed">
+        <p>
+          This computational model and software (NIK-Predict) is currently under peer review and pre-publication embargo. In accordance with university research governance, open public downloads are not available until publication.
+        </p>
+        <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg text-amber-900 text-[11px] font-medium">
+          <strong class="block mb-0.5">Academic Evaluation PIN:</strong>
+          Scholars and researchers can obtain an authorized Access PIN by emailing <span class="font-mono font-bold text-amber-950">drugdesignsynthesislab@gmail.com</span> to evaluate this standalone Windows application.
+        </div>
+      </div>
+
+      <!-- Request PIN via Email Button -->
+      <div class="pt-1">
+        <a href="mailto:drugdesignsynthesislab@gmail.com?cc=yogita_pharma@pbi.ac.in&subject=Request%20for%20NIK-Predict%20Academic%20Access%20PIN&body=Respected%20Prof.%20Yogita%20Bansal%20%2F%20Research%20Group%2C%0A%0AI%20would%20like%20to%20request%20an%20authorized%20Access%20PIN%20to%20download%20and%20evaluate%20the%20NIK-Predict%20standalone%20desktop%20executable%20for%20academic%20research%20purposes.%0A%0AName%3A%20%0ADesignation%2FInstitution%3A%20%0AResearch%20Objective%3A%20%0A%0AThank%20you." 
+           class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center justify-center gap-2 transition-colors border border-slate-200">
+          <i data-lucide="mail" class="w-4 h-4 text-teal-700"></i>
+          <span>Request Access PIN via Email (drugdesignsynthesislab@gmail.com) &rarr;</span>
+        </a>
+      </div>
+
+      <!-- Unlock PIN Form -->
+      <form id="nik-pin-form" onsubmit="handleNikPinSubmit(event)" class="space-y-3 pt-2 border-t border-slate-100">
+        <label for="nik-pin-input" class="block text-xs font-bold text-slate-800">
+          Already have an authorized Access PIN?
+        </label>
+        <div class="flex gap-2">
+          <input type="password" id="nik-pin-input" required placeholder="Enter Access PIN" 
+                 class="flex-1 bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs text-slate-900 font-mono focus:outline-none focus:border-teal-600 focus:bg-white" />
+          <button type="submit" id="nik-pin-submit-btn" 
+                  class="px-5 py-2 bg-teal-800 hover:bg-teal-900 text-white font-bold text-xs rounded-xl shadow-xs flex items-center gap-1.5 transition-colors shrink-0">
+            <i data-lucide="key" class="w-3.5 h-3.5"></i>
+            <span>Unlock &amp; Download</span>
+          </button>
+        </div>
+        <div id="nik-pin-status" class="hidden text-xs font-medium py-2 px-3 rounded-lg"></div>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="js/app.js?v=78"></script>
 </body>
 </html>

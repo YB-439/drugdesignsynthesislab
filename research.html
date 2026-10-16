@@ -46,8 +46,8 @@
                   <span class="text-xs font-bold text-teal-900">NIK-Predict</span>
                 </a>
 
-                <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" 
-                   class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
+                <button type="button" onclick="if(window.openNikAccessModal){openNikAccessModal();}" 
+                   class="w-full text-left flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
                   <div class="w-7 h-7 rounded-md bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
                     <i data-lucide="download" class="w-3.5 h-3.5"></i>
                   </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="text-[11px] text-slate-500 font-normal">Windows standalone executable for NIK bioactivity</div>
                   </div>
-                </a>
+                </button>
 
 
                 <a href="tools.html" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
@@ -109,10 +109,10 @@
           <a href="nik-predict.html" class="block py-1 text-xs font-bold text-teal-900">
             &bull; NIK-Predict
           </a>
-          <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" class="flex items-center justify-between py-1 text-xs font-bold text-teal-700 hover:underline">
+          <button type="button" onclick="if(window.openNikAccessModal){openNikAccessModal();}" class="w-full flex items-center justify-between py-1 text-xs font-bold text-teal-700 hover:underline text-left cursor-pointer">
             <span>&bull; NIK-Predict (.exe Download)</span>
             <i data-lucide="download" class="w-3.5 h-3.5"></i>
-          </a>
+          </button>
           <a href="tools.html#p38-predict" class="block py-1 text-xs font-bold text-teal-900">
             &bull; p38-Predict
           </a>
@@ -285,6 +285,6 @@
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script src="js/app.js?v=78"></script>
 </body>
 </html>
