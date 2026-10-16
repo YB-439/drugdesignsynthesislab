@@ -187,13 +187,17 @@
 
           <!-- Action Buttons -->
           <div class="flex flex-wrap items-center gap-3 pt-2">
-            <a href="nik-predict.html" 
-               class="px-5 py-3 rounded-xl bg-teal-800 hover:bg-teal-900 text-white font-bold text-xs shadow-sm flex items-center gap-2 transition-all">
-              <i data-lucide="info" class="w-4 h-4"></i> View Platform Overview &rarr;
-            </a>
+            <button type="button" onclick="openPaperStatusModal()" 
+               class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer">
+              <i data-lucide="book-open" class="w-4 h-4 text-amber-400"></i> Read Article
+            </button>
             <a href="https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe" 
-               class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shadow-sm flex items-center gap-2 transition-all">
+               class="px-5 py-3 rounded-xl bg-teal-800 hover:bg-teal-900 text-white font-bold text-xs shadow-sm flex items-center gap-2 transition-all">
               <i data-lucide="download" class="w-4 h-4"></i> Download (.exe)
+            </a>
+            <a href="nik-predict.html" 
+               class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center gap-2 border border-slate-200 transition-all">
+              <i data-lucide="info" class="w-4 h-4 text-teal-700"></i> Platform Overview &rarr;
             </a>
           </div>
 
