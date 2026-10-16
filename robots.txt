@@ -1,4 +1,61 @@
-User-agent: *
+# ==============================================================================
+# Robots.txt for Drug Design & Synthesis Lab (DDSL)
+# Domain: https://drugdesignsynthesislab.com/
+# ==============================================================================
+
+# 1. Allow legitimate academic & search engine crawlers
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Slurp
+User-agent: Baiduspider
+User-agent: YandexBot
+User-agent: Applebot
 Allow: /
 
+# 2. Block aggressive commercial SEO scrapers & data harvesters
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: SemrushBot-SA
+User-agent: DotBot
+User-agent: MJ12bot
+User-agent: PetalBot
+User-agent: ZoominfoBot
+User-agent: DataForSeoBot
+User-agent: BLEXBot
+User-agent: MegaIndex
+User-agent: SerpstatBot
+Disallow: /
+
+# 3. Block unauthorized AI scrapers & bulk content harvesters
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: CCBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Bytespider
+User-agent: Diffbot
+User-agent: ImagesiftBot
+User-agent: Omgilibot
+User-agent: PerplexityBot
+User-agent: YouBot
+Disallow: /
+
+# 4. Block known exploit tools & automated vulnerability scanners
+User-agent: sqlmap
+User-agent: nikto
+User-agent: Nessus
+User-agent: OpenVAS
+User-agent: Acunetix
+Disallow: /
+
+# 5. Default rules for remaining compliant crawlers
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /downloads/
+Crawl-delay: 5
+
+# Canonical Sitemap Reference
 Sitemap: https://drugdesignsynthesislab.com/sitemap.xml

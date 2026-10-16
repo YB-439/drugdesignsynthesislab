@@ -85,12 +85,44 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Client-side Contact Form handling
+  // Dynamic Anti-Scraper Email Decoding
+  document.querySelectorAll('.email-protect').forEach(el => {
+    const user = el.getAttribute('data-user');
+    const domain = el.getAttribute('data-domain');
+    if (user && domain) {
+      const address = `${user}@${domain}`;
+      el.href = `mailto:${address}`;
+      el.textContent = address;
+    }
+  });
+
+  // Client-side Contact Form handling with Anti-Bot Security Protections
+  const pageLoadedAt = Date.now();
   const contactForm = document.getElementById('lab-contact-form');
   const contactSuccess = document.getElementById('contact-success-msg');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      // 1. Anti-Bot Honeypot Trap Check (bots auto-fill all form fields)
+      const honeypot = document.getElementById('contact-hp-check')?.value;
+      if (honeypot && honeypot.trim() !== '') {
+        console.warn('Automated bot submission trapped via honeypot.');
+        if (contactSuccess) {
+          contactSuccess.textContent = 'Inquiry received.';
+          contactSuccess.classList.remove('hidden');
+        }
+        return;
+      }
+
+      // 2. Anti-Bot Rapid Automated Submission Check (bots submit under 1.5 seconds)
+      const elapsedMs = Date.now() - pageLoadedAt;
+      if (elapsedMs < 1500) {
+        console.warn('Rapid automated submission intercepted.');
+        alert('Please take a moment to review your message details before submitting.');
+        return;
+      }
+
       const name = document.getElementById('contact-name')?.value || '';
       const email = document.getElementById('contact-email')?.value || '';
       const subject = document.getElementById('contact-subject')?.value || 'Academic Inquiry - DDSL';
@@ -100,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const mailtoUrl = `mailto:yogita_pharma@pbi.ac.in?cc=drugdesignsynthesislab@gmail.com&subject=${encodeURIComponent(subject + ' - ' + name)}&body=${encodeURIComponent("Sender: " + name + " (" + email + ")\n\nMessage:\n" + message)}`;
       
       if (contactSuccess) {
+        contactSuccess.textContent = 'Preparing message for dispatch via your email client...';
         contactSuccess.classList.remove('hidden');
       }
       

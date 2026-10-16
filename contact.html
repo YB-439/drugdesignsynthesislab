@@ -6,6 +6,9 @@
   <title>Contact & University Location | Drug Design & Synthesis Lab (DDSL)</title>
   <meta name="description" content="Official contact details for Drug Design & Synthesis Lab (DDSL), Punjabi University Patiala. Lead: Prof. Yogita Bansal. Department of Pharmaceutical Sciences & Drug Research." />
   <link rel="canonical" href="https://drugdesignsynthesislab.com/contact.html" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
@@ -156,8 +159,8 @@
                 <i data-lucide="mail" class="w-4 h-4 text-teal-700 shrink-0 mt-0.5"></i>
                 <div>
                   <strong class="text-slate-900 block">Official Emails</strong>
-                  <a href="mailto:yogita_pharma@pbi.ac.in" class="text-teal-800 hover:underline font-mono">yogita_pharma@pbi.ac.in</a><br />
-                  <a href="mailto:drugdesignsynthesislab@gmail.com" class="text-teal-800 hover:underline font-mono">drugdesignsynthesislab@gmail.com</a>
+                  <a href="#" data-user="yogita_pharma" data-domain="pbi.ac.in" class="email-protect text-teal-800 hover:underline font-mono">yogita_pharma [at] pbi.ac.in</a><br />
+                  <a href="#" data-user="drugdesignsynthesislab" data-domain="gmail.com" class="email-protect text-teal-800 hover:underline font-mono">drugdesignsynthesislab [at] gmail.com</a>
                 </div>
               </div>
 
@@ -209,6 +212,12 @@
             </div>
 
             <form id="lab-contact-form" class="space-y-4 text-xs">
+              <!-- Anti-Bot Honeypot Field (Invisible to human users, traps automated scrapers) -->
+              <div class="hidden" style="display:none !important;" aria-hidden="true">
+                <label for="contact-hp-check">Please leave this field blank</label>
+                <input type="text" id="contact-hp-check" name="website_hp_auth" tabindex="-1" autocomplete="off" />
+              </div>
+
               <div class="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label for="contact-name" class="block font-bold text-slate-700 mb-1">Your Full Name *</label>
