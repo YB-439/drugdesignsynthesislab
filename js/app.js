@@ -378,6 +378,17 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+document.addEventListener('click', function (e) {
+  const p38Modal = document.getElementById('p38-access-modal');
+  if (p38Modal && e.target === p38Modal) {
+    closeP38AccessModal();
+  }
+  const paperModal = document.getElementById('paper-status-modal');
+  if (paperModal && e.target === paperModal) {
+    if (window.closePaperStatusModal) closePaperStatusModal();
+  }
+});
+
 function ensurePaperStatusModalExists() {
   if (document.getElementById('paper-status-modal')) return;
   const modalHtml = `
