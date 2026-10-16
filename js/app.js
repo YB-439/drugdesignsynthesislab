@@ -289,7 +289,65 @@ function initScholarMetrics() {
  * p38α/β-Predict Pre-Publication Academic Access Verification Logic
  * ==============================================================================
  */
+function ensureP38ModalExists() {
+  if (document.getElementById('p38-access-modal')) return;
+  const modalHtml = `
+  <div id="p38-access-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="academic-card bg-white max-w-lg w-full p-6 sm:p-7 shadow-2xl space-y-5 border-amber-300 animate-in fade-in duration-200">
+      <div class="flex items-start justify-between gap-3 border-b border-slate-100 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
+            <i data-lucide="lock" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="inline-block text-[10px] font-bold font-mono tracking-wider uppercase px-2 py-0.5 rounded bg-amber-100 text-amber-900 mb-1">
+              Pre-Publication Restricted Access
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 font-serif leading-tight">p38α/β-Predict Standalone (.exe)</h3>
+          </div>
+        </div>
+        <button type="button" onclick="closeP38AccessModal()" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg hover:bg-slate-100">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="text-xs text-slate-600 space-y-2 leading-relaxed">
+        <p>
+          This computational model and software (p38-Predict) is currently under peer review and pre-publication embargo. In accordance with university research governance, open public downloads are not available until publication.
+        </p>
+        <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg text-amber-900 text-[11px] font-medium">
+          <strong class="block mb-0.5">Academic Evaluation PIN:</strong>
+          Scholars and researchers can obtain an authorized Access PIN by emailing <span class="font-mono font-bold text-amber-950">drugdesignsynthesislab@gmail.com</span> to evaluate this standalone Windows application.
+        </div>
+      </div>
+      <div class="pt-1">
+        <a href="mailto:drugdesignsynthesislab@gmail.com?cc=yogita_pharma@pbi.ac.in&subject=Request%20for%20p38-Predict%20Academic%20Access%20PIN&body=Respected%20Prof.%20Yogita%20Bansal%20%2F%20Research%20Group%2C%0A%0AI%20would%20like%20to%20request%20an%20authorized%20Access%20PIN%20to%20download%20and%20evaluate%20the%20p38-Predict%20standalone%20desktop%20executable%20for%20academic%20research%20purposes.%0A%0AName%3A%20%0ADesignation%2FInstitution%3A%20%0AResearch%20Objective%3A%20%0A%0AThank%20you." 
+           class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center justify-center gap-2 transition-colors border border-slate-200">
+          <i data-lucide="mail" class="w-4 h-4 text-teal-700"></i>
+          <span>Request Access PIN via Email (drugdesignsynthesislab@gmail.com) &rarr;</span>
+        </a>
+      </div>
+      <form id="p38-pin-form" onsubmit="handleP38PinSubmit(event)" class="space-y-3 pt-2 border-t border-slate-100">
+        <label for="p38-pin-input" class="block text-xs font-bold text-slate-800">
+          Already have an authorized Access PIN?
+        </label>
+        <div class="flex gap-2">
+          <input type="password" id="p38-pin-input" required placeholder="Enter Access PIN" 
+                 class="flex-1 bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs text-slate-900 font-mono focus:outline-none focus:border-amber-600 focus:bg-white" />
+          <button type="submit" id="p38-pin-submit-btn" 
+                  class="px-5 py-2 bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs rounded-xl shadow-xs flex items-center gap-1.5 transition-colors shrink-0">
+            <i data-lucide="key" class="w-3.5 h-3.5"></i>
+            <span>Unlock &amp; Download</span>
+          </button>
+        </div>
+        <div id="p38-pin-status" class="hidden text-xs font-medium py-2 px-3 rounded-lg"></div>
+      </form>
+    </div>
+  </div>`;
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+}
+
 window.openP38AccessModal = function () {
+  ensureP38ModalExists();
   const modal = document.getElementById('p38-access-modal');
   if (modal) {
     modal.classList.remove('hidden');
