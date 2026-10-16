@@ -6,7 +6,7 @@
 
 window.LAB_PUBLICATIONS = [
   {
-    "title": "BACE-1 inhibitors as potential drug candidates for treatment of Alzheimer’s disease: a systematic review",
+    "title": "BACE-1 inhibitors as potential drug candidates for treatment of Alzheimer’s disease, a systematic review",
     "authors": "N Kaur, S Gupta, G Bansal, Y Bansal",
     "journal": "Molecular Diversity, 1-39",
     "year": 2026,
