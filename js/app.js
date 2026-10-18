@@ -375,6 +375,7 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     closeP38AccessModal();
     if (window.closeNikAccessModal) closeNikAccessModal();
+    if (window.closeIl6AccessModal) closeIl6AccessModal();
     if (window.closePaperStatusModal) closePaperStatusModal();
   }
 });
@@ -387,6 +388,10 @@ document.addEventListener('click', function (e) {
   const nikModal = document.getElementById('nik-access-modal');
   if (nikModal && e.target === nikModal) {
     if (window.closeNikAccessModal) closeNikAccessModal();
+  }
+  const il6Modal = document.getElementById('il6-access-modal');
+  if (il6Modal && e.target === il6Modal) {
+    if (window.closeIl6AccessModal) closeIl6AccessModal();
   }
   const paperModal = document.getElementById('paper-status-modal');
   if (paperModal && e.target === paperModal) {
@@ -520,6 +525,151 @@ window.handleNikPinSubmit = async function (e) {
         window.location.href = decryptedUrl;
         setTimeout(() => {
           closeNikAccessModal();
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i data-lucide="key" class="w-3.5 h-3.5"></i> <span>Unlock &amp; Download</span>';
+            if (window.lucide) lucide.createIcons();
+          }
+        }, 2000);
+      }, 600);
+    } else {
+      statusEl.textContent = '✕ Invalid Access PIN. Please request the authorized code from Prof. Yogita Bansal or Mr. Saurabh Gupta.';
+      statusEl.classList.add('bg-rose-50', 'text-rose-800', 'border', 'border-rose-300');
+      statusEl.classList.remove('hidden');
+    }
+  } catch (err) {
+    statusEl.textContent = 'Verification error. Please ensure JavaScript is enabled and try again.';
+    statusEl.classList.add('bg-rose-50', 'text-rose-800', 'border', 'border-rose-300');
+    statusEl.classList.remove('hidden');
+  }
+};
+
+/**
+ * ==============================================================================
+ * IL-6/TNF-α-Predict Pre-Publication Academic Access Verification Logic
+ * ==============================================================================
+ */
+function ensureIl6ModalExists() {
+  if (document.getElementById('il6-access-modal')) return;
+  const modalHtml = `
+  <div id="il6-access-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="academic-card bg-white max-w-lg w-full p-6 sm:p-7 shadow-2xl space-y-5 border-purple-300 animate-in fade-in duration-200">
+      <div class="flex items-start justify-between gap-3 border-b border-slate-100 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center shrink-0">
+            <i data-lucide="lock" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="inline-block text-[10px] font-bold font-mono tracking-wider uppercase px-2 py-0.5 rounded bg-purple-100 text-purple-900 mb-1">
+              Pre-Publication Restricted Access
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 font-serif leading-tight">IL-6/TNF-α-Predict Standalone (.exe)</h3>
+          </div>
+        </div>
+        <button type="button" onclick="closeIl6AccessModal()" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg hover:bg-slate-100">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="text-xs text-slate-600 space-y-2 leading-relaxed">
+        <p>
+          This computational model and software (IL-6/TNF-α-Predict) is currently under peer review and pre-publication embargo. In accordance with university research governance, open public downloads are not available until publication.
+        </p>
+        <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg text-amber-900 text-[11px] font-medium">
+          <strong class="block mb-0.5">Academic Evaluation PIN:</strong>
+          Scholars and researchers can obtain an authorized Access PIN by emailing <span class="font-mono font-bold text-amber-950">drugdesignsynthesislab@gmail.com</span> to evaluate this standalone Windows application.
+        </div>
+      </div>
+      <div class="pt-1">
+        <a href="mailto:drugdesignsynthesislab@gmail.com?cc=yogita_pharma@pbi.ac.in&subject=Request%20for%20IL-6%2FTNF-alpha-Predict%20Academic%20Access%20PIN&body=Respected%20Prof.%20Yogita%20Bansal%20%2F%20Research%20Group%2C%0A%0AI%20would%20like%20to%20request%20an%20authorized%20Access%20PIN%20to%20download%20and%20evaluate%20the%20IL-6%2FTNF-alpha-Predict%20standalone%20desktop%20executable%20for%20academic%20research%20purposes.%0A%0AName%3A%20%0ADesignation%2FInstitution%3A%20%0AResearch%20Objective%3A%20%0A%0AThank%20you." 
+           class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center justify-center gap-2 transition-colors border border-slate-200">
+          <i data-lucide="mail" class="w-4 h-4 text-purple-700"></i>
+          <span>Request Access PIN via Email (drugdesignsynthesislab@gmail.com) &rarr;</span>
+        </a>
+      </div>
+      <form id="il6-pin-form" onsubmit="handleIl6PinSubmit(event)" class="space-y-3 pt-2 border-t border-slate-100">
+        <label for="il6-pin-input" class="block text-xs font-bold text-slate-800">
+          Already have an authorized Access PIN?
+        </label>
+        <div class="flex gap-2">
+          <input type="password" id="il6-pin-input" required placeholder="Enter Access PIN" 
+                 class="flex-1 bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs text-slate-900 font-mono focus:outline-none focus:border-purple-600 focus:bg-white" />
+          <button type="submit" id="il6-pin-submit-btn" 
+                  class="px-5 py-2 bg-purple-800 hover:bg-purple-900 text-white font-bold text-xs rounded-xl shadow-xs flex items-center gap-1.5 transition-colors shrink-0">
+            <i data-lucide="key" class="w-3.5 h-3.5"></i>
+            <span>Unlock &amp; Download</span>
+          </button>
+        </div>
+        <div id="il6-pin-status" class="hidden text-xs font-medium py-2 px-3 rounded-lg"></div>
+      </form>
+    </div>
+  </div>`;
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+}
+
+window.openIl6AccessModal = function () {
+  ensureIl6ModalExists();
+  const modal = document.getElementById('il6-access-modal');
+  if (modal) {
+    modal.classList.remove('hidden');
+    const input = document.getElementById('il6-pin-input');
+    if (input) {
+      input.value = '';
+      input.focus();
+    }
+    const status = document.getElementById('il6-pin-status');
+    if (status) {
+      status.classList.add('hidden');
+      status.textContent = '';
+    }
+    if (window.lucide) lucide.createIcons();
+  }
+};
+
+window.closeIl6AccessModal = function () {
+  const modal = document.getElementById('il6-access-modal');
+  if (modal) modal.classList.add('hidden');
+};
+
+window.handleIl6PinSubmit = async function (e) {
+  e.preventDefault();
+  const pinInput = document.getElementById('il6-pin-input')?.value || '';
+  const statusEl = document.getElementById('il6-pin-status');
+  const submitBtn = document.getElementById('il6-pin-submit-btn');
+
+  if (!statusEl) return;
+
+  statusEl.className = 'text-xs font-medium py-2 px-3 rounded-lg';
+
+  try {
+    const enc = new TextEncoder();
+    const hashBuffer = await crypto.subtle.digest('SHA-256', enc.encode(pinInput.trim()));
+    const key = new Uint8Array(hashBuffer);
+
+    // Encrypted download URL payload (Symmetric stream cipher keyed with SHA-256 of authorized PIN: Saurabh1510Cyt)
+    const cipherHex = '663cf713e4a0bc48349b35c58998e78bdd72bf70b5590b5eaee1401a5aacaf497d21e40de4e3fd133b9732c48f96a88a9d6df54592154c08e4e1400758a5a7436f2cac15a6b4a34963dd08e1d1cce4bcfc59f104a7065a09fead50464ab3ae';
+    const cipherBytes = new Uint8Array(cipherHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+    const decrypted = new Uint8Array(cipherBytes.length);
+
+    for (let i = 0; i < cipherBytes.length; i++) {
+      decrypted[i] = cipherBytes[i] ^ key[i % key.length];
+    }
+
+    const decryptedUrl = new TextDecoder().decode(decrypted);
+
+    if (decryptedUrl.startsWith('https://github.com/YB-439/drugdesignsynthesislab/releases/download/')) {
+      statusEl.textContent = '✓ Access PIN Verified! Initiating secure download...';
+      statusEl.classList.add('bg-purple-50', 'text-purple-900', 'border', 'border-purple-300');
+      statusEl.classList.remove('hidden');
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Downloading...';
+      }
+
+      setTimeout(() => {
+        window.location.href = decryptedUrl;
+        setTimeout(() => {
+          closeIl6AccessModal();
           if (submitBtn) {
             submitBtn.disabled = false;
             submitBtn.innerHTML = '<i data-lucide="key" class="w-3.5 h-3.5"></i> <span>Unlock &amp; Download</span>';

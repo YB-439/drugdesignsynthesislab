@@ -61,7 +61,7 @@
                 </button>
 
 
-                <a href="tools.html" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
+                <a href="tools.html#p38-predict" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
                   <div class="w-7 h-7 rounded-md bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 mt-0.5">
                     <i data-lucide="activity" class="w-3.5 h-3.5"></i>
                   </div>
@@ -71,6 +71,19 @@
                       <span class="px-1.5 py-0.5 text-[9px] font-bold rounded bg-amber-100 text-amber-800 border border-amber-200">Kinase Tool</span>
                     </div>
                     <div class="text-[11px] text-slate-500 font-normal">p38α & p38β isoform selectivity model</div>
+                  </div>
+                </a>
+
+                <a href="tools.html#il6-predict" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
+                  <div class="w-7 h-7 rounded-md bg-purple-100 text-purple-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-900 group-hover/item:text-purple-700">
+                      <span>IL-6/TNF-α-Predict</span>
+                      <span class="px-1.5 py-0.5 text-[9px] font-bold rounded bg-purple-100 text-purple-800 border border-purple-200">Dual Cytokine</span>
+                    </div>
+                    <div class="text-[11px] text-slate-500 font-normal">IL-6 &amp; TNF-α dual inhibition platform</div>
                   </div>
                 </a>
 
@@ -120,6 +133,13 @@
             <span>&bull; p38-Predict (.exe Download)</span>
             <i data-lucide="lock" class="w-3.5 h-3.5 text-amber-600"></i>
           </a>
+          <a href="tools.html#il6-predict" class="block py-1 text-xs font-bold text-teal-900">
+            &bull; IL-6/TNF-α-Predict
+          </a>
+          <button type="button" onclick="if(window.openIl6AccessModal){openIl6AccessModal();}" class="w-full flex items-center justify-between py-1 text-xs font-bold text-teal-700 hover:underline text-left cursor-pointer">
+            <span>&bull; IL-6/TNF-α-Predict (.exe Download)</span>
+            <i data-lucide="lock" class="w-3.5 h-3.5 text-purple-600"></i>
+          </button>
 
           <a href="tools.html" class="block py-1 text-xs text-teal-800 font-bold">
             &bull; View All QSAR Models/Tools &rarr;
@@ -145,126 +165,202 @@
   <main class="py-14 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <!-- Featured In-House Tools Grid (NIK-Predict & p38-Predict) -->
-      <div class="grid lg:grid-cols-2 gap-8">
+      <!-- Featured In-House Tools Grid (NIK-Predict, p38-Predict & IL-6/TNF-α-Predict) -->
+      <div class="grid lg:grid-cols-3 gap-6">
         
         <!-- Tool 1: NIK-Predict -->
-        <div class="academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-5">
-          <div>
-            <h2 class="text-2xl font-bold text-slate-900 font-serif">NIK-Predict</h2>
-            <p class="text-xs text-slate-600 mt-1">
-              NF-κB Inducing Kinase (NIK / MAP3K14) Bioactivity Prediction Platform
+        <div class="academic-card p-6 sm:p-7 bg-white border-slate-300 space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900 font-serif">NIK-Predict</h2>
+              <p class="text-xs text-slate-600 mt-1">
+                NF-κB Inducing Kinase (NIK / MAP3K14) Bioactivity Prediction Platform
+              </p>
+            </div>
+
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Consensus 3-run Monte Carlo 2D-QSAR model developed within the CORALSEA-2024 platform for rapid, reliable virtual screening of small-molecule NIK inhibitors. Available as a standalone offline desktop application for Windows.
             </p>
-          </div>
 
-          <p class="text-xs text-slate-700 leading-relaxed">
-            Consensus 3-run Monte Carlo 2D-QSAR model developed within the CORALSEA-2024 platform for rapid, reliable virtual screening of small-molecule NIK inhibitors. Available as a standalone offline desktop application for Windows.
-          </p>
-
-          <!-- Specifications Table -->
-          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2">
-            <div class="grid grid-cols-3 gap-2">
-              <span class="font-bold text-slate-900">Input Format:</span>
-              <span class="col-span-2 font-mono text-slate-700">SMILES strings (Single molecule or Multi-line batch)</span>
-            </div>
-            <div class="grid grid-cols-3 gap-2">
-              <span class="font-bold text-slate-900">Output Endpoints:</span>
-              <span class="col-span-2 text-slate-700">Predicted pIC50, IC50 (nM/µM), AD evaluation, CSV export</span>
-            </div>
-            <div class="grid grid-cols-3 gap-2">
-              <span class="font-bold text-slate-900">Validation Metrics:</span>
-              <span class="col-span-2 text-slate-700">R² = 0.765, Q² = 0.660, CCC = 0.861, MAE = 0.291</span>
-            </div>
-            <div class="grid grid-cols-3 gap-2">
-              <span class="font-bold text-slate-900">Applicability Domain:</span>
-              <span class="col-span-2 font-mono text-slate-700">Defect(SMILES) &lt; 7.98</span>
-            </div>
-            <div class="grid grid-cols-3 gap-2">
-              <span class="font-bold text-slate-900">Dataset Curation:</span>
-              <span class="col-span-2 text-slate-700">118 small-molecule NIK inhibitors from published literature</span>
-            </div>
-            <div class="grid grid-cols-3 gap-2">
-              <span class="font-bold text-slate-900">Model Development &amp; Tool Design:</span>
-              <span class="col-span-2 text-slate-700">Anjali Sharma, Saurabh Gupta</span>
+            <!-- Specifications Table -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2">
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Input Format:</span>
+                <span class="col-span-2 font-mono text-slate-700">SMILES strings (Single or Batch)</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Output Endpoints:</span>
+                <span class="col-span-2 text-slate-700">Predicted pIC50, IC50, AD evaluation</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Validation Metrics:</span>
+                <span class="col-span-2 text-slate-700">R² = 0.765, Q² = 0.660, CCC = 0.861</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Applicability Domain:</span>
+                <span class="col-span-2 font-mono text-slate-700">Defect(SMILES) &lt; 7.98</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Dataset Curation:</span>
+                <span class="col-span-2 text-slate-700">118 small-molecule NIK inhibitors</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Model &amp; Tool:</span>
+                <span class="col-span-2 text-slate-700">Anjali Sharma, Saurabh Gupta</span>
+              </div>
             </div>
           </div>
 
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-3 pt-2">
-            <button type="button" onclick="openPaperStatusModal()" 
-               class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs flex items-center gap-2 shadow-sm transition-all cursor-pointer">
-              <i data-lucide="book-open" class="w-4 h-4 text-amber-400"></i> Read Article
-            </button>
-            <button type="button" onclick="openNikAccessModal()" 
-               class="px-5 py-3 rounded-xl bg-teal-800 hover:bg-teal-900 text-white font-bold text-xs shadow-sm flex items-center gap-2 transition-all cursor-pointer">
-              <i data-lucide="download" class="w-4 h-4"></i>
-              <span>Download NIK-Predict for Windows</span>
-              <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-teal-950/50 text-teal-100">v1.0.0</span>
-            </button>
-            <a href="nik-predict.html" 
-               class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center gap-2 border border-slate-200 transition-all">
-              <i data-lucide="info" class="w-4 h-4 text-teal-700"></i> Platform Overview &rarr;
-            </a>
-          </div>
+          <div class="space-y-4 pt-2">
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-2.5">
+              <button type="button" onclick="openPaperStatusModal()" 
+                 class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer">
+                <i data-lucide="book-open" class="w-3.5 h-3.5 text-amber-400"></i> Read Article
+              </button>
+              <button type="button" onclick="openNikAccessModal()" 
+                 class="px-4 py-2.5 rounded-xl bg-teal-800 hover:bg-teal-900 text-white font-bold text-xs shadow-sm flex items-center gap-1.5 transition-all cursor-pointer">
+                <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                <span>Download .exe</span>
+                <span class="px-1.5 py-0.5 text-[9px] font-mono rounded bg-teal-950/50 text-teal-100">v1.0.0</span>
+              </button>
+              <a href="nik-predict.html" 
+                 class="px-3 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center gap-1 border border-slate-200 transition-all">
+                <i data-lucide="info" class="w-3.5 h-3.5 text-teal-700"></i> Overview &rarr;
+              </a>
+            </div>
 
-          <div class="text-[11px] text-slate-500 font-mono">
-            Supported OS: Windows 10 / 11 (64-bit standalone executable, portable, no Python or external libraries required).
+            <div class="text-[11px] text-slate-500 font-mono">
+              Supported OS: Windows 10 / 11 (64-bit standalone executable, portable).
+            </div>
           </div>
         </div>
 
         <!-- Tool 2: p38α/β-Predict -->
-        <div id="p38-predict" class="academic-card p-6 sm:p-8 bg-white border-slate-300 space-y-5">
-          <div>
-            <h2 class="text-2xl font-bold text-slate-900 font-serif">p38α/β-Predict</h2>
-            <p class="text-xs text-slate-600 mt-1">
-              p38 MAP Kinase α & β Isoform Selectivity & Potency Platform
+        <div id="p38-predict" class="academic-card p-6 sm:p-7 bg-white border-slate-300 space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900 font-serif">p38α/β-Predict</h2>
+              <p class="text-xs text-slate-600 mt-1">
+                p38 MAP Kinase α & β Isoform Selectivity & Potency Platform
+              </p>
+            </div>
+
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Consensus 3-run Monte Carlo 2D-QSAR ensemble model predicting continuous inhibitory potency (pIC50) against p38α (MAPK14) alongside qualitative classification on p38β (MAPK11) to establish isoform selectivity.
             </p>
+
+            <!-- Specifications Table -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2">
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Input Format:</span>
+                <span class="col-span-2 font-mono text-slate-700">SMILES strings / Chemical structures</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Output Endpoints:</span>
+                <span class="col-span-2 text-slate-700">p38α pIC50 continuous + p38β binary score</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">p38α Validation:</span>
+                <span class="col-span-2 text-slate-700">R² = 0.871, Q² = 0.859, CCC = 0.932</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">p38β Validation:</span>
+                <span class="col-span-2 text-slate-700">Accuracy = 1.000, Sensitivity = 1.000</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Published Citation:</span>
+                <span class="col-span-2 text-slate-700 font-mono text-[11px]">JMGM 143, 109246 (2026)</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Model Lead:</span>
+                <span class="col-span-2 text-slate-700">Mr. Saurabh Gupta &amp; Prof. Yogita Bansal</span>
+              </div>
+            </div>
           </div>
 
-          <p class="text-xs text-slate-700 leading-relaxed">
-            Consensus 3-run Monte Carlo 2D-QSAR ensemble model predicting continuous inhibitory potency (pIC50) against p38α (MAPK14) alongside qualitative classification on p38β (MAPK11) to establish isoform selectivity for inflammatory therapeutic design.
-          </p>
+          <div class="space-y-4 pt-2">
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-2.5">
+              <a href="https://doi.org/10.1016/j.jmgm.2025.109246" target="_blank" rel="noopener noreferrer" 
+                 class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs flex items-center gap-1.5 transition-all">
+                <i data-lucide="book-open" class="w-3.5 h-3.5 text-amber-400"></i> Read Article &rarr;
+              </a>
+              <button type="button" onclick="openP38AccessModal()" 
+                 class="px-4 py-2.5 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs flex items-center gap-1.5 shadow-sm transition-colors cursor-pointer">
+                <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                <span>Download .exe</span>
+                <span class="px-1.5 py-0.5 text-[9px] font-mono rounded bg-amber-950/50 text-amber-100">v1.0.0</span>
+              </button>
+            </div>
 
-          <!-- Specifications Table -->
-          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2">
-            <div class="grid grid-cols-3 gap-2">
-              <span class="font-bold text-slate-900">Input Format:</span>
-              <span class="col-span-2 font-mono text-slate-700">SMILES strings / Chemical structures</span>
+            <div class="text-[11px] text-slate-500 font-mono">
+              Supported OS: Windows 10 / 11 (64-bit standalone executable, portable).
             </div>
-            <div class="grid grid-cols-3 gap-2">
-              <span class="font-bold text-slate-900">Output Endpoints:</span>
-              <span class="col-span-2 text-slate-700">p38α pIC50 continuous + p38β binary score (Active/Inactive)</span>
+          </div>
+        </div>
+
+        <!-- Tool 3: IL-6/TNF-α-Predict -->
+        <div id="il6-predict" class="academic-card p-6 sm:p-7 bg-white border-slate-300 space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900 font-serif">IL-6/TNF-α-Predict</h2>
+              <p class="text-xs text-slate-600 mt-1">
+                IL-6 and TNF-α Dual Bioactivity Prediction Platform
+              </p>
             </div>
-            <div class="grid grid-cols-3 gap-2">
-              <span class="font-bold text-slate-900">p38α Validation:</span>
-              <span class="col-span-2 text-slate-700">R² = 0.871, Q² = 0.859, CCC = 0.932, RMSE = 0.295</span>
-            </div>
-            <div class="grid grid-cols-3 gap-2">
-              <span class="font-bold text-slate-900">p38β Validation:</span>
-              <span class="col-span-2 text-slate-700">Accuracy = 1.000, Sensitivity = 1.000, Specificity = 1.000</span>
-            </div>
-            <div class="grid grid-cols-3 gap-2">
-              <span class="font-bold text-slate-900">Published Citation:</span>
-              <span class="col-span-2 text-slate-700 font-mono text-[11px]">J. Mol. Graph. Model. 143, 109246 (2026)</span>
+
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Consensus Monte Carlo-based 2D-QSAR regression models implemented in CORALSEA to predict inhibitory activity (pIC50) of small molecules against pro-inflammatory cytokines IL-6 and TNF-α for dual-target therapeutic design.
+            </p>
+
+            <!-- Specifications Table -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2">
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Input Format:</span>
+                <span class="col-span-2 font-mono text-slate-700">SMILES strings / Chemical structures</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Output Endpoints:</span>
+                <span class="col-span-2 text-slate-700">Dual pIC50 predictions (IL-6 &amp; TNF-α)</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">IL-6 Validation:</span>
+                <span class="col-span-2 text-slate-700">R² = 0.853, Q² = 0.800, CCC = 0.915</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">TNF-α Validation:</span>
+                <span class="col-span-2 text-slate-700">R² = 0.803, Q² = 0.718, CCC = 0.797</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Dataset Curation:</span>
+                <span class="col-span-2 text-slate-700">114 IL-6 &amp; 116 TNF-α compounds (macrophage)</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <span class="font-bold text-slate-900">Model &amp; Tool:</span>
+                <span class="col-span-2 text-slate-700">Mr. Saurabh Gupta</span>
+              </div>
             </div>
           </div>
 
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-3 pt-2">
-            <a href="https://doi.org/10.1016/j.jmgm.2025.109246" target="_blank" rel="noopener noreferrer" 
-               class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs flex items-center gap-2 transition-all">
-              <i data-lucide="book-open" class="w-4 h-4 text-amber-400"></i> Read Article in JMGM &rarr;
-            </a>
-            <button type="button" onclick="openP38AccessModal()" 
-               class="px-5 py-3 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs flex items-center gap-2 shadow-sm transition-colors cursor-pointer">
-              <i data-lucide="download" class="w-4 h-4"></i>
-              <span>Download p38-Predict for Windows</span>
-              <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-amber-950/50 text-amber-100">v1.0.0</span>
-            </button>
-          </div>
+          <div class="space-y-4 pt-2">
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-2.5">
+              <button type="button" onclick="openPaperStatusModal()" 
+                 class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer">
+                <i data-lucide="book-open" class="w-3.5 h-3.5 text-amber-400"></i> Read Article
+              </button>
+              <button type="button" onclick="openIl6AccessModal()" 
+                 class="px-4 py-2.5 rounded-xl bg-purple-800 hover:bg-purple-900 text-white font-bold text-xs shadow-sm flex items-center gap-1.5 transition-all cursor-pointer">
+                <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                <span>Download .exe</span>
+                <span class="px-1.5 py-0.5 text-[9px] font-mono rounded bg-purple-950/50 text-purple-100">v1.0.0</span>
+              </button>
+            </div>
 
-          <div class="text-[11px] text-slate-500 font-mono">
-            Model Lead: Mr. Saurabh Gupta & Prof. Yogita Bansal.
+            <div class="text-[11px] text-slate-500 font-mono">
+              Supported OS: Windows 10 / 11 (64-bit standalone executable, portable).
+            </div>
           </div>
         </div>
 
@@ -557,8 +653,70 @@
       </form>
 
     </div>
+  <!-- ============================================================================== -->
+  <!-- IL-6/TNF-α-Predict Pre-Publication Academic Access Verification Modal          -->
+  <!-- ============================================================================== -->
+  <div id="il6-access-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="academic-card bg-white max-w-lg w-full p-6 sm:p-7 shadow-2xl space-y-5 border-purple-300 animate-in fade-in duration-200">
+      
+      <!-- Modal Header -->
+      <div class="flex items-start justify-between gap-3 border-b border-slate-100 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center shrink-0">
+            <i data-lucide="lock" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="inline-block text-[10px] font-bold font-mono tracking-wider uppercase px-2 py-0.5 rounded bg-purple-100 text-purple-900 mb-1">
+              Pre-Publication Restricted Access
+            </span>
+            <h3 class="text-lg font-bold text-slate-900 font-serif leading-tight">IL-6/TNF-α-Predict Standalone (.exe)</h3>
+          </div>
+        </div>
+        <button type="button" onclick="closeIl6AccessModal()" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg hover:bg-slate-100">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Notice Description -->
+      <div class="text-xs text-slate-600 space-y-2 leading-relaxed">
+        <p>
+          This computational model and software (IL-6/TNF-α-Predict) is currently under peer review and pre-publication embargo. In accordance with university research governance, open public downloads are not available until publication.
+        </p>
+        <div class="p-3 bg-amber-50 border border-amber-200 rounded-lg text-amber-900 text-[11px] font-medium">
+          <strong class="block mb-0.5">Academic Evaluation PIN:</strong>
+          Scholars and researchers can obtain an authorized Access PIN by emailing <span class="font-mono font-bold text-amber-950">drugdesignsynthesislab@gmail.com</span> to evaluate this standalone Windows application.
+        </div>
+      </div>
+
+      <!-- Request PIN via Email Button -->
+      <div class="pt-1">
+        <a href="mailto:drugdesignsynthesislab@gmail.com?cc=yogita_pharma@pbi.ac.in&subject=Request%20for%20IL-6%2FTNF-alpha-Predict%20Academic%20Access%20PIN&body=Respected%20Prof.%20Yogita%20Bansal%20%2F%20Research%20Group%2C%0A%0AI%20would%20like%20to%20request%20an%20authorized%20Access%20PIN%20to%20download%20and%20evaluate%20the%20IL-6%2FTNF-alpha-Predict%20standalone%20desktop%20executable%20for%20academic%20research%20purposes.%0A%0AName%3A%20%0ADesignation%2FInstitution%3A%20%0AResearch%20Objective%3A%20%0A%0AThank%20you." 
+           class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center justify-center gap-2 transition-colors border border-slate-200">
+          <i data-lucide="mail" class="w-4 h-4 text-purple-700"></i>
+          <span>Request Access PIN via Email (drugdesignsynthesislab@gmail.com) &rarr;</span>
+        </a>
+      </div>
+
+      <!-- Unlock PIN Form -->
+      <form id="il6-pin-form" onsubmit="handleIl6PinSubmit(event)" class="space-y-3 pt-2 border-t border-slate-100">
+        <label for="il6-pin-input" class="block text-xs font-bold text-slate-800">
+          Already have an authorized Access PIN?
+        </label>
+        <div class="flex gap-2">
+          <input type="password" id="il6-pin-input" required placeholder="Enter Access PIN" 
+                 class="flex-1 bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs text-slate-900 font-mono focus:outline-none focus:border-purple-600 focus:bg-white" />
+          <button type="submit" id="il6-pin-submit-btn" 
+                  class="px-5 py-2 bg-purple-800 hover:bg-purple-900 text-white font-bold text-xs rounded-xl shadow-xs flex items-center gap-1.5 transition-colors shrink-0">
+            <i data-lucide="key" class="w-3.5 h-3.5"></i>
+            <span>Unlock &amp; Download</span>
+          </button>
+        </div>
+        <div id="il6-pin-status" class="hidden text-xs font-medium py-2 px-3 rounded-lg"></div>
+      </form>
+
+    </div>
   </div>
 
-  <script src="js/app.js?v=78"></script>
+  <script src="js/app.js?v=80"></script>
 </body>
 </html>

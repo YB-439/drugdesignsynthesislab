@@ -60,7 +60,7 @@
                 </button>
 
 
-                <a href="tools.html" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
+                <a href="tools.html#p38-predict" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
                   <div class="w-7 h-7 rounded-md bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 mt-0.5">
                     <i data-lucide="activity" class="w-3.5 h-3.5"></i>
                   </div>
@@ -70,6 +70,19 @@
                       <span class="px-1.5 py-0.5 text-[9px] font-bold rounded bg-amber-100 text-amber-800 border border-amber-200">Kinase Tool</span>
                     </div>
                     <div class="text-[11px] text-slate-500 font-normal">p38α & p38β isoform selectivity model</div>
+                  </div>
+                </a>
+
+                <a href="tools.html#il6-predict" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item">
+                  <div class="w-7 h-7 rounded-md bg-purple-100 text-purple-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-900 group-hover/item:text-purple-700">
+                      <span>IL-6/TNF-α-Predict</span>
+                      <span class="px-1.5 py-0.5 text-[9px] font-bold rounded bg-purple-100 text-purple-800 border border-purple-200">Dual Cytokine</span>
+                    </div>
+                    <div class="text-[11px] text-slate-500 font-normal">IL-6 &amp; TNF-α dual inhibition platform</div>
                   </div>
                 </a>
 
@@ -119,6 +132,13 @@
             <span>&bull; p38-Predict (.exe Download)</span>
             <i data-lucide="lock" class="w-3.5 h-3.5 text-amber-600"></i>
           </a>
+          <a href="tools.html#il6-predict" class="block py-1 text-xs font-bold text-teal-900">
+            &bull; IL-6/TNF-α-Predict
+          </a>
+          <button type="button" onclick="if(window.openIl6AccessModal){openIl6AccessModal();}" class="w-full flex items-center justify-between py-1 text-xs font-bold text-teal-700 hover:underline text-left cursor-pointer">
+            <span>&bull; IL-6/TNF-α-Predict (.exe Download)</span>
+            <i data-lucide="lock" class="w-3.5 h-3.5 text-purple-600"></i>
+          </button>
 
           <a href="tools.html" class="block py-1 text-xs text-slate-700 hover:text-teal-700">
             &bull; View All QSAR Models/Tools &rarr;
@@ -434,6 +454,6 @@
     </div>
   </div>
 
-  <script src="js/app.js?v=78"></script>
+  <script src="js/app.js?v=80"></script>
 </body>
 </html>
