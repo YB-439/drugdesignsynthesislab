@@ -485,9 +485,36 @@ window.closeNikAccessModal = function () {
   if (modal) modal.classList.add('hidden');
 };
 
+function triggerExecutableDownload(url, filename) {
+  try {
+    const a = document.createElement('a');
+    a.href = url;
+    if (filename) a.setAttribute('download', filename);
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener noreferrer');
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => {
+      if (a.parentNode) a.parentNode.removeChild(a);
+    }, 1000);
+  } catch (err) {
+    console.error('Download trigger error:', err);
+  }
+}
+
+function isAuthorizedLabPin(pin) {
+  if (!pin) return false;
+  const p = pin.trim().toLowerCase();
+  return (
+    p === 'saurabh1510nik' ||
+    p === 'saurabh1510cyt' ||
+    p === 'saurabh1510p38'
+  );
+}
+
 window.handleNikPinSubmit = async function (e) {
   e.preventDefault();
-  const pinInput = document.getElementById('nik-pin-input')?.value || '';
+  const rawInput = document.getElementById('nik-pin-input')?.value || '';
   const statusEl = document.getElementById('nik-pin-status');
   const submitBtn = document.getElementById('nik-pin-submit-btn');
 
@@ -496,50 +523,68 @@ window.handleNikPinSubmit = async function (e) {
   statusEl.className = 'text-xs font-medium py-2 px-3 rounded-lg';
 
   try {
-    const enc = new TextEncoder();
-    const hashBuffer = await crypto.subtle.digest('SHA-256', enc.encode(pinInput.trim()));
-    const key = new Uint8Array(hashBuffer);
+    const pin = rawInput.trim();
+    let isMatch = isAuthorizedLabPin(pin);
+    let downloadUrl = 'https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/NIK-Predict.exe';
+    const filename = 'NIK-Predict.exe';
 
-    // Encrypted download URL payload (Symmetric stream cipher keyed with SHA-256 of authorized PIN: Saurabh1510NIK)
-    const cipherHex = '73df65cd474c73529568ba4a19365dc43aab53d123268d5a05347ed2bfbfc64c68c276d3470f32099a64bd4b1f3812c57ab419e4046aca0c4f347ecfbdb6ce467acf3ecb05586c53c22e806b277923d530a215eb1525dc1159';
-    const cipherBytes = new Uint8Array(cipherHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
-    const decrypted = new Uint8Array(cipherBytes.length);
+    if (!isMatch) {
+      const enc = new TextEncoder();
+      const hashBuffer = await crypto.subtle.digest('SHA-256', enc.encode(pin));
+      const key = new Uint8Array(hashBuffer);
 
-    for (let i = 0; i < cipherBytes.length; i++) {
-      decrypted[i] = cipherBytes[i] ^ key[i % key.length];
-    }
+      // Encrypted download URL payload (Symmetric stream cipher keyed with SHA-256 of authorized PIN: Saurabh1510NIK)
+      const cipherHex = '73df65cd474c73529568ba4a19365dc43aab53d123268d5a05347ed2bfbfc64c68c276d3470f32099a64bd4b1f3812c57ab419e4046aca0c4f347ecfbdb6ce467acf3ecb05586c53c22e806b277923d530a215eb1525dc1159';
+      const cipherBytes = new Uint8Array(cipherHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+      const decrypted = new Uint8Array(cipherBytes.length);
 
-    const decryptedUrl = new TextDecoder().decode(decrypted);
-
-    if (decryptedUrl.startsWith('https://github.com/YB-439/drugdesignsynthesislab/releases/download/')) {
-      statusEl.textContent = '✓ Access PIN Verified! Initiating secure download...';
-      statusEl.classList.add('bg-teal-50', 'text-teal-800', 'border', 'border-teal-300');
-      statusEl.classList.remove('hidden');
-
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Downloading...';
+      for (let i = 0; i < cipherBytes.length; i++) {
+        decrypted[i] = cipherBytes[i] ^ key[i % key.length];
       }
 
-      setTimeout(() => {
-        window.location.href = decryptedUrl;
-        setTimeout(() => {
-          closeNikAccessModal();
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i data-lucide="key" class="w-3.5 h-3.5"></i> <span>Unlock &amp; Download</span>';
-            if (window.lucide) lucide.createIcons();
-          }
-        }, 2000);
-      }, 600);
+      const decryptedUrl = new TextDecoder().decode(decrypted);
+
+      if (decryptedUrl.startsWith('https://github.com/YB-439/drugdesignsynthesislab/releases/download/')) {
+        isMatch = true;
+        downloadUrl = decryptedUrl;
+      }
+    }
+
+    if (isMatch) {
+      statusEl.className = 'text-xs font-medium p-4 rounded-xl bg-teal-50 text-teal-950 border border-teal-300 space-y-2.5 block';
+      statusEl.innerHTML = `
+        <div class="flex items-center gap-2 font-bold text-teal-900 text-xs sm:text-sm">
+          <i data-lucide="check-circle" class="w-4 h-4 text-teal-600 shrink-0"></i>
+          <span>✓ Access PIN Verified! Initiating secure download...</span>
+        </div>
+        <p class="text-[11px] text-slate-600">
+          Your browser should begin downloading automatically. If it does not start within a few seconds, click the direct button below:
+        </p>
+        <a href="${downloadUrl}" download="${filename}" target="_blank" rel="noopener noreferrer" 
+           class="w-full py-2.5 px-4 bg-teal-800 hover:bg-teal-900 text-white font-bold text-xs rounded-xl shadow-xs flex items-center justify-center gap-2 transition-colors cursor-pointer">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Click Here to Download ${filename} &rarr;</span>
+        </a>
+      `;
+      statusEl.classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.className = 'px-5 py-2 bg-teal-800 hover:bg-teal-900 text-white font-bold text-xs rounded-xl shadow-xs flex items-center gap-1.5 transition-colors shrink-0';
+        submitBtn.innerHTML = '<i data-lucide="download" class="w-3.5 h-3.5"></i> <span>Download Started</span>';
+        if (window.lucide) lucide.createIcons();
+      }
+
+      triggerExecutableDownload(downloadUrl, filename);
     } else {
       statusEl.textContent = '✕ Invalid Access PIN. Please request the authorized code from Prof. Yogita Bansal or Mr. Saurabh Gupta.';
-      statusEl.classList.add('bg-rose-50', 'text-rose-800', 'border', 'border-rose-300');
+      statusEl.className = 'text-xs font-medium py-2 px-3 rounded-lg bg-rose-50 text-rose-800 border border-rose-300';
       statusEl.classList.remove('hidden');
     }
   } catch (err) {
     statusEl.textContent = 'Verification error. Please ensure JavaScript is enabled and try again.';
-    statusEl.classList.add('bg-rose-50', 'text-rose-800', 'border', 'border-rose-300');
+    statusEl.className = 'text-xs font-medium py-2 px-3 rounded-lg bg-rose-50 text-rose-800 border border-rose-300';
     statusEl.classList.remove('hidden');
   }
 };
@@ -632,7 +677,7 @@ window.closeIl6AccessModal = function () {
 
 window.handleIl6PinSubmit = async function (e) {
   e.preventDefault();
-  const pinInput = document.getElementById('il6-pin-input')?.value || '';
+  const rawInput = document.getElementById('il6-pin-input')?.value || '';
   const statusEl = document.getElementById('il6-pin-status');
   const submitBtn = document.getElementById('il6-pin-submit-btn');
 
@@ -641,50 +686,68 @@ window.handleIl6PinSubmit = async function (e) {
   statusEl.className = 'text-xs font-medium py-2 px-3 rounded-lg';
 
   try {
-    const enc = new TextEncoder();
-    const hashBuffer = await crypto.subtle.digest('SHA-256', enc.encode(pinInput.trim()));
-    const key = new Uint8Array(hashBuffer);
+    const pin = rawInput.trim();
+    let isMatch = isAuthorizedLabPin(pin);
+    let downloadUrl = 'https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/IL-6-TNFa-Predict.exe';
+    const filename = 'IL-6-TNFa-Predict.exe';
 
-    // Encrypted download URL payload (Symmetric stream cipher keyed with SHA-256 of authorized PIN: Saurabh1510Cyt)
-    const cipherHex = '663cf713e4a0bc48349b35c58998e78bdd72bf70b5590b5eaee1401a5aacaf497d21e40de4e3fd133b9732c48f96a88a9d6df54592154c08e4e1400758a5a7436f2cac15a6b4a34963dd08e1d1cce4bcfc59f104a7065a09fead50464ab3ae';
-    const cipherBytes = new Uint8Array(cipherHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
-    const decrypted = new Uint8Array(cipherBytes.length);
+    if (!isMatch) {
+      const enc = new TextEncoder();
+      const hashBuffer = await crypto.subtle.digest('SHA-256', enc.encode(pin));
+      const key = new Uint8Array(hashBuffer);
 
-    for (let i = 0; i < cipherBytes.length; i++) {
-      decrypted[i] = cipherBytes[i] ^ key[i % key.length];
-    }
+      // Encrypted download URL payload (Symmetric stream cipher keyed with SHA-256 of authorized PIN: Saurabh1510Cyt)
+      const cipherHex = '663cf713e4a0bc48349b35c58998e78bdd72bf70b5590b5eaee1401a5aacaf497d21e40de4e3fd133b9732c48f96a88a9d6df54592154c08e4e1400758a5a7436f2cac15a6b4a34963dd08e1d1cce4bcfc59f104a7065a09fead50464ab3ae';
+      const cipherBytes = new Uint8Array(cipherHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+      const decrypted = new Uint8Array(cipherBytes.length);
 
-    const decryptedUrl = new TextDecoder().decode(decrypted);
-
-    if (decryptedUrl.startsWith('https://github.com/YB-439/drugdesignsynthesislab/releases/download/')) {
-      statusEl.textContent = '✓ Access PIN Verified! Initiating secure download...';
-      statusEl.classList.add('bg-purple-50', 'text-purple-900', 'border', 'border-purple-300');
-      statusEl.classList.remove('hidden');
-
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Downloading...';
+      for (let i = 0; i < cipherBytes.length; i++) {
+        decrypted[i] = cipherBytes[i] ^ key[i % key.length];
       }
 
-      setTimeout(() => {
-        window.location.href = decryptedUrl;
-        setTimeout(() => {
-          closeIl6AccessModal();
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i data-lucide="key" class="w-3.5 h-3.5"></i> <span>Unlock &amp; Download</span>';
-            if (window.lucide) lucide.createIcons();
-          }
-        }, 2000);
-      }, 600);
+      const decryptedUrl = new TextDecoder().decode(decrypted);
+
+      if (decryptedUrl.startsWith('https://github.com/YB-439/drugdesignsynthesislab/releases/download/')) {
+        isMatch = true;
+        downloadUrl = decryptedUrl;
+      }
+    }
+
+    if (isMatch) {
+      statusEl.className = 'text-xs font-medium p-4 rounded-xl bg-purple-50 text-purple-950 border border-purple-300 space-y-2.5 block';
+      statusEl.innerHTML = `
+        <div class="flex items-center gap-2 font-bold text-purple-900 text-xs sm:text-sm">
+          <i data-lucide="check-circle" class="w-4 h-4 text-purple-600 shrink-0"></i>
+          <span>✓ Access PIN Verified! Initiating secure download...</span>
+        </div>
+        <p class="text-[11px] text-slate-600">
+          Your browser should begin downloading automatically. If it doesn't start within a few seconds, click the direct button below:
+        </p>
+        <a href="${downloadUrl}" download="${filename}" target="_blank" rel="noopener noreferrer" 
+           class="w-full py-2.5 px-4 bg-purple-800 hover:bg-purple-900 text-white font-bold text-xs rounded-xl shadow-xs flex items-center justify-center gap-2 transition-colors cursor-pointer">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Click Here to Download ${filename} &rarr;</span>
+        </a>
+      `;
+      statusEl.classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.className = 'px-5 py-2 bg-purple-800 hover:bg-purple-900 text-white font-bold text-xs rounded-xl shadow-xs flex items-center gap-1.5 transition-colors shrink-0';
+        submitBtn.innerHTML = '<i data-lucide="download" class="w-3.5 h-3.5"></i> <span>Download Started</span>';
+        if (window.lucide) lucide.createIcons();
+      }
+
+      triggerExecutableDownload(downloadUrl, filename);
     } else {
       statusEl.textContent = '✕ Invalid Access PIN. Please request the authorized code from Prof. Yogita Bansal or Mr. Saurabh Gupta.';
-      statusEl.classList.add('bg-rose-50', 'text-rose-800', 'border', 'border-rose-300');
+      statusEl.className = 'text-xs font-medium py-2 px-3 rounded-lg bg-rose-50 text-rose-800 border border-rose-300';
       statusEl.classList.remove('hidden');
     }
   } catch (err) {
     statusEl.textContent = 'Verification error. Please ensure JavaScript is enabled and try again.';
-    statusEl.classList.add('bg-rose-50', 'text-rose-800', 'border', 'border-rose-300');
+    statusEl.className = 'text-xs font-medium py-2 px-3 rounded-lg bg-rose-50 text-rose-800 border border-rose-300';
     statusEl.classList.remove('hidden');
   }
 };
@@ -744,7 +807,7 @@ window.closePaperStatusModal = function () {
 
 window.handleP38PinSubmit = async function (e) {
   e.preventDefault();
-  const pinInput = document.getElementById('p38-pin-input')?.value || '';
+  const rawInput = document.getElementById('p38-pin-input')?.value || '';
   const statusEl = document.getElementById('p38-pin-status');
   const submitBtn = document.getElementById('p38-pin-submit-btn');
 
@@ -753,50 +816,68 @@ window.handleP38PinSubmit = async function (e) {
   statusEl.className = 'text-xs font-medium py-2 px-3 rounded-lg';
 
   try {
-    const enc = new TextEncoder();
-    const hashBuffer = await crypto.subtle.digest('SHA-256', enc.encode(pinInput.trim()));
-    const key = new Uint8Array(hashBuffer);
+    const pin = rawInput.trim();
+    let isMatch = isAuthorizedLabPin(pin);
+    let downloadUrl = 'https://github.com/YB-439/drugdesignsynthesislab/releases/download/v1.0.0/p38-Predict.exe';
+    const filename = 'p38-Predict.exe';
 
-    // Encrypted download URL payload (Symmetric stream cipher keyed with SHA-256 of authorized PIN)
-    const cipherHex = '01fbc5c9fd3f713dcc6523643e69a5acc54a07954f643d63f19d27cfaefb32431ae6d6d7fd7c3066c36924653867eaad85554da068287a35bb9d27d2acf23a4908eb9ecfbf2b6e3c9b23273f7326dbbdcf4341af79676c28ad';
-    const cipherBytes = new Uint8Array(cipherHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
-    const decrypted = new Uint8Array(cipherBytes.length);
+    if (!isMatch) {
+      const enc = new TextEncoder();
+      const hashBuffer = await crypto.subtle.digest('SHA-256', enc.encode(pin));
+      const key = new Uint8Array(hashBuffer);
 
-    for (let i = 0; i < cipherBytes.length; i++) {
-      decrypted[i] = cipherBytes[i] ^ key[i % key.length];
-    }
+      // Encrypted download URL payload (Symmetric stream cipher keyed with SHA-256 of authorized PIN)
+      const cipherHex = '01fbc5c9fd3f713dcc6523643e69a5acc54a07954f643d63f19d27cfaefb32431ae6d6d7fd7c3066c36924653867eaad85554da068287a35bb9d27d2acf23a4908eb9ecfbf2b6e3c9b23273f7326dbbdcf4341af79676c28ad';
+      const cipherBytes = new Uint8Array(cipherHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+      const decrypted = new Uint8Array(cipherBytes.length);
 
-    const decryptedUrl = new TextDecoder().decode(decrypted);
-
-    if (decryptedUrl.startsWith('https://github.com/YB-439/drugdesignsynthesislab/releases/download/')) {
-      statusEl.textContent = '✓ Access PIN Verified! Initiating secure download...';
-      statusEl.classList.add('bg-teal-50', 'text-teal-800', 'border', 'border-teal-300');
-      statusEl.classList.remove('hidden');
-
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Downloading...';
+      for (let i = 0; i < cipherBytes.length; i++) {
+        decrypted[i] = cipherBytes[i] ^ key[i % key.length];
       }
 
-      setTimeout(() => {
-        window.location.href = decryptedUrl;
-        setTimeout(() => {
-          closeP38AccessModal();
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i data-lucide="key" class="w-3.5 h-3.5"></i> <span>Unlock &amp; Download</span>';
-            if (window.lucide) lucide.createIcons();
-          }
-        }, 2000);
-      }, 600);
+      const decryptedUrl = new TextDecoder().decode(decrypted);
+
+      if (decryptedUrl.startsWith('https://github.com/YB-439/drugdesignsynthesislab/releases/download/')) {
+        isMatch = true;
+        downloadUrl = decryptedUrl;
+      }
+    }
+
+    if (isMatch) {
+      statusEl.className = 'text-xs font-medium p-4 rounded-xl bg-amber-50 text-amber-950 border border-amber-300 space-y-2.5 block';
+      statusEl.innerHTML = `
+        <div class="flex items-center gap-2 font-bold text-amber-900 text-xs sm:text-sm">
+          <i data-lucide="check-circle" class="w-4 h-4 text-amber-600 shrink-0"></i>
+          <span>✓ Access PIN Verified! Initiating secure download...</span>
+        </div>
+        <p class="text-[11px] text-slate-600">
+          Your browser should begin downloading automatically. If it doesn't start within a few seconds, click the direct button below:
+        </p>
+        <a href="${downloadUrl}" download="${filename}" target="_blank" rel="noopener noreferrer" 
+           class="w-full py-2.5 px-4 bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs rounded-xl shadow-xs flex items-center justify-center gap-2 transition-colors cursor-pointer">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Click Here to Download ${filename} &rarr;</span>
+        </a>
+      `;
+      statusEl.classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.className = 'px-5 py-2 bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs rounded-xl shadow-xs flex items-center gap-1.5 transition-colors shrink-0';
+        submitBtn.innerHTML = '<i data-lucide="download" class="w-3.5 h-3.5"></i> <span>Download Started</span>';
+        if (window.lucide) lucide.createIcons();
+      }
+
+      triggerExecutableDownload(downloadUrl, filename);
     } else {
       statusEl.textContent = '✕ Invalid Access PIN. Please request the authorized code from Prof. Yogita Bansal or Mr. Saurabh Gupta.';
-      statusEl.classList.add('bg-rose-50', 'text-rose-800', 'border', 'border-rose-300');
+      statusEl.className = 'text-xs font-medium py-2 px-3 rounded-lg bg-rose-50 text-rose-800 border border-rose-300';
       statusEl.classList.remove('hidden');
     }
   } catch (err) {
     statusEl.textContent = 'Verification error. Please ensure JavaScript is enabled and try again.';
-    statusEl.classList.add('bg-rose-50', 'text-rose-800', 'border', 'border-rose-300');
+    statusEl.className = 'text-xs font-medium py-2 px-3 rounded-lg bg-rose-50 text-rose-800 border border-rose-300';
     statusEl.classList.remove('hidden');
   }
 };
