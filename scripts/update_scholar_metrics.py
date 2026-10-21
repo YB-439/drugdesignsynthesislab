@@ -7,6 +7,7 @@ import html
 import time
 import difflib
 import sys
+import subprocess
 from datetime import datetime
 
 if hasattr(sys.stdout, 'reconfigure'):
@@ -87,8 +88,28 @@ def fetch_scholar_data():
             time.sleep(3)
 
     if not html_doc:
-        print("Could not fetch page from Google Scholar. Using existing local data if present.")
-        return
+        print("Urllib connection failed. Attempting fallback via curl...")
+        try:
+            curl_bin = "curl.exe" if os.name == "nt" else "curl"
+            curl_res = subprocess.run(
+                [curl_bin, "-s", "-L", "-A", headers["User-Agent"], URL],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="ignore",
+                timeout=40
+            )
+            if curl_res.returncode == 0 and "gsc_rsb_std" in curl_res.stdout:
+                html_doc = curl_res.stdout
+                print(f"Curl successfully fetched Google Scholar profile ({len(html_doc)} bytes).")
+            else:
+                print(f"Curl fallback did not retrieve metrics (returncode={curl_res.returncode}).")
+        except Exception as e:
+            print(f"Curl fallback failed: {e}")
+
+    if not html_doc or "gsc_rsb_std" not in html_doc:
+        print("ERROR: Could not fetch valid page from Google Scholar.")
+        sys.exit(1)
 
     # 1. Parse Profile Metrics & History
     metrics = re.findall(r'class="gsc_rsb_std">(\d+)</td>', html_doc)

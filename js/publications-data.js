@@ -1,12 +1,12 @@
 /**
  * Auto-Generated Publications Dataset for Prof. Yogita Bansal & DDSL
  * Google Scholar ID: kxIxyF8AAAAJ
- * Auto-updated on: 2026-10-13 14:59:34
+ * Auto-updated on: 2026-10-21 19:53:17
  */
 
 window.LAB_PUBLICATIONS = [
   {
-    "title": "BACE-1 inhibitors as potential drug candidates for treatment of Alzheimer’s disease, a systematic review",
+    "title": "BACE-1 inhibitors as potential drug candidates for treatment of Alzheimer’s disease: a systematic review",
     "authors": "N Kaur, S Gupta, G Bansal, Y Bansal",
     "journal": "Molecular Diversity, 1-39",
     "year": 2026,
@@ -26,14 +26,24 @@ window.LAB_PUBLICATIONS = [
     "id": 2
   },
   {
+    "title": "Asiatic acid mitigates neuroinflammation and oxidative stress in Alzheimer's disease: An integrated computational and cellular study",
+    "authors": "A Gupta, S Singh, S Gupta, P Kumar, D Pareek, Y Bansal, A Tripathi, ...",
+    "journal": "Results in Chemistry, 103979",
+    "year": 2026,
+    "citations": 0,
+    "link": "https://doi.org/10.1016/j.rechem.2026.103979",
+    "doi": "10.1016/j.rechem.2026.103979",
+    "id": 3
+  },
+  {
     "title": "Design of BBB permeable BACE-1 inhibitor as potential drug candidate for Alzheimer disease: 2D-QSAR, molecular docking, ADMET, molecular dynamics, MMGBSA",
     "authors": "N Kaur, S Gupta, J Pal, Y Bansal, G Bansal",
     "journal": "Computational biology and chemistry 116, 108371",
     "year": 2025,
-    "citations": 26,
+    "citations": 27,
     "link": "https://doi.org/10.1016/j.compbiolchem.2025.108371",
     "doi": "10.1016/j.compbiolchem.2025.108371",
-    "id": 3
+    "id": 4
   },
   {
     "title": "2D-QSAR driven design, molecular docking, molecular dynamics simulation and MM/GBSA studies on quinazoline derivatives for development of VEGFR-2 inhibitors",
@@ -43,7 +53,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 9,
     "link": "https://doi.org/10.1007/s44371-025-00173-4",
     "doi": "10.1007/s44371-025-00173-4",
-    "id": 4
+    "id": 5
   },
   {
     "title": "Identification of structural fragments and field point-based design of novel p38α MAPK inhibitor: Integrating 2D and 3D-QSAR models with advanced in-silico techniques",
@@ -53,7 +63,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 5,
     "link": "https://doi.org/10.1016/j.jmgm.2025.109246",
     "doi": "10.1016/j.jmgm.2025.109246",
-    "id": 5
+    "id": 6
   },
   {
     "title": "Male meiosis and chromosome numbers in seventeen species of tribe Cardueae from northwest Himalayas",
@@ -63,7 +73,17 @@ window.LAB_PUBLICATIONS = [
     "citations": 1,
     "link": "https://doi.org/10.1508/cytologia.90.109",
     "doi": "10.1508/cytologia.90.109",
-    "id": 6
+    "id": 7
+  },
+  {
+    "title": "In silico insights into design of novel VEGFR-2 inhibitors: SMILES-based QSAR modelling, and docking studies on substituted benzo-fused heteronuclear derivatives",
+    "authors": "S Gupta, M Kashyap, Y Bansal, G Bansal",
+    "journal": "SAR and QSAR in Environmental Research 35 (4), 265-284",
+    "year": 2024,
+    "citations": 11,
+    "link": "https://doi.org/10.1080/1062936x.2024.2332203",
+    "doi": "10.1080/1062936x.2024.2332203",
+    "id": 8
   },
   {
     "title": "A critical analysis of design, binding pattern and SAR of benzo-fused heteronuclear compounds as VEGFR-2 inhibitors",
@@ -73,27 +93,17 @@ window.LAB_PUBLICATIONS = [
     "citations": 10,
     "link": "https://doi.org/10.1016/j.bmc.2024.117966",
     "doi": "10.1016/j.bmc.2024.117966",
-    "id": 7
-  },
-  {
-    "title": "In silico insights into design of novel VEGFR-2 inhibitors: SMILES-based QSAR modelling, and docking studies on substituted benzo-fused heteronuclear derivatives",
-    "authors": "S Gupta, M Kashyap, Y Bansal, G Bansal",
-    "journal": "SAR and QSAR in Environmental Research 35 (4), 265-284",
-    "year": 2024,
-    "citations": 10,
-    "link": "https://doi.org/10.1080/1062936x.2024.2332203",
-    "doi": "10.1080/1062936x.2024.2332203",
-    "id": 8
+    "id": 9
   },
   {
     "title": "Chromone hybrids as interleukin-6 and acetylcholinesterase inhibitor for treatment of Alzheimer's disease: Design, docking, synthesis and evaluation",
     "authors": "S Mishra, S Kaur, G Bansal, Y Bansal",
     "journal": "European Journal of Medicinal Chemistry Reports 12, 100180",
     "year": 2024,
-    "citations": 4,
+    "citations": 5,
     "link": "https://doi.org/10.1016/j.ejmcr.2024.100180",
     "doi": "10.1016/j.ejmcr.2024.100180",
-    "id": 9
+    "id": 10
   },
   {
     "title": "Design, Synthesis and Evaluation of Benzimidazole Derivatives as IL‐6 Inhibitors and Their Role in Rheumatoid Arthritis",
@@ -103,7 +113,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 4,
     "link": "https://doi.org/10.1111/cbdd.70008",
     "doi": "10.1111/cbdd.70008",
-    "id": 10
+    "id": 11
   },
   {
     "title": "Identification of Chromone Hybrids as Interleukin‐6 and Acetylcholinesterase Inhibitor for treatment of Alzheimer’s Disease",
@@ -113,7 +123,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 2,
     "link": "https://doi.org/10.1002/alz.089026",
     "doi": "10.1002/alz.089026",
-    "id": 11
+    "id": 12
   },
   {
     "title": "Six-membered ring (with N, O or S) fused pyrimidine-based derivatives and biological properties",
@@ -123,7 +133,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 4,
     "link": "https://doi.org/10.1016/b978-0-443-18616-5.00007-7",
     "doi": "10.1016/b978-0-443-18616-5.00007-7",
-    "id": 12
+    "id": 13
   },
   {
     "title": "Design, docking, synthesis and biological evaluation of chromone derivatives as dual inhibitors of Interleukin‐6 and acetylcholinesterase for treatment of Alzheimer’s Disease",
@@ -133,7 +143,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 1,
     "link": "https://doi.org/10.1002/alz.066745",
     "doi": "10.1002/alz.066745",
-    "id": 13
+    "id": 14
   },
   {
     "title": "Design, Molecular Docking, Synthesis and Evaluation of Xanthoxylin Hybrids as Dual Inhibitors of IL‐6 and Acetylcholinesterase for Alzheimer’s Disease",
@@ -143,7 +153,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 0,
     "link": "https://doi.org/10.1002/alz.076685",
     "doi": "10.1002/alz.076685",
-    "id": 14
+    "id": 15
   },
   {
     "title": "Design, molecular Docking, synthesis and evaluation of xanthoxylin hybrids as dual inhibitors of IL-6 and acetylcholinesterase for Alzheimer's disease",
@@ -153,7 +163,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 27,
     "link": "https://doi.org/10.1016/j.bioorg.2022.105670",
     "doi": "10.1016/j.bioorg.2022.105670",
-    "id": 15
+    "id": 16
   },
   {
     "title": "Inhibition of iNOS by benzimidazole derivatives: Synthesis, docking, and biological evaluations",
@@ -163,7 +173,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 8,
     "link": "https://doi.org/10.2174/1573406417666210927123137",
     "doi": "10.2174/1573406417666210927123137",
-    "id": 16
+    "id": 17
   },
   {
     "title": "INOS inhibitors: benzimidazole-coumarin derivatives to combat inflammation",
@@ -173,17 +183,17 @@ window.LAB_PUBLICATIONS = [
     "citations": 4,
     "link": "https://doi.org/10.5155/eurjchem.13.3.307-318.2282",
     "doi": "10.5155/eurjchem.13.3.307-318.2282",
-    "id": 17
+    "id": 18
   },
   {
     "title": "Design, synthesis and evaluation of benzimidazole hybrids to inhibit acetylcholinesterase and COX for treatment of Alzheimer’s disease",
     "authors": "S Kaur, R Minhas, S Mishra, B Kaur, Y Bansal, G Bansal",
     "journal": "Central Nervous System Agents in Medicinal ChemistryChemistry-Central …",
     "year": 2022,
-    "citations": 3,
+    "citations": 4,
     "link": "https://doi.org/10.2174/1871524922666220428134001",
     "doi": "10.2174/1871524922666220428134001",
-    "id": 18
+    "id": 19
   },
   {
     "title": "Benzimidazole: a multifacted nucelus for anticancer agents",
@@ -193,7 +203,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 37,
     "link": "https://doi.org/10.2174/1385272825666210208141107",
     "doi": "10.2174/1385272825666210208141107",
-    "id": 19
+    "id": 20
   },
   {
     "title": "Organ-based chemo-profiling of Echinops echinatus Roxb. using high-performance thin-layer chromatography (HPTLC) technique",
@@ -203,7 +213,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 2,
     "link": "https://doi.org/10.1007/s00764-021-00101-z",
     "doi": "10.1007/s00764-021-00101-z",
-    "id": 20
+    "id": 21
   },
   {
     "title": "Dual inhibitors of Interleukin-6 and acetylcholinesterase for treatment of Alzheimer's disease: Design, docking, synthesis and biological evaluation",
@@ -213,17 +223,17 @@ window.LAB_PUBLICATIONS = [
     "citations": 1,
     "link": "https://doi.org/10.1016/j.jics.2021.100165",
     "doi": "10.1016/j.jics.2021.100165",
-    "id": 21
+    "id": 22
   },
   {
     "title": "A panoramic review of IL-6: Structure, pathophysiological roles and inhibitors",
     "authors": "S Kaur, Y Bansal, R Kumar, G Bansal",
     "journal": "Bioorganic & medicinal chemistry 28 (5), 115327",
     "year": 2020,
-    "citations": 591,
+    "citations": 593,
     "link": "https://doi.org/10.1016/j.bmc.2020.115327",
     "doi": "10.1016/j.bmc.2020.115327",
-    "id": 22
+    "id": 23
   },
   {
     "title": "Inducible nitric oxide synthase inhibitors: A comprehensive update",
@@ -233,7 +243,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 191,
     "link": "https://doi.org/10.1002/med.21636",
     "doi": "10.1002/med.21636",
-    "id": 23
+    "id": 24
   },
   {
     "title": "Novel coupled molecules from active structural motifs of synthetic and natural origin as immunosuppressants",
@@ -243,7 +253,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 10,
     "link": "https://doi.org/10.2174/1573406415666190409111459",
     "doi": "10.2174/1573406415666190409111459",
-    "id": 24
+    "id": 25
   },
   {
     "title": "WHO guidelines in practice in India: stability studies on selected CNS active herbal products through physicochemical, chromatographic and biological evaluations",
@@ -253,7 +263,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 1,
     "link": "https://doi.org/10.2174/2215083805666190830125626",
     "doi": "10.2174/2215083805666190830125626",
-    "id": 25
+    "id": 26
   },
   {
     "title": "Novel Xanthoxyline Derivatives As Potential Anti-Arthritic Agents: Design, Synthesis and Biological Evaluation",
@@ -263,7 +273,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 0,
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:dhFuZR0502QC",
     "doi": "",
-    "id": 26
+    "id": 27
   },
   {
     "title": "MULTIFUNCTIONAL COMPOUNDS: A NEW JOURNEY OF BENZIMIDAZOLE",
@@ -273,7 +283,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 0,
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:O3NaXMp0MMsC",
     "doi": "",
-    "id": 27
+    "id": 28
   },
   {
     "title": "Renew bupropion Renew bupropion",
@@ -283,7 +293,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 0,
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:R3hNpaxXUhUC",
     "doi": "",
-    "id": 28
+    "id": 29
   },
   {
     "title": "Antimicrobial potential of benzimidazole derived molecules",
@@ -293,7 +303,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 88,
     "link": "https://doi.org/10.2174/1389557517666171101104024",
     "doi": "10.2174/1389557517666171101104024",
-    "id": 29
+    "id": 30
   },
   {
     "title": "Secondary Metabolites in Arctium lappa L.: Variation Among Plant Parts and Phenological Stages",
@@ -303,7 +313,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 9,
     "link": "https://doi.org/10.1556/1006.2019.32.6.3",
     "doi": "10.1556/1006.2019.32.6.3",
-    "id": 30
+    "id": 31
   },
   {
     "title": "Direct Access to Highly Functionalised Benzimidazoles and Benzoxazoles from a Common Precursor",
@@ -313,7 +323,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 5,
     "link": "https://doi.org/10.1055/s-0039-1690153",
     "doi": "10.1055/s-0039-1690153",
-    "id": 31
+    "id": 32
   },
   {
     "title": "P1‐091: DESIGN AND IN SILICO SCREENING OF BIFUNCTIONAL DERIVATIVES FOR INHIBITION OF ACETYLCHOLINESTRASE IN ALZHEIMER'S DISEASE",
@@ -323,7 +333,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 0,
     "link": "https://doi.org/10.1016/j.jalz.2019.06.646",
     "doi": "10.1016/j.jalz.2019.06.646",
-    "id": 32
+    "id": 33
   },
   {
     "title": "Synthesis and PASS-assisted evaluation of coumarin–benzimidazole derivatives as potential anti-inflammatory and anthelmintic agents",
@@ -333,7 +343,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 59,
     "link": "https://doi.org/10.1007/s00044-017-2036-1",
     "doi": "10.1007/s00044-017-2036-1",
-    "id": 33
+    "id": 34
   },
   {
     "title": "Benzoxazole-coumarin derivatives: potential candidates for development of safer anti-inflammatory drugs",
@@ -343,17 +353,17 @@ window.LAB_PUBLICATIONS = [
     "citations": 22,
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:aqlVkmm33-oC",
     "doi": "",
-    "id": 34
+    "id": 35
   },
   {
     "title": "WHO guided real time stability testing on Shankhpushpi Syrup",
     "authors": "A Jain, J Kaur, Y Bansal, B Saini, G Bansal",
-    "journal": "J. Adv. Pharm. Technol. Res 5, 1-19",
+    "journal": "Chitkara University Publications",
     "year": 2017,
     "citations": 6,
     "link": "https://doi.org/10.15415/jptrm.2017.51001",
     "doi": "10.15415/jptrm.2017.51001",
-    "id": 35
+    "id": 36
   },
   {
     "title": "[P1–080]: IN SILICO ASSISTED DESIGN, SYNTHESIS AND EVALUATIONS OF PLURIPOTENT COMPOUNDS FOR COMBATING ALZHEIMER's DISEASE",
@@ -363,7 +373,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 1,
     "link": "https://doi.org/10.1016/j.jalz.2017.06.147",
     "doi": "10.1016/j.jalz.2017.06.147",
-    "id": 36
+    "id": 37
   },
   {
     "title": "Accelerated Stability Studies on Dried Extracts of Centella asiatica Through Chemical, HPLC, HPTLC, and Biological Activity Analyses",
@@ -373,7 +383,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 33,
     "link": "https://doi.org/10.1177/2156587216661468",
     "doi": "10.1177/2156587216661468",
-    "id": 37
+    "id": 38
   },
   {
     "title": "Forced degradation, LC–UV, MSn and LC–MS–TOF studies on azilsartan: Identification of a known and three new degradation impurities",
@@ -383,7 +393,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 23,
     "link": "https://doi.org/10.1016/j.jpba.2015.12.027",
     "doi": "10.1016/j.jpba.2015.12.027",
-    "id": 38
+    "id": 39
   },
   {
     "title": "Understanding unconventional routes to impurities from drugs in hydrolytic conditions",
@@ -393,7 +403,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 13,
     "link": "https://doi.org/10.5530/ijper.50.3.28",
     "doi": "10.5530/ijper.50.3.28",
-    "id": 39
+    "id": 40
   },
   {
     "title": "Coumarin: a promising scaffold for anticancer agents",
@@ -403,7 +413,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 168,
     "link": "https://doi.org/10.2174/1871520615666150101125503",
     "doi": "10.2174/1871520615666150101125503",
-    "id": 40
+    "id": 41
   },
   {
     "title": "Benzimidazole–ibuprofen/mesalamine conjugates: Potential candidates for multifactorial diseases",
@@ -413,7 +423,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 35,
     "link": "https://doi.org/10.1016/j.ejmech.2014.10.081",
     "doi": "10.1016/j.ejmech.2014.10.081",
-    "id": 41
+    "id": 42
   },
   {
     "title": "2-Aminobenzimidazole conjugates of NSAIDS: novel compounds with immunomodulatory, anti-inflammatory and antioxidant actions",
@@ -423,27 +433,27 @@ window.LAB_PUBLICATIONS = [
     "citations": 17,
     "link": "https://doi.org/10.1007/s00044-014-1198-3",
     "doi": "10.1007/s00044-014-1198-3",
-    "id": 42
+    "id": 43
   },
   {
     "title": "Coumarin hybrids as novel therapeutic agents",
     "authors": "S Sandhu, Y Bansal, O Silakari, G Bansal",
     "journal": "Bioorganic & medicinal chemistry 22 (15), 3806-3814",
     "year": 2014,
-    "citations": 382,
+    "citations": 383,
     "link": "https://doi.org/10.1016/j.bmc.2014.05.032",
     "doi": "10.1016/j.bmc.2014.05.032",
-    "id": 43
+    "id": 44
   },
   {
     "title": "Multifunctional compounds: Smart molecules for multifactorial diseases",
     "authors": "Y Bansal, O Silakari",
     "journal": "European Journal of Medicinal Chemistry 76, 31-42",
     "year": 2014,
-    "citations": 299,
+    "citations": 300,
     "link": "https://doi.org/10.1016/j.ejmech.2014.01.060",
     "doi": "10.1016/j.ejmech.2014.01.060",
-    "id": 44
+    "id": 45
   },
   {
     "title": "Novel coumarin–benzimidazole derivatives as antioxidants and safer anti-inflammatory agents",
@@ -453,7 +463,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 192,
     "link": "https://doi.org/10.1016/j.apsb.2014.07.001",
     "doi": "10.1016/j.apsb.2014.07.001",
-    "id": 45
+    "id": 46
   },
   {
     "title": "Anti-inflammatory and antinociceptive activity of vanillin",
@@ -463,7 +473,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 33,
     "link": "https://doi.org/10.4103/2394-2002.139630",
     "doi": "10.4103/2394-2002.139630",
-    "id": 46
+    "id": 47
   },
   {
     "title": "Design, synthesis, and PASS-assisted evaluation of novel 2-substituted benzimidazole derivatives as potent anthelmintics",
@@ -473,7 +483,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 27,
     "link": "https://doi.org/10.1007/s00044-013-0856-1",
     "doi": "10.1007/s00044-013-0856-1",
-    "id": 47
+    "id": 48
   },
   {
     "title": "Synthesis and pharmacological evaluation of polyfunctional benzimidazole-NSAID chimeric molecules combining anti-inflammatory, immunomodulatory and antioxidant activities",
@@ -483,7 +493,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 21,
     "link": "https://doi.org/10.1007/s12272-013-0282-4",
     "doi": "10.1007/s12272-013-0282-4",
-    "id": 48
+    "id": 49
   },
   {
     "title": "Design, synthesis and PASS assisted evaluation of novel 2-substituted benzimidazole derivatives as potent anthelimintics",
@@ -493,17 +503,17 @@ window.LAB_PUBLICATIONS = [
     "citations": 8,
     "link": "https://doi.org/10.2174/157340641004140421115518",
     "doi": "10.2174/157340641004140421115518",
-    "id": 49
+    "id": 50
   },
   {
     "title": "Coumarin: a potential nucleus for anti-inflammatory molecules",
     "authors": "Y Bansal, P Sethi, G Bansal",
     "journal": "Medicinal Chemistry Research 22 (7), 3049-3060",
     "year": 2013,
-    "citations": 398,
+    "citations": 401,
     "link": "https://doi.org/10.1007/s00044-012-0321-6",
     "doi": "10.1007/s00044-012-0321-6",
-    "id": 50
+    "id": 51
   },
   {
     "title": "ESI-MSn and LC–ESI-MS studies to characterize forced degradation products of bosentan and a validated stability-indicating LC–UV method",
@@ -513,7 +523,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 18,
     "link": "https://doi.org/10.1016/j.jpba.2012.08.014",
     "doi": "10.1016/j.jpba.2012.08.014",
-    "id": 51
+    "id": 52
   },
   {
     "title": "MSn, LC‐MS‐TOF and LC‐PDA studies for identification of new degradation impurities of bupropion",
@@ -523,17 +533,17 @@ window.LAB_PUBLICATIONS = [
     "citations": 11,
     "link": "https://doi.org/10.1002/bmc.2933",
     "doi": "10.1002/bmc.2933",
-    "id": 52
+    "id": 53
   },
   {
     "title": "The therapeutic journey of benzimidazoles: A review",
     "authors": "Y Bansal, O Silakari",
     "journal": "Bioorganic & medicinal chemistry 20 (21), 6208-6236",
     "year": 2012,
-    "citations": 1107,
+    "citations": 1110,
     "link": "https://doi.org/10.1016/j.bmc.2012.09.013",
     "doi": "10.1016/j.bmc.2012.09.013",
-    "id": 53
+    "id": 54
   },
   {
     "title": "The therapeutic journey of benzimidazoles: A review pp 6208-6236",
@@ -543,7 +553,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 4,
     "link": "https://doi.org/10.1016/j.bmc.2012.09.013",
     "doi": "10.1016/j.bmc.2012.09.013",
-    "id": 54
+    "id": 55
   },
   {
     "title": "Analytical methods for standardization of Aegle marmelos: A review",
@@ -553,7 +563,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 61,
     "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kxIxyF8AAAAJ&pagesize=100&citation_for_view=kxIxyF8AAAAJ:W7OEmFMy1HYC",
     "doi": "",
-    "id": 55
+    "id": 56
   },
   {
     "title": "MS2/TOF and LC-MS/TOF studies on toremifene to characterize its forced degradation products",
@@ -563,7 +573,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 4,
     "link": "https://doi.org/10.1039/c1an15587c",
     "doi": "10.1039/c1an15587c",
-    "id": 56
+    "id": 57
   },
   {
     "title": "Anti-inflammatory, analgesic and antipyretic activity of aqueous extract of fresh leaves of Coccinia indica",
@@ -573,7 +583,7 @@ window.LAB_PUBLICATIONS = [
     "citations": 80,
     "link": "https://doi.org/10.1007/s10787-009-0010-3",
     "doi": "10.1007/s10787-009-0010-3",
-    "id": 57
+    "id": 58
   },
   {
     "title": "Design and synthesis of coumarin substituted oxathiadiazolone derivatives having anti-inflammatory activity possibly through p38 MAP kinase inhibition",
@@ -583,36 +593,36 @@ window.LAB_PUBLICATIONS = [
     "citations": 18,
     "link": "https://doi.org/10.1007/bf03246527",
     "doi": "10.1007/bf03246527",
-    "id": 58
+    "id": 59
   },
   {
     "title": "Angiotensin II–AT1 receptor antagonists: Design, synthesis and evaluation of substituted carboxamido benzimidazole derivatives",
     "authors": "DI Shah, M Sharma, Y Bansal, G Bansal, M Singh",
     "journal": "European Journal of Medicinal Chemistry 43 (9), 1808-1812",
     "year": 2008,
-    "citations": 101,
+    "citations": 102,
     "link": "https://doi.org/10.1016/j.ejmech.2007.11.008",
     "doi": "10.1016/j.ejmech.2007.11.008",
-    "id": 59
+    "id": 60
   },
   {
     "title": "Design, synthesis, and evaluation of 5-sulfamoyl benzimidazole derivatives as novel angiotensin II receptor antagonists",
     "authors": "N Kaur, A Kaur, Y Bansal, DI Shah, G Bansal, M Singh",
     "journal": "Bioorganic & medicinal chemistry 16 (24), 10210-10215",
     "year": 2008,
-    "citations": 56,
+    "citations": 57,
     "link": "https://doi.org/10.1016/j.bmc.2008.10.056",
     "doi": "10.1016/j.bmc.2008.10.056",
-    "id": 60
+    "id": 61
   },
   {
     "title": "Design, synthesis, and evaluation of novelly substituted benzimidazole compounds as angiotensin II receptor antagonists",
     "authors": "A Bali, Y Bansal, M Sugumaran, JS Saggu, P Balakumar, G Kaur, ...",
     "journal": "Bioorganic & medicinal chemistry letters 15 (17), 3962-3965",
     "year": 2005,
-    "citations": 89,
+    "citations": 90,
     "link": "https://doi.org/10.1016/j.bmcl.2005.05.054",
     "doi": "10.1016/j.bmcl.2005.05.054",
-    "id": 61
+    "id": 62
   }
 ];

@@ -27,5 +27,5 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/scholar-metrics.json data/publications.json js/publications-data.js
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Google Scholar metrics and publications dataset [skip ci]" && git push)
+          git add data/scholar-metrics.json data/publications.json js/publications-data.js publications.html
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Google Scholar metrics and publications dataset" && git push)
