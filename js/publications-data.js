@@ -1,7 +1,7 @@
 /**
  * Auto-Generated Publications Dataset for Prof. Yogita Bansal & DDSL
  * Google Scholar ID: kxIxyF8AAAAJ
- * Auto-updated on: 2026-10-21 19:53:17
+ * Auto-updated on: 2026-10-26 11:09:40
  */
 
 window.LAB_PUBLICATIONS = [
@@ -40,7 +40,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "N Kaur, S Gupta, J Pal, Y Bansal, G Bansal",
     "journal": "Computational biology and chemistry 116, 108371",
     "year": 2025,
-    "citations": 27,
+    "citations": 28,
     "link": "https://doi.org/10.1016/j.compbiolchem.2025.108371",
     "doi": "10.1016/j.compbiolchem.2025.108371",
     "id": 4
@@ -230,7 +230,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "S Kaur, Y Bansal, R Kumar, G Bansal",
     "journal": "Bioorganic & medicinal chemistry 28 (5), 115327",
     "year": 2020,
-    "citations": 593,
+    "citations": 594,
     "link": "https://doi.org/10.1016/j.bmc.2020.115327",
     "doi": "10.1016/j.bmc.2020.115327",
     "id": 23
@@ -240,7 +240,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "R Minhas, Y Bansal, G Bansal",
     "journal": "Medicinal Research Reviews 40 (3), 823-855",
     "year": 2020,
-    "citations": 191,
+    "citations": 192,
     "link": "https://doi.org/10.1002/med.21636",
     "doi": "10.1002/med.21636",
     "id": 24
@@ -300,7 +300,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "Y Bansal, M Kaur, G Bansal",
     "journal": "Mini Reviews in Medicinal Chemistry 19 (8), 624-646",
     "year": 2019,
-    "citations": 88,
+    "citations": 90,
     "link": "https://doi.org/10.2174/1389557517666171101104024",
     "doi": "10.2174/1389557517666171101104024",
     "id": 30
@@ -450,7 +450,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "Y Bansal, O Silakari",
     "journal": "European Journal of Medicinal Chemistry 76, 31-42",
     "year": 2014,
-    "citations": 300,
+    "citations": 301,
     "link": "https://doi.org/10.1016/j.ejmech.2014.01.060",
     "doi": "10.1016/j.ejmech.2014.01.060",
     "id": 45
@@ -460,7 +460,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "RK Arora, N Kaur, Y Bansal, G Bansal",
     "journal": "Acta Pharmaceutica Sinica B 4 (5), 368-375",
     "year": 2014,
-    "citations": 192,
+    "citations": 193,
     "link": "https://doi.org/10.1016/j.apsb.2014.07.001",
     "doi": "10.1016/j.apsb.2014.07.001",
     "id": 46
@@ -510,7 +510,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "Y Bansal, P Sethi, G Bansal",
     "journal": "Medicinal Chemistry Research 22 (7), 3049-3060",
     "year": 2013,
-    "citations": 401,
+    "citations": 400,
     "link": "https://doi.org/10.1007/s00044-012-0321-6",
     "doi": "10.1007/s00044-012-0321-6",
     "id": 51
@@ -540,7 +540,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "Y Bansal, O Silakari",
     "journal": "Bioorganic & medicinal chemistry 20 (21), 6208-6236",
     "year": 2012,
-    "citations": 1110,
+    "citations": 1113,
     "link": "https://doi.org/10.1016/j.bmc.2012.09.013",
     "doi": "10.1016/j.bmc.2012.09.013",
     "id": 54
@@ -600,7 +600,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "DI Shah, M Sharma, Y Bansal, G Bansal, M Singh",
     "journal": "European Journal of Medicinal Chemistry 43 (9), 1808-1812",
     "year": 2008,
-    "citations": 102,
+    "citations": 101,
     "link": "https://doi.org/10.1016/j.ejmech.2007.11.008",
     "doi": "10.1016/j.ejmech.2007.11.008",
     "id": 60
@@ -610,7 +610,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "N Kaur, A Kaur, Y Bansal, DI Shah, G Bansal, M Singh",
     "journal": "Bioorganic & medicinal chemistry 16 (24), 10210-10215",
     "year": 2008,
-    "citations": 57,
+    "citations": 56,
     "link": "https://doi.org/10.1016/j.bmc.2008.10.056",
     "doi": "10.1016/j.bmc.2008.10.056",
     "id": 61
@@ -620,7 +620,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "A Bali, Y Bansal, M Sugumaran, JS Saggu, P Balakumar, G Kaur, ...",
     "journal": "Bioorganic & medicinal chemistry letters 15 (17), 3962-3965",
     "year": 2005,
-    "citations": 90,
+    "citations": 89,
     "link": "https://doi.org/10.1016/j.bmcl.2005.05.054",
     "doi": "10.1016/j.bmcl.2005.05.054",
     "id": 62
