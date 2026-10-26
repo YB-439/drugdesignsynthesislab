@@ -1,7 +1,7 @@
 /**
  * Auto-Generated Publications Dataset for Prof. Yogita Bansal & DDSL
  * Google Scholar ID: kxIxyF8AAAAJ
- * Auto-updated on: 2026-10-25 03:44:30
+ * Auto-updated on: 2026-10-26 11:09:40
  */
 
 window.LAB_PUBLICATIONS = [
@@ -40,7 +40,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "N Kaur, S Gupta, J Pal, Y Bansal, G Bansal",
     "journal": "Computational biology and chemistry 116, 108371",
     "year": 2025,
-    "citations": 27,
+    "citations": 28,
     "link": "https://doi.org/10.1016/j.compbiolchem.2025.108371",
     "doi": "10.1016/j.compbiolchem.2025.108371",
     "id": 4
@@ -230,7 +230,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "S Kaur, Y Bansal, R Kumar, G Bansal",
     "journal": "Bioorganic & medicinal chemistry 28 (5), 115327",
     "year": 2020,
-    "citations": 593,
+    "citations": 594,
     "link": "https://doi.org/10.1016/j.bmc.2020.115327",
     "doi": "10.1016/j.bmc.2020.115327",
     "id": 23
@@ -510,7 +510,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "Y Bansal, P Sethi, G Bansal",
     "journal": "Medicinal Chemistry Research 22 (7), 3049-3060",
     "year": 2013,
-    "citations": 401,
+    "citations": 400,
     "link": "https://doi.org/10.1007/s00044-012-0321-6",
     "doi": "10.1007/s00044-012-0321-6",
     "id": 51
@@ -540,7 +540,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "Y Bansal, O Silakari",
     "journal": "Bioorganic & medicinal chemistry 20 (21), 6208-6236",
     "year": 2012,
-    "citations": 1112,
+    "citations": 1113,
     "link": "https://doi.org/10.1016/j.bmc.2012.09.013",
     "doi": "10.1016/j.bmc.2012.09.013",
     "id": 54
