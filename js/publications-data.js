@@ -1,7 +1,7 @@
 /**
  * Auto-Generated Publications Dataset for Prof. Yogita Bansal & DDSL
  * Google Scholar ID: kxIxyF8AAAAJ
- * Auto-updated on: 2026-10-28 04:39:32
+ * Auto-updated on: 2026-10-30 04:52:36
  */
 
 window.LAB_PUBLICATIONS = [
@@ -240,7 +240,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "R Minhas, Y Bansal, G Bansal",
     "journal": "Medicinal Research Reviews 40 (3), 823-855",
     "year": 2020,
-    "citations": 192,
+    "citations": 193,
     "link": "https://doi.org/10.1002/med.21636",
     "doi": "10.1002/med.21636",
     "id": 24
