@@ -121,6 +121,10 @@
           <a href="nik-predict.html" class="block py-1 text-xs font-bold text-teal-900">
             &bull; NIK-Predict
           </a>
+          <a href="https://nik-ddsl.streamlit.app/" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-between py-1 text-xs font-bold text-teal-700 hover:underline text-left cursor-pointer">
+            <span>&bull; NIK-Predict (Run Online)</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
           <button type="button" onclick="if(window.openNikAccessModal){openNikAccessModal();}" class="w-full flex items-center justify-between py-1 text-xs font-bold text-teal-700 hover:underline text-left cursor-pointer">
             <span>&bull; NIK-Predict (.exe Download)</span>
             <i data-lucide="download" class="w-3.5 h-3.5"></i>
@@ -179,18 +183,26 @@
             </p>
           </div>
 
-          <!-- Primary Download & Article Action Buttons (Single Row on Desktop) -->
+          <!-- Primary Action Buttons: Online Web Tool, Download & Article -->
           <div class="flex flex-wrap lg:flex-nowrap items-center gap-3 pt-2">
-            <!-- 1. Download Button -->
+            <!-- 1. Run Online Live Web App -->
+            <a href="https://nik-ddsl.streamlit.app/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all whitespace-nowrap flex-shrink-0 group cursor-pointer">
+              <i data-lucide="external-link" class="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform"></i>
+              <span>Run NIK-Predict Online</span>
+              <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-teal-900/60 text-teal-100">Live Web App</span>
+            </a>
+
+            <!-- 2. Download Button -->
             <button type="button" 
                onclick="openNikAccessModal()"
-               class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all whitespace-nowrap flex-shrink-0 group cursor-pointer">
+               class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all whitespace-nowrap flex-shrink-0 group cursor-pointer">
               <i data-lucide="download" class="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-0.5 transition-transform"></i>
-              <span>Download NIK-Predict for Windows</span>
-              <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-teal-900/60 text-teal-100">v1.0.0</span>
+              <span>Download Desktop .exe</span>
+              <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-700 text-slate-200">v1.0.0</span>
             </button>
 
-            <!-- 2. Read Article Button -->
+            <!-- 3. Read Article Button -->
             <button type="button" 
                     id="read-article-btn"
                     onclick="openPaperStatusModal()"
@@ -200,11 +212,11 @@
               <span class="px-1.5 py-0.5 text-[10px] font-mono rounded bg-amber-100 text-amber-800 border border-amber-200">In Press</span>
             </button>
 
-            <!-- 3. Explore other QSAR Models/Tools Button (Right of Read Article) -->
+            <!-- 4. Explore other QSAR Models/Tools Button -->
             <a href="tools.html" 
                class="inline-flex items-center justify-center gap-2 px-3.5 sm:px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 hover:border-slate-300 font-semibold text-xs sm:text-sm transition-all whitespace-nowrap flex-shrink-0 group">
               <i data-lucide="layers" class="w-4 h-4 text-slate-600 group-hover:text-teal-700 transition-colors"></i>
-              <span>Explore other QSAR Models/Tools &rarr;</span>
+              <span>Explore other Tools &rarr;</span>
             </a>
           </div>
 
@@ -239,6 +251,26 @@
   <main class="py-14 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
+      <!-- LIVE WEB TOOL BANNER CARD -->
+      <section class="academic-card p-6 sm:p-7 bg-gradient-to-r from-teal-900 via-teal-800 to-slate-900 text-white rounded-2xl shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-teal-500/20 border border-teal-400/30 text-teal-200 text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Official Live Web Application
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold font-serif text-white">
+            Run NIK-Predict Directly in Your Web Browser
+          </h2>
+          <p class="text-xs sm:text-sm text-teal-100/90 max-w-2xl">
+            Evaluate candidate molecules, verify applicability domain (AD), view Monte Carlo splits, and export prediction datasets immediately in cloud without downloading any software.
+          </p>
+        </div>
+        <a href="https://nik-ddsl.streamlit.app/" target="_blank" rel="noopener noreferrer"
+           class="px-6 py-3.5 rounded-xl bg-white hover:bg-teal-50 text-teal-900 font-bold text-sm shadow-md hover:shadow-xl transition-all whitespace-nowrap flex items-center gap-2 shrink-0 group">
+          <i data-lucide="play" class="w-4 h-4 text-teal-700 fill-teal-700"></i>
+          <span>Launch Web Tool</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+        </a>
+      </section>
 
       <!-- 3-CARD HIGHLIGHT GRID -->
       <section class="grid md:grid-cols-3 gap-6 items-stretch">
