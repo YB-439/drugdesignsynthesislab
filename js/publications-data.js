@@ -1,7 +1,7 @@
 /**
  * Auto-Generated Publications Dataset for Prof. Yogita Bansal & DDSL
  * Google Scholar ID: kxIxyF8AAAAJ
- * Auto-updated on: 2026-11-01 04:57:38
+ * Auto-updated on: 2026-11-10 06:27:43
  */
 
 window.LAB_PUBLICATIONS = [
@@ -230,7 +230,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "S Kaur, Y Bansal, R Kumar, G Bansal",
     "journal": "Bioorganic & medicinal chemistry 28 (5), 115327",
     "year": 2020,
-    "citations": 593,
+    "citations": 594,
     "link": "https://doi.org/10.1016/j.bmc.2020.115327",
     "doi": "10.1016/j.bmc.2020.115327",
     "id": 23
@@ -240,7 +240,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "R Minhas, Y Bansal, G Bansal",
     "journal": "Medicinal Research Reviews 40 (3), 823-855",
     "year": 2020,
-    "citations": 193,
+    "citations": 194,
     "link": "https://doi.org/10.1002/med.21636",
     "doi": "10.1002/med.21636",
     "id": 24
@@ -340,7 +340,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "P Sethi, Y Bansal, G Bansal",
     "journal": "Medicinal chemistry research 27 (1), 61-71",
     "year": 2018,
-    "citations": 59,
+    "citations": 60,
     "link": "https://doi.org/10.1007/s00044-017-2036-1",
     "doi": "10.1007/s00044-017-2036-1",
     "id": 34
@@ -358,7 +358,7 @@ window.LAB_PUBLICATIONS = [
   {
     "title": "WHO guided real time stability testing on Shankhpushpi Syrup",
     "authors": "A Jain, J Kaur, Y Bansal, B Saini, G Bansal",
-    "journal": "Chitkara University Publications",
+    "journal": "J. Adv. Pharm. Technol. Res 5, 1-19",
     "year": 2017,
     "citations": 6,
     "link": "https://doi.org/10.15415/jptrm.2017.51001",
@@ -540,7 +540,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "Y Bansal, O Silakari",
     "journal": "Bioorganic & medicinal chemistry 20 (21), 6208-6236",
     "year": 2012,
-    "citations": 1112,
+    "citations": 1120,
     "link": "https://doi.org/10.1016/j.bmc.2012.09.013",
     "doi": "10.1016/j.bmc.2012.09.013",
     "id": 54
