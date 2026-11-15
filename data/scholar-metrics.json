@@ -1,25 +1,25 @@
 {
   "scholar_id": "kxIxyF8AAAAJ",
   "profile_url": "https://scholar.google.com/citations?user=kxIxyF8AAAAJ&hl=en",
-  "last_updated": "2026-11-10 06:27:26",
+  "last_updated": "2026-11-15 05:26:19",
   "table": {
     "citations": {
-      "all": 4380,
-      "since_recent": 2499
+      "all": 4391,
+      "since_recent": 2508
     },
     "h_index": {
       "all": 23,
       "since_recent": 18
     },
     "i10_index": {
-      "all": 33,
-      "since_recent": 28
+      "all": 34,
+      "since_recent": 29
     }
   },
   "history": [
     {
       "year": 2022,
-      "citations": 422,
+      "citations": 421,
       "is_current": false
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "year": 2024,
-      "citations": 429,
+      "citations": 428,
       "is_current": false
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "year": 2026,
-      "citations": 372,
+      "citations": 381,
       "is_current": true
     }
   ]
