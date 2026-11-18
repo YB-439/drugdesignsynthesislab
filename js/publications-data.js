@@ -1,7 +1,7 @@
 /**
  * Auto-Generated Publications Dataset for Prof. Yogita Bansal & DDSL
  * Google Scholar ID: kxIxyF8AAAAJ
- * Auto-updated on: 2026-11-15 05:26:22
+ * Auto-updated on: 2026-11-18 06:27:11
  */
 
 window.LAB_PUBLICATIONS = [
@@ -230,7 +230,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "S Kaur, Y Bansal, R Kumar, G Bansal",
     "journal": "Bioorganic & medicinal chemistry 28 (5), 115327",
     "year": 2020,
-    "citations": 596,
+    "citations": 598,
     "link": "https://doi.org/10.1016/j.bmc.2020.115327",
     "doi": "10.1016/j.bmc.2020.115327",
     "id": 23
@@ -240,7 +240,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "R Minhas, Y Bansal, G Bansal",
     "journal": "Medicinal Research Reviews 40 (3), 823-855",
     "year": 2020,
-    "citations": 194,
+    "citations": 193,
     "link": "https://doi.org/10.1002/med.21636",
     "doi": "10.1002/med.21636",
     "id": 24
@@ -360,7 +360,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "A Jain, J Kaur, Y Bansal, B Saini, G Bansal",
     "journal": "J. Adv. Pharm. Technol. Res 5, 1-19",
     "year": 2017,
-    "citations": 6,
+    "citations": 7,
     "link": "https://doi.org/10.15415/jptrm.2017.51001",
     "doi": "10.15415/jptrm.2017.51001",
     "id": 36
@@ -440,7 +440,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "S Sandhu, Y Bansal, O Silakari, G Bansal",
     "journal": "Bioorganic & medicinal chemistry 22 (15), 3806-3814",
     "year": 2014,
-    "citations": 384,
+    "citations": 383,
     "link": "https://doi.org/10.1016/j.bmc.2014.05.032",
     "doi": "10.1016/j.bmc.2014.05.032",
     "id": 44
@@ -510,7 +510,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "Y Bansal, P Sethi, G Bansal",
     "journal": "Medicinal Chemistry Research 22 (7), 3049-3060",
     "year": 2013,
-    "citations": 402,
+    "citations": 400,
     "link": "https://doi.org/10.1007/s00044-012-0321-6",
     "doi": "10.1007/s00044-012-0321-6",
     "id": 51
@@ -540,7 +540,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "Y Bansal, O Silakari",
     "journal": "Bioorganic & medicinal chemistry 20 (21), 6208-6236",
     "year": 2012,
-    "citations": 1121,
+    "citations": 1122,
     "link": "https://doi.org/10.1016/j.bmc.2012.09.013",
     "doi": "10.1016/j.bmc.2012.09.013",
     "id": 54
@@ -600,7 +600,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "DI Shah, M Sharma, Y Bansal, G Bansal, M Singh",
     "journal": "European Journal of Medicinal Chemistry 43 (9), 1808-1812",
     "year": 2008,
-    "citations": 102,
+    "citations": 101,
     "link": "https://doi.org/10.1016/j.ejmech.2007.11.008",
     "doi": "10.1016/j.ejmech.2007.11.008",
     "id": 60
@@ -610,7 +610,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "N Kaur, A Kaur, Y Bansal, DI Shah, G Bansal, M Singh",
     "journal": "Bioorganic & medicinal chemistry 16 (24), 10210-10215",
     "year": 2008,
-    "citations": 57,
+    "citations": 56,
     "link": "https://doi.org/10.1016/j.bmc.2008.10.056",
     "doi": "10.1016/j.bmc.2008.10.056",
     "id": 61
@@ -620,7 +620,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "A Bali, Y Bansal, M Sugumaran, JS Saggu, P Balakumar, G Kaur, ...",
     "journal": "Bioorganic & medicinal chemistry letters 15 (17), 3962-3965",
     "year": 2005,
-    "citations": 90,
+    "citations": 89,
     "link": "https://doi.org/10.1016/j.bmcl.2005.05.054",
     "doi": "10.1016/j.bmcl.2005.05.054",
     "id": 62
