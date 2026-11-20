@@ -1,11 +1,11 @@
 {
   "scholar_id": "kxIxyF8AAAAJ",
   "profile_url": "https://scholar.google.com/citations?user=kxIxyF8AAAAJ&hl=en",
-  "last_updated": "2026-11-18 06:27:09",
+  "last_updated": "2026-11-20 06:16:19",
   "table": {
     "citations": {
-      "all": 4388,
-      "since_recent": 2509
+      "all": 4395,
+      "since_recent": 2512
     },
     "h_index": {
       "all": 23,
@@ -19,7 +19,7 @@
   "history": [
     {
       "year": 2022,
-      "citations": 419,
+      "citations": 420,
       "is_current": false
     },
     {
@@ -29,17 +29,17 @@
     },
     {
       "year": 2024,
-      "citations": 428,
+      "citations": 429,
       "is_current": false
     },
     {
       "year": 2025,
-      "citations": 438,
+      "citations": 437,
       "is_current": false
     },
     {
       "year": 2026,
-      "citations": 383,
+      "citations": 385,
       "is_current": true
     }
   ]
