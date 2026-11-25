@@ -1,7 +1,7 @@
 /**
  * Auto-Generated Publications Dataset for Prof. Yogita Bansal & DDSL
  * Google Scholar ID: kxIxyF8AAAAJ
- * Auto-updated on: 2026-11-20 06:16:19
+ * Auto-updated on: 2026-11-25 07:33:31
  */
 
 window.LAB_PUBLICATIONS = [
@@ -76,6 +76,16 @@ window.LAB_PUBLICATIONS = [
     "id": 7
   },
   {
+    "title": "A critical analysis of design, binding pattern and SAR of benzo-fused heteronuclear compounds as VEGFR-2 inhibitors",
+    "authors": "M Kashyap, S Gupta, Y Bansal, G Bansal",
+    "journal": "Bioorganic & medicinal chemistry 115, 117966",
+    "year": 2024,
+    "citations": 11,
+    "link": "https://doi.org/10.1016/j.bmc.2024.117966",
+    "doi": "10.1016/j.bmc.2024.117966",
+    "id": 8
+  },
+  {
     "title": "In silico insights into design of novel VEGFR-2 inhibitors: SMILES-based QSAR modelling, and docking studies on substituted benzo-fused heteronuclear derivatives",
     "authors": "S Gupta, M Kashyap, Y Bansal, G Bansal",
     "journal": "SAR and QSAR in Environmental Research 35 (4), 265-284",
@@ -83,16 +93,6 @@ window.LAB_PUBLICATIONS = [
     "citations": 11,
     "link": "https://doi.org/10.1080/1062936x.2024.2332203",
     "doi": "10.1080/1062936x.2024.2332203",
-    "id": 8
-  },
-  {
-    "title": "A critical analysis of design, binding pattern and SAR of benzo-fused heteronuclear compounds as VEGFR-2 inhibitors",
-    "authors": "M Kashyap, S Gupta, Y Bansal, G Bansal",
-    "journal": "Bioorganic & medicinal chemistry 115, 117966",
-    "year": 2024,
-    "citations": 10,
-    "link": "https://doi.org/10.1016/j.bmc.2024.117966",
-    "doi": "10.1016/j.bmc.2024.117966",
     "id": 9
   },
   {
@@ -230,7 +230,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "S Kaur, Y Bansal, R Kumar, G Bansal",
     "journal": "Bioorganic & medicinal chemistry 28 (5), 115327",
     "year": 2020,
-    "citations": 598,
+    "citations": 597,
     "link": "https://doi.org/10.1016/j.bmc.2020.115327",
     "doi": "10.1016/j.bmc.2020.115327",
     "id": 23
@@ -240,7 +240,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "R Minhas, Y Bansal, G Bansal",
     "journal": "Medicinal Research Reviews 40 (3), 823-855",
     "year": 2020,
-    "citations": 194,
+    "citations": 195,
     "link": "https://doi.org/10.1002/med.21636",
     "doi": "10.1002/med.21636",
     "id": 24
@@ -410,7 +410,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "M Kaur, S Kohli, S Sandhu, Y Bansal, G Bansal",
     "journal": "Anti-Cancer Agents in Medicinal Chemistry (Formerly Current Medicinal …",
     "year": 2015,
-    "citations": 170,
+    "citations": 171,
     "link": "https://doi.org/10.2174/1871520615666150101125503",
     "doi": "10.2174/1871520615666150101125503",
     "id": 41
@@ -460,7 +460,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "RK Arora, N Kaur, Y Bansal, G Bansal",
     "journal": "Acta Pharmaceutica Sinica B 4 (5), 368-375",
     "year": 2014,
-    "citations": 193,
+    "citations": 192,
     "link": "https://doi.org/10.1016/j.apsb.2014.07.001",
     "doi": "10.1016/j.apsb.2014.07.001",
     "id": 46
@@ -600,7 +600,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "DI Shah, M Sharma, Y Bansal, G Bansal, M Singh",
     "journal": "European Journal of Medicinal Chemistry 43 (9), 1808-1812",
     "year": 2008,
-    "citations": 102,
+    "citations": 101,
     "link": "https://doi.org/10.1016/j.ejmech.2007.11.008",
     "doi": "10.1016/j.ejmech.2007.11.008",
     "id": 60
@@ -610,7 +610,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "N Kaur, A Kaur, Y Bansal, DI Shah, G Bansal, M Singh",
     "journal": "Bioorganic & medicinal chemistry 16 (24), 10210-10215",
     "year": 2008,
-    "citations": 57,
+    "citations": 56,
     "link": "https://doi.org/10.1016/j.bmc.2008.10.056",
     "doi": "10.1016/j.bmc.2008.10.056",
     "id": 61
@@ -620,7 +620,7 @@ window.LAB_PUBLICATIONS = [
     "authors": "A Bali, Y Bansal, M Sugumaran, JS Saggu, P Balakumar, G Kaur, ...",
     "journal": "Bioorganic & medicinal chemistry letters 15 (17), 3962-3965",
     "year": 2005,
-    "citations": 90,
+    "citations": 89,
     "link": "https://doi.org/10.1016/j.bmcl.2005.05.054",
     "doi": "10.1016/j.bmcl.2005.05.054",
     "id": 62
